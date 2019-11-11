@@ -1,0 +1,8 @@
+
+.idea/
+
+cmake-build-debug/
+
+libplcurve_src/
+
+knot_txt_files/
