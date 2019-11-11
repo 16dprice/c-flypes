@@ -1,0 +1,10 @@
+- after getting adjacency matrix, get all four edge subsets and remove them from the matrix
+    - check to see which ones disconnect the graph
+- flyping code, obviously
+- recursive function termination condition will come from getting Jason's code to work with mine
+
+
+Compiling Tip:
+    i) first, compile utilities to an object file "gcc -c src/utilities.c src/queue.c"
+    ii) then, compile main with the utilities.o file, making sure to link to the right libraries
+        "gcc utilities.o queue.o main.c -lm -lplCurve" optionally adding "-o exec_name" for an executable with name "exec_name"
