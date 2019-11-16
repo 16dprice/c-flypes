@@ -35,92 +35,23 @@ void pd_code_t_to_int_array(int cr_num, pd_code_t *pd_code, int pd_code_arr[][4]
 
 }
 
-struct PD_code* pd_code_t_to_pd_code(pd_code_t* pd) {
-
-    int cr_num = pd->ncross;
-
-    // this is what will be returned
-    struct PD_code* ret_code;
-
-    ret_code->cr_num = cr_num;
-    ret_code->crossings = malloc(cr_num * sizeof(struct pd_crossing));
-
-    struct pd_crossing* ret_code_crossing = ret_code->crossings;
-
-    pd_crossing_t *crossing = pd->cross;
-    pd_idx_t incoming_under_edgepos, outgoing_under_edgepos;
-    pd_idx_t incoming_over_edgepos, outgoing_over_edgepos;
-
-    // fill in each crossing
-    // some decisions have to be made because pd_stor_t does not store the edges in the original order
-    for(int i = 0; i < cr_num; i++) {
-        pd_understrand_pos(pd, (pd_idx_t) i, &incoming_under_edgepos, &outgoing_under_edgepos);
-
-        ret_code_crossing->edge[0] = crossing->edge[incoming_under_edgepos] + 1;
-        ret_code_crossing->edge[2] = crossing->edge[outgoing_under_edgepos] + 1;
-
-        pd_overstrand_pos(pd, (pd_idx_t) i, &incoming_over_edgepos, &outgoing_over_edgepos);
-
-        if(crossing->sign == PD_POS_ORIENTATION) {
-            ret_code_crossing->edge[1] = crossing->edge[outgoing_over_edgepos] + 1;
-            ret_code_crossing->edge[3] = crossing->edge[incoming_over_edgepos] + 1;
-        } else {
-            ret_code_crossing->edge[3] = crossing->edge[outgoing_over_edgepos] + 1;
-            ret_code_crossing->edge[1] = crossing->edge[incoming_over_edgepos] + 1;
-        }
-
-        crossing++;
-        ret_code_crossing++;
-    }
-
-    return ret_code;
-
-}
-
-void print_PD_code(struct PD_code* pd_code) {
-
-    struct pd_crossing* crossing = pd_code->crossings;
-
-    printf("\n");
-
-    for(int i = 0; i < pd_code->cr_num; i++) {
-        printf("{");
-        for(int i = 0; i < 4; i++) {
-            if(i == 3) {
-                printf("%d", crossing->edge[i]);
-            } else {
-                printf("%d, ", crossing->edge[i]);
-            }
-        }
-        printf("}\n");
-        crossing++;
-    }
-
-    printf("\n");
-
-}
-
 void int_array_to_pd_code_t(int cr_num, int pd_code_arr[][4], pd_code_t *pd_code) {
     // gonna want to use pd_regenerate_crossings(pd_code_t *pd)
 
     pd_crossing_t *crossing = pd_code->cross;
 
     for(int i = 0; i < cr_num; i++) {
-
         for(int j = 0; j < 4; j++) {
-            crossing->edge[j] = pd_code_arr[i][j] - 1;
+            crossing->edge[j] = (pd_idx_t) pd_code_arr[i][j] - 1;
         }
-
         crossing++;
-
     }
 
     pd_regenerate_crossings(pd_code);
 
-
 }
 
-void generate_adjacency_matrix_from_pd(int cr_num, int pd_code[][4], int adjacency_matrix[cr_num][cr_num]) {
+void generate_adjacency_matrix_from_pd(int cr_num, int pd_code[cr_num][4], int adjacency_matrix[cr_num][cr_num]) {
 
     int i, j;
 

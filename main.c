@@ -19,8 +19,10 @@ int main() {
     infile = fopen("knot_txt_files/knot_3_1.txt", "r");
     next_pd_code = pd_read_KnotTheory(infile);
 
-    struct PD_code* pd_code = pd_code_t_to_pd_code(next_pd_code);
-    print_PD_code(pd_code);
+    int cr_num = next_pd_code->ncross;
+
+    int pd_code[cr_num][4];
+    pd_code_t_to_int_array(cr_num, next_pd_code, pd_code);
 
 //    // get the adjacency matrix for the graph corresponding to the knot given by the pd code
 //    int adjacency_matrix[next_pd_code->ncross][next_pd_code->ncross];

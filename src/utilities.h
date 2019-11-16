@@ -66,7 +66,7 @@ void int_array_to_pd_code_t(int cr_num, int pd_code_arr[][4], pd_code_t *pd_code
  * @param pd_code
  * @param adjacency_matrix
  */
-void generate_adjacency_matrix_from_pd(int cr_num, int pd_code[][4], int adjacency_matrix[cr_num][cr_num]);
+void generate_adjacency_matrix_from_pd(int cr_num, int pd_code[cr_num][4], int adjacency_matrix[cr_num][cr_num]);
 
 void get_edge_list_from_adjacency_matrix(int cr_num, int edge_list[2 * cr_num][2], int adjacency_matrix[cr_num][cr_num]);
 
