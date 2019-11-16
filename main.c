@@ -22,8 +22,6 @@ int main() {
     struct PD_code* pd_code = pd_code_t_to_pd_code(next_pd_code);
     print_PD_code(pd_code);
 
-
-
 //    // get the adjacency matrix for the graph corresponding to the knot given by the pd code
 //    int adjacency_matrix[next_pd_code->ncross][next_pd_code->ncross];
 //    memset(adjacency_matrix, 0, sizeof(adjacency_matrix)); // init all values to 0
