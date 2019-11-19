@@ -7,6 +7,7 @@
 
 #include "src/utilities.h"
 #include "src/queue.h"
+#include "src/print_structures.h"
 
 int main() {
 
@@ -24,15 +25,19 @@ int main() {
     int pd_code[cr_num][4];
     pd_code_t_to_int_array(cr_num, next_pd_code, pd_code);
 
-//    // get the adjacency matrix for the graph corresponding to the knot given by the pd code
-//    int adjacency_matrix[next_pd_code->ncross][next_pd_code->ncross];
-//    memset(adjacency_matrix, 0, sizeof(adjacency_matrix)); // init all values to 0
-//    generate_adjacency_matrix_from_pd(cr_num, pd_code, adjacency_matrix);
-//
-//    // get the edge list of the graph from the adjacency matrix
-//    int edge_list[2 * cr_num][2];
-//    get_edge_list_from_adjacency_matrix(cr_num, edge_list, adjacency_matrix);
-//
+    // get the adjacency matrix for the graph corresponding to the knot given by the pd code
+    int adjacency_matrix[next_pd_code->ncross][next_pd_code->ncross];
+    memset(adjacency_matrix, 0, sizeof(adjacency_matrix)); // init all values to 0
+    generate_adjacency_matrix_from_pd(cr_num, pd_code, adjacency_matrix);
+
+    print_adjacency_matrix(cr_num, adjacency_matrix);
+
+    // get the edge list of the graph from the adjacency matrix
+    int edge_list[2 * cr_num][2];
+    get_edge_list_from_adjacency_matrix(cr_num, edge_list, adjacency_matrix);
+
+    print_edge_list(cr_num, edge_list);
+
 //    pd_code_t *new_pd_code = pd_copy(next_pd_code);
 //    int_array_to_pd_code_t(cr_num, pd_code, new_pd_code);
 //    crossing = new_pd_code->cross;
