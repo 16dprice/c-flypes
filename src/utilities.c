@@ -155,37 +155,6 @@ bool is_connected_after_removal_of_edges(int cr_num, int four_edge_subset[4][2],
 }
 
 // this function assumes that the four edge subset will disconnect the graph
-void get_tangle_from_four_edge_subset(int cr_num, int pd_code[cr_num][4], int four_edge_subset[4][2], int tangle[2][cr_num]) {
-
-    int adjacency_matrix[cr_num][cr_num];
-    memset(adjacency_matrix, 0, sizeof(adjacency_matrix));
-    generate_adjacency_matrix_from_pd(cr_num, pd_code, adjacency_matrix);
-
-    int new_adjacency_matrix[cr_num][cr_num];
-    remove_four_edges_from_adjacency_matrix(cr_num, four_edge_subset, adjacency_matrix, new_adjacency_matrix);
-
-    int component_designation[cr_num];
-
-    for(int i = 0; i < cr_num; i++) {
-        if(is_in_same_component(cr_num, new_adjacency_matrix, 0, i)) {
-            component_designation[i] = IS_CONNECTED_TO_0;
-        } else {
-            component_designation[i] = NOT_CONNECTED_TO_0;
-        }
-    }
-
-    int tangle_1_crossing_count = -1;
-    int tangle_2_crossing_count = -1;
-    for(int i = 0; i < cr_num; i++) {
-        if(component_designation[i] == IS_CONNECTED_TO_0) {
-            tangle[0][++tangle_1_crossing_count] = i;
-        } else {
-            tangle[1][++tangle_2_crossing_count] = i;
-        }
-    }
-
-}
-
 struct pd_tangle* get_tangles_from_four_edge_subset(int cr_num, int pd_code[cr_num][4], int four_edge_subset[4][2]) {
 
     int adjacency_matrix[cr_num][cr_num];

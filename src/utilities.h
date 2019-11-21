@@ -76,8 +76,6 @@ void remove_four_edges_from_adjacency_matrix(int cr_num, int four_edge_subset[4]
 
 bool is_connected_after_removal_of_edges(int cr_num, int four_edge_subset[4][2], int adjacency_matrix[cr_num][cr_num]);
 
-void get_tangle_from_four_edge_subset(int cr_num, int pd_code[cr_num][4], int four_edge_subset[4][2], int tangle[2][cr_num]);
-
 struct pd_tangle* get_tangles_from_four_edge_subset(int cr_num, int pd_code[cr_num][4], int four_edge_subset[4][2]);
 
 void get_all_tangles_from_pd_code(int cr_num, int pd_code[cr_num][4], int tangle_list[2 * four_edge_subsets_count[cr_num]][cr_num]);
