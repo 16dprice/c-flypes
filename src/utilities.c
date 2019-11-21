@@ -330,12 +330,20 @@ int* get_strands(int cr_num, int pd_code[cr_num][4], struct pd_tangle tangle) {
 // otherwise, returns pointer to 2 ints representing the 2 strands connected to the crossing
 int* get_instrands(int cr_num, int pd_code[cr_num][4], int crossing_index, struct pd_tangle tangle) {
 
+    // short circuit if crossing is in tangle
+    if(in_array(crossing_index, tangle.cr_num, tangle.crossings)) {
+        return NULL;
+    }
+
     int* strands = get_strands(cr_num, pd_code, tangle);
     int* instrands = malloc(2 * sizeof(int));
 
     int instrand_count = 0;
     for(int i = 0; i < 4; i++) {
         if(in_array(strands[i], 4, (int*) pd_code[crossing_index])) {
+            if(instrand_count == 2) {
+                return NULL;
+            }
             instrands[instrand_count++] = strands[i];
         }
     }
@@ -352,12 +360,20 @@ int* get_instrands(int cr_num, int pd_code[cr_num][4], int crossing_index, struc
 // otherwise, returns pointer to 2 ints representing the 2 strands NOT connected to the crossing
 int* get_outstrands(int cr_num, int pd_code[cr_num][4], int crossing_index, struct pd_tangle tangle) {
 
+    // short circuit if crossing is in tangle
+    if(in_array(crossing_index, tangle.cr_num, tangle.crossings)) {
+        return NULL;
+    }
+
     int* strands = get_strands(cr_num, pd_code, tangle);
     int* outstrands = malloc(2 * sizeof(int));
 
     int outstrand_count = 0;
     for(int i = 0; i < 4; i++) {
         if(!in_array(strands[i], 4, (int*) pd_code[crossing_index])) {
+            if(outstrand_count == 2) {
+                return NULL;
+            }
             outstrands[outstrand_count++] = strands[i];
         }
     }
@@ -367,6 +383,38 @@ int* get_outstrands(int cr_num, int pd_code[cr_num][4], int crossing_index, stru
     } else {
         return outstrands;
     }
+
+}
+
+struct pd_flype_list get_all_flypes_from_pd_code(int cr_num, int pd_code[cr_num][4]) {
+
+    struct pd_tangle_list non_trivial_tangles = get_non_trivial_tangles_from_pd_code(cr_num, pd_code);
+
+    struct pd_flype_list all_flypes;
+    all_flypes.flypes = malloc(2 * non_trivial_tangles.num_tangles * sizeof(struct pd_flype));
+
+    printf("Number of tangles: %d\n", non_trivial_tangles.num_tangles);
+
+    // for each tangle, look at each crossing
+    // if the instrands for that crossing and tangle is not NULL, that means the tangle can be flyped over it
+    int flypes_found = 0;
+    for(int i = 0; i < non_trivial_tangles.num_tangles; i++) {
+        for(int j = 0; j < cr_num; j++) {
+            if(get_instrands(cr_num, pd_code, j, non_trivial_tangles.tangles[i]) != NULL) {
+
+                struct pd_flype new_flype;
+
+                new_flype.crossing = j;
+                new_flype.tangle = non_trivial_tangles.tangles[i];
+
+                all_flypes.flypes[flypes_found++] = new_flype;
+
+            }
+        }
+    }
+    all_flypes.num_flypes = flypes_found;
+
+    return all_flypes;
 
 }
 

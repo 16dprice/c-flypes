@@ -61,7 +61,8 @@ int main() {
 //        printf("Outstrands: %d, %d\n", outstrands[0], outstrands[1]);
 //    }
 
-//    printf("Flype Count: %d\n", get_num_flypes(cr_num, pd_code));
+    struct pd_flype_list all_flypes = get_all_flypes_from_pd_code(cr_num, pd_code);
+    printf("Flype Count: %d\n", all_flypes.num_flypes);
 
 //    flype_t flypes[2 * num_tangles];
 //    get_all_flypes_from_pd_code(cr_num, pd_code, flypes);

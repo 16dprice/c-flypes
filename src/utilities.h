@@ -104,4 +104,6 @@ int* get_instrands(int cr_num, int pd_code[cr_num][4], int crossing_index, struc
 
 int* get_outstrands(int cr_num, int pd_code[cr_num][4], int crossing_index, struct pd_tangle tangle);
 
+struct pd_flype_list get_all_flypes_from_pd_code(int cr_num, int pd_code[cr_num][4]);
+
 #endif //C_FLYPES_UTILITIES_H
