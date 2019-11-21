@@ -1,0 +1,1 @@
+gcc -c src/utilities.c src/queue.c src/print_structures.c
