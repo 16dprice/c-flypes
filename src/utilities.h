@@ -100,4 +100,8 @@ struct pd_tangle_list get_non_trivial_tangles_from_pd_code(int cr_num, int pd_co
 
 int* get_strands(int cr_num, int pd_code[cr_num][4], struct pd_tangle tangle);
 
+int* get_instrands(int cr_num, int pd_code[cr_num][4], int crossing_index, struct pd_tangle tangle);
+
+int* get_outstrands(int cr_num, int pd_code[cr_num][4], int crossing_index, struct pd_tangle tangle);
+
 #endif //C_FLYPES_UTILITIES_H

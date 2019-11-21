@@ -51,6 +51,16 @@ int main() {
 
     struct pd_tangle_list non_trivial_tangles = get_non_trivial_tangles_from_pd_code(cr_num, pd_code);
 
+    int* instrands = get_instrands(cr_num, pd_code, 1, non_trivial_tangles.tangles[0]);
+//    if(instrands != NULL) {
+//        printf("Instrands: %d, %d\n", instrands[0], instrands[1]);
+//    }
+
+    int* outstrands = get_outstrands(cr_num, pd_code, 1, non_trivial_tangles.tangles[0]);
+//    if(outstrands != NULL) {
+//        printf("Outstrands: %d, %d\n", outstrands[0], outstrands[1]);
+//    }
+
 //    printf("Flype Count: %d\n", get_num_flypes(cr_num, pd_code));
 
 //    flype_t flypes[2 * num_tangles];

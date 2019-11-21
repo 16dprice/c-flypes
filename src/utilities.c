@@ -10,6 +10,13 @@ const int four_edge_subsets_count[] = {
         15, 70, 210, 495, 1001, 1820, 3060, 4845, 7315, 10626, 14950, 20475, 27405, 35960
 };
 
+bool in_array(int val, int n, int arr[n]) {
+    for(int i = 0; i < n; i++) {
+        if(arr[i] == val) return true;
+    }
+    return false;
+}
+
 void pd_code_t_to_int_array(int cr_num, pd_code_t *pd_code, int pd_code_arr[][4]) {
 
     pd_crossing_t *crossing = pd_code->cross;
@@ -319,6 +326,50 @@ int* get_strands(int cr_num, int pd_code[cr_num][4], struct pd_tangle tangle) {
 
 }
 
+// returns NULL if the crossing is not connected to the tangle by 2 strands
+// otherwise, returns pointer to 2 ints representing the 2 strands connected to the crossing
+int* get_instrands(int cr_num, int pd_code[cr_num][4], int crossing_index, struct pd_tangle tangle) {
+
+    int* strands = get_strands(cr_num, pd_code, tangle);
+    int* instrands = malloc(2 * sizeof(int));
+
+    int instrand_count = 0;
+    for(int i = 0; i < 4; i++) {
+        if(in_array(strands[i], 4, (int*) pd_code[crossing_index])) {
+            instrands[instrand_count++] = strands[i];
+        }
+    }
+
+    if(instrand_count != 2) {
+        return NULL;
+    } else {
+        return instrands;
+    }
+
+}
+
+// returns NULL if the crossing is not connected to the tangle by 2 strands
+// otherwise, returns pointer to 2 ints representing the 2 strands NOT connected to the crossing
+int* get_outstrands(int cr_num, int pd_code[cr_num][4], int crossing_index, struct pd_tangle tangle) {
+
+    int* strands = get_strands(cr_num, pd_code, tangle);
+    int* outstrands = malloc(2 * sizeof(int));
+
+    int outstrand_count = 0;
+    for(int i = 0; i < 4; i++) {
+        if(!in_array(strands[i], 4, (int*) pd_code[crossing_index])) {
+            outstrands[outstrand_count++] = strands[i];
+        }
+    }
+
+    if(outstrand_count != 2) {
+        return NULL;
+    } else {
+        return outstrands;
+    }
+
+}
+
 //int get_tangle_size(int cr_num, int tangle[cr_num]) {
 //    int size = 0;
 //    for(int i = 0; i < cr_num; i++) {
@@ -328,12 +379,6 @@ int* get_strands(int cr_num, int pd_code[cr_num][4], struct pd_tangle tangle) {
 //    return size; // should technically never get here
 //}
 //
-//bool in_array(int val, int n, int arr[n]) {
-//    for(int i = 0; i < n; i++) {
-//        if(arr[i] == val) return true;
-//    }
-//    return false;
-//}
 //
 //bool is_crossing_in_tangle(int cr_num, int crossing[4], int pd_code[cr_num][4], int tangle[cr_num]) {
 //
