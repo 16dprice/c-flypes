@@ -280,6 +280,8 @@ struct pd_tangle_list get_non_trivial_tangles_from_pd_code(int cr_num, int pd_co
 
 }
 
+
+
 //int get_tangle_size(int cr_num, int tangle[cr_num]) {
 //    int size = 0;
 //    for(int i = 0; i < cr_num; i++) {

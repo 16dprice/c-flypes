@@ -93,22 +93,4 @@ int num_non_trivial_tangles(int cr_num, int pd_code[cr_num][4]);
 
 struct pd_tangle_list get_non_trivial_tangles_from_pd_code(int cr_num, int pd_code[cr_num][4]);
 
-int get_tangle_size(int cr_num, int tangle[cr_num]);
-
-bool in_array(int val, int n, int arr[n]);
-
-bool is_crossing_in_tangle(int cr_num, int crossing[4], int pd_code[cr_num][4], int tangle[cr_num]);
-
-void get_flypes_from_tangle(int cr_num, int pd_code[cr_num][4], int tangle[cr_num], int flypable_crossings[2]);
-
-int get_num_flypes(int cr_num, int pd_code[cr_num][4]);
-
-//void get_all_flypes_from_pd_code(int cr_num, int pd_code[cr_num][4], flype_t flypes[]);
-//
-//void get_instrands(flype_t flype, int instrands[2]);
-//
-//int get_next_strand(int crossing[4], int strand);
-//
-//bool is_flype_parallel(flype_t flype);
-
 #endif //C_FLYPES_UTILITIES_H
