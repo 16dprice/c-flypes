@@ -17,7 +17,7 @@ int main() {
     pd_crossing_t *crossing;
 
     // NOTE: the code starts not working for knots of 16 crossings
-    infile = fopen("knot_txt_files/knot_3_1.txt", "r");
+    infile = fopen("knot_txt_files/knot_6_1.txt", "r");
     next_pd_code = pd_read_KnotTheory(infile);
 
     int cr_num = next_pd_code->ncross;
@@ -42,6 +42,9 @@ int main() {
     get_four_edge_subsets_from_edge_list(cr_num, edge_list, four_edge_subset_list);
 
     print_four_edge_subset_list(cr_num, four_edge_subset_list);
+
+    struct pd_tangle* tangles = get_tangles_from_four_edge_subset(cr_num, pd_code, four_edge_subset_list[0]);
+    printf("%d\n", tangles[1].cr_num);
 
 //    int tangle_list[2 * four_edge_subsets_count[cr_num]][cr_num];
 //    memset(tangle_list, -1, sizeof(tangle_list)); // prepare the list

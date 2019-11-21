@@ -1,3 +1,5 @@
+#include <stdint.h>
+
 #include "utilities.h"
 #include "queue.h"
 //#include "plcTopology.h"
@@ -181,6 +183,60 @@ void get_tangle_from_four_edge_subset(int cr_num, int pd_code[cr_num][4], int fo
             tangle[1][++tangle_2_crossing_count] = i;
         }
     }
+
+}
+
+struct pd_tangle* get_tangles_from_four_edge_subset(int cr_num, int pd_code[cr_num][4], int four_edge_subset[4][2]) {
+
+    int adjacency_matrix[cr_num][cr_num];
+    memset(adjacency_matrix, 0, sizeof(adjacency_matrix));
+    generate_adjacency_matrix_from_pd(cr_num, pd_code, adjacency_matrix);
+
+    int new_adjacency_matrix[cr_num][cr_num];
+    remove_four_edges_from_adjacency_matrix(cr_num, four_edge_subset, adjacency_matrix, new_adjacency_matrix);
+
+    int component_designation[cr_num];
+
+    int tangle_1_crossing_count = 0;
+    int tangle_2_crossing_count = 0;
+
+    for(int i = 0; i < cr_num; i++) {
+        if(is_in_same_component(cr_num, new_adjacency_matrix, 0, i)) {
+            component_designation[i] = IS_CONNECTED_TO_0;
+            tangle_1_crossing_count++;
+        } else {
+            component_designation[i] = NOT_CONNECTED_TO_0;
+            tangle_2_crossing_count++;
+        }
+    }
+
+    struct pd_tangle tangle1;
+    struct pd_tangle tangle2;
+
+    tangle1.cr_num = tangle_1_crossing_count;
+    tangle2.cr_num = tangle_2_crossing_count;
+
+    tangle1.crossings = malloc(tangle1.cr_num * sizeof(int));
+    tangle2.crossings = malloc(tangle2.cr_num * sizeof(int));
+
+    // TODO: does this reference to i cause problems later?? Seems questionable, but the compiler isn't mad...
+    for(int i = 0; i < cr_num; i++) {
+        if(component_designation[i] == IS_CONNECTED_TO_0) {
+            tangle1.crossings = &i;
+            tangle1.crossings++;
+        } else {
+            tangle2.crossings = &i;
+            tangle2.crossings++;
+        }
+    }
+
+    struct pd_tangle* tangles;
+    tangles = malloc(sizeof(tangle1) + sizeof(tangle2));
+
+    tangles[0] = tangle1;
+    tangles[1] = tangle2;
+
+    return tangles;
 
 }
 
