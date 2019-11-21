@@ -44,7 +44,6 @@ int main() {
     print_four_edge_subset_list(cr_num, four_edge_subset_list);
 
     struct pd_tangle* tangles = get_tangles_from_four_edge_subset(cr_num, pd_code, four_edge_subset_list[0]);
-    printf("%d\n", tangles[1].cr_num);
 
 //    int tangle_list[2 * four_edge_subsets_count[cr_num]][cr_num];
 //    memset(tangle_list, -1, sizeof(tangle_list)); // prepare the list
