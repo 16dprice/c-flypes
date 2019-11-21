@@ -26,3 +26,17 @@ void print_edge_list(int cr_num, int edge_list[2 * cr_num][2]) {
     printf("------------------------------------------------\n");
 
 }
+
+void print_four_edge_subset_list(int cr_num, int four_edge_subset_list[four_edge_subsets_count[cr_num]][4][2]) {
+
+    printf("\n------------- Four Edge Subset List ------------\n");
+    for(int i = 0; i < four_edge_subsets_count[cr_num]; i++) {
+        printf("Four Edges: ");
+        printf("{%d, %d}, ", four_edge_subset_list[i][0][0], four_edge_subset_list[i][0][1]);
+        printf("{%d, %d}, ", four_edge_subset_list[i][1][0], four_edge_subset_list[i][1][1]);
+        printf("{%d, %d}, ", four_edge_subset_list[i][2][0], four_edge_subset_list[i][2][1]);
+        printf("{%d, %d}\n", four_edge_subset_list[i][3][0], four_edge_subset_list[i][3][1]);
+    }
+    printf("------------------------------------------------\n");
+
+}

@@ -41,10 +41,12 @@ int main() {
 //    pd_code_t *new_pd_code = pd_copy(next_pd_code);
 //    int_array_to_pd_code_t(cr_num, pd_code, new_pd_code);
 //    crossing = new_pd_code->cross;
-//
-//    int four_edge_subset_list[four_edge_subsets_count[cr_num]][4][2];
-//    get_four_edge_subsets_from_edge_list(cr_num, edge_list, four_edge_subset_list);
-//
+
+    int four_edge_subset_list[four_edge_subsets_count[cr_num]][4][2];
+    get_four_edge_subsets_from_edge_list(cr_num, edge_list, four_edge_subset_list);
+
+    print_four_edge_subset_list(cr_num, four_edge_subset_list);
+
 //    int tangle_list[2 * four_edge_subsets_count[cr_num]][cr_num];
 //    memset(tangle_list, -1, sizeof(tangle_list)); // prepare the list
 //    get_all_tangles_from_pd_code(cr_num, pd_code, tangle_list);
