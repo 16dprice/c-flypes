@@ -28,8 +28,13 @@ struct pd_tangle_list {
 };
 
 struct pd_flype {
-    struct pd_crossing cross;
+    int crossing;
     struct pd_tangle tangle;
+};
+
+struct pd_flype_list {
+    int num_flypes;
+    struct pd_flype* flypes;
 };
 
 struct PD_code {
@@ -92,5 +97,7 @@ int num_non_trivial_tangles_from_tangle_list(int cr_num, struct pd_tangle_list t
 int num_non_trivial_tangles(int cr_num, int pd_code[cr_num][4]);
 
 struct pd_tangle_list get_non_trivial_tangles_from_pd_code(int cr_num, int pd_code[cr_num][4]);
+
+int* get_strands(int cr_num, int pd_code[cr_num][4], struct pd_tangle tangle);
 
 #endif //C_FLYPES_UTILITIES_H

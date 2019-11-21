@@ -17,7 +17,7 @@ int main() {
     pd_crossing_t *crossing;
 
     // NOTE: the code starts not working for knots of 16 crossings
-    infile = fopen("knot_txt_files/knot_16_1.txt", "r");
+    infile = fopen("knot_txt_files/knot_6_1.txt", "r");
     next_pd_code = pd_read_KnotTheory(infile);
 
     int cr_num = next_pd_code->ncross;

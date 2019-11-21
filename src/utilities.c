@@ -280,7 +280,44 @@ struct pd_tangle_list get_non_trivial_tangles_from_pd_code(int cr_num, int pd_co
 
 }
 
+// returns pointer to 4 ints representing the 4 strands on the outside of the tangle
+int* get_strands(int cr_num, int pd_code[cr_num][4], struct pd_tangle tangle) {
 
+    int *strands = malloc(4 * sizeof(int));
+
+    // basically flattening out the tangle
+    int all_tangle_strands[4 * tangle.cr_num];
+    for(int i = 0; i < tangle.cr_num; i++) {
+        all_tangle_strands[4 * i + 0] = pd_code[*tangle.crossings][0];
+        all_tangle_strands[4 * i + 1] = pd_code[*tangle.crossings][1];
+        all_tangle_strands[4 * i + 2] = pd_code[*tangle.crossings][2];
+        all_tangle_strands[4 * i + 3] = pd_code[*tangle.crossings][3];
+
+        tangle.crossings++;
+    }
+
+    // if a strand is unique, add it to the strands list
+    // there should be exactly 4
+    int strand, same_strand_count;
+    int strands_found = -1;
+    for(int i = 0; i < 4 * tangle.cr_num; i++) {
+        strand = all_tangle_strands[i];
+        same_strand_count = 0;
+
+        for(int j = 0; j < 4 * tangle.cr_num; j++) {
+            if(strand == all_tangle_strands[j] && i != j) {
+                same_strand_count++;
+            }
+        }
+
+        if(same_strand_count == 0) {
+            strands[++strands_found] = strand;
+        }
+    }
+
+    return strands;
+
+}
 
 //int get_tangle_size(int cr_num, int tangle[cr_num]) {
 //    int size = 0;
