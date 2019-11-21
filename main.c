@@ -30,25 +30,27 @@ int main() {
     memset(adjacency_matrix, 0, sizeof(adjacency_matrix)); // init all values to 0
     generate_adjacency_matrix_from_pd(cr_num, pd_code, adjacency_matrix);
 
-    print_adjacency_matrix(cr_num, adjacency_matrix);
+//    print_adjacency_matrix(cr_num, adjacency_matrix);
 
     // get the edge list of the graph from the adjacency matrix
     int edge_list[2 * cr_num][2];
     get_edge_list_from_adjacency_matrix(cr_num, edge_list, adjacency_matrix);
 
-    print_edge_list(cr_num, edge_list);
+//    print_edge_list(cr_num, edge_list);
 
     int four_edge_subset_list[four_edge_subsets_count[cr_num]][4][2];
     get_four_edge_subsets_from_edge_list(cr_num, edge_list, four_edge_subset_list);
 
-    print_four_edge_subset_list(cr_num, four_edge_subset_list);
+//    print_four_edge_subset_list(cr_num, four_edge_subset_list);
 
-    struct pd_tangle* tangles = get_tangles_from_four_edge_subset(cr_num, pd_code, four_edge_subset_list[0]);
+    struct pd_tangle_list tangles = get_all_tangles_from_pd_code(cr_num, pd_code);
 
-//    int tangle_list[2 * four_edge_subsets_count[cr_num]][cr_num];
-//    memset(tangle_list, -1, sizeof(tangle_list)); // prepare the list
-//    get_all_tangles_from_pd_code(cr_num, pd_code, tangle_list);
-//
+//    for(int i = 0; i < tangles.num_tangles; i++) {
+//        print_pd_tangle(tangles.tangles[i]);
+//    }
+
+    
+
 //    int num_tangles = num_non_trivial_tangles(cr_num, pd_code);
 //    int non_trivial_tangle_list[num_tangles][cr_num];
 //    memset(non_trivial_tangle_list, -1, sizeof(non_trivial_tangle_list));

@@ -155,7 +155,7 @@ bool is_connected_after_removal_of_edges(int cr_num, int four_edge_subset[4][2],
 }
 
 // this function assumes that the four edge subset will disconnect the graph
-struct pd_tangle* get_tangles_from_four_edge_subset(int cr_num, int pd_code[cr_num][4], int four_edge_subset[4][2]) {
+struct pd_tangle_list get_tangles_from_four_edge_subset(int cr_num, int pd_code[cr_num][4], int four_edge_subset[4][2]) {
 
     int adjacency_matrix[cr_num][cr_num];
     memset(adjacency_matrix, 0, sizeof(adjacency_matrix));
@@ -196,11 +196,13 @@ struct pd_tangle* get_tangles_from_four_edge_subset(int cr_num, int pd_code[cr_n
         }
     }
 
-    struct pd_tangle* tangles;
-    tangles = malloc(sizeof(tangle1) + sizeof(tangle2));
+    struct pd_tangle_list tangles;
+    tangles.num_tangles = 2;
 
-    tangles[0] = tangle1;
-    tangles[1] = tangle2;
+    tangles.tangles = malloc(sizeof(tangle1) + sizeof(tangle2));
+
+    tangles.tangles[0] = tangle1;
+    tangles.tangles[1] = tangle2;
 
     return tangles;
 
@@ -208,12 +210,7 @@ struct pd_tangle* get_tangles_from_four_edge_subset(int cr_num, int pd_code[cr_n
 
 // each index of tangle list will be a list of numbers indicating which indices of pd_code make up the tangle
 // all other values should be -1
-void get_all_tangles_from_pd_code(int cr_num, int pd_code[cr_num][4], int tangle_list[2 * four_edge_subsets_count[cr_num]][cr_num]) {
-
-    // the max number of tangles that are possible is 2 * max number of four edge subsets
-    // because each four edge subset could potentially split the knot into two tangles
-
-    // in reality, there are much fewer tangles than that, but this is an upper limit
+struct pd_tangle_list get_all_tangles_from_pd_code(int cr_num, int pd_code[cr_num][4]) {
 
     int adjacency_matrix[cr_num][cr_num];
     memset(adjacency_matrix, 0, sizeof(adjacency_matrix));
@@ -225,180 +222,166 @@ void get_all_tangles_from_pd_code(int cr_num, int pd_code[cr_num][4], int tangle
     int four_edge_subset_list[four_edge_subsets_count[cr_num]][4][2];
     get_four_edge_subsets_from_edge_list(cr_num, edge_list, four_edge_subset_list);
 
+    // the max number of tangles that are possible is 2 * max number of four edge subsets
+    // because each four edge subset could potentially split the knot into two tangles
+    // in reality, there are much fewer tangles than that, but this is an upper limit
+    struct pd_tangle_list tangles;
+    tangles.tangles = malloc(2 * four_edge_subsets_count[cr_num] * sizeof(struct pd_tangle));
+
     int tangle_count = -1;
     for(int i = 0; i < four_edge_subsets_count[cr_num]; i++) {
-
         if(!is_connected_after_removal_of_edges(cr_num, four_edge_subset_list[i], adjacency_matrix)) {
-            int two_tangle_list[2][cr_num];
-            memset(two_tangle_list, -1, sizeof(two_tangle_list));
-            get_tangle_from_four_edge_subset(cr_num, pd_code, four_edge_subset_list[i], two_tangle_list);
-
-            tangle_count++;
-
-            for(int j = 0; j < cr_num; j++) {
-                tangle_list[tangle_count][j] = two_tangle_list[0][j];
-            }
-
-            tangle_count++;
-
-            for(int j = 0; j < cr_num; j++) {
-                tangle_list[tangle_count][j] = two_tangle_list[1][j];
-            }
-        }
-
-    }
-
-}
-
-bool is_tangle_trivial(int cr_num, const int *tangle) {
-    int minus_1_count = 0;
-    for(int i = 0; i < cr_num; i++) {
-        if(tangle[i] == -1) {
-            minus_1_count++;
+            struct pd_tangle_list new_tangles = get_tangles_from_four_edge_subset(cr_num, pd_code, four_edge_subset_list[i]);
+            tangles.tangles[++tangle_count] = new_tangles.tangles[0];
+            tangles.tangles[++tangle_count] = new_tangles.tangles[1];
         }
     }
-    if(minus_1_count == 0 || minus_1_count == 1 || minus_1_count == (cr_num - 1) || minus_1_count == cr_num) {
-        return true;
-    }
-    return false;
-}
+    tangles.num_tangles = tangle_count + 1;
 
-int num_non_trivial_tangles(int cr_num, int pd_code[cr_num][4]) {
-
-    int tangle_list[2 * four_edge_subsets_count[cr_num]][cr_num];
-    memset(tangle_list, -1, sizeof(tangle_list));
-    get_all_tangles_from_pd_code(cr_num, pd_code, tangle_list);
-
-    int tangle_count = 0;
-    for(int i = 0; i < 2 * four_edge_subsets_count[cr_num]; i++) {
-        if(!is_tangle_trivial(cr_num, tangle_list[i])) {
-            tangle_count++;
-        }
-    }
-
-    return tangle_count;
+    return tangles;
 
 }
 
-void get_non_trivial_tangles_from_pd_code(int cr_num, int pd_code[cr_num][4], int non_trivial_tangle_list[][cr_num]) {
-
-    // tangle list should have first dimension length of num_tangles(cr_num, pd_code) and be initialized to all -1's
-    int non_trivial_tangle_count = -1;
-    int tangle_list[2 * four_edge_subsets_count[cr_num]][cr_num];
-    memset(tangle_list, -1, sizeof(tangle_list));
-
-    get_all_tangles_from_pd_code(cr_num, pd_code, tangle_list);
-
-    for(int i = 0; i < 2 * four_edge_subsets_count[cr_num]; i++) {
-        if(!is_tangle_trivial(cr_num, tangle_list[i])) {
-            non_trivial_tangle_count++;
-            for(int j = 0; j < cr_num; j++) {
-                non_trivial_tangle_list[non_trivial_tangle_count][j] = tangle_list[i][j];
-            }
-        }
-    }
-
+bool is_tangle_trivial(int cr_num, struct pd_tangle tangle) {
+    return tangle.cr_num == cr_num - 1 || tangle.cr_num == 1;
 }
-
-int get_tangle_size(int cr_num, int tangle[cr_num]) {
-    int size = 0;
-    for(int i = 0; i < cr_num; i++) {
-        if(tangle[i] == -1) return size;
-        size++;
-    }
-    return size; // should technically never get here
-}
-
-bool in_array(int val, int n, int arr[n]) {
-    for(int i = 0; i < n; i++) {
-        if(arr[i] == val) return true;
-    }
-    return false;
-}
-
-bool is_crossing_in_tangle(int cr_num, int crossing[4], int pd_code[cr_num][4], int tangle[cr_num]) {
-
-    for(int i = 0; i < cr_num; i++) {
-        if(tangle[i] == -1) return false;
-
-        if(pd_code[i][0] == crossing[0] && pd_code[i][1] == crossing[1] && pd_code[i][2] == crossing[2] && pd_code[i][3] == crossing[3]) {
-            return true;
-        }
-    }
-    return false;
-
-}
-
-bool is_crossing_flypable(int cr_num, int crossing[4], int pd_code[cr_num][4], int tangle[cr_num]) {
-    int tangle_size = get_tangle_size(cr_num, tangle);
-
-    // load up all the edge values that are in the tangle
-    int tangle_edges[4 * tangle_size];
-    for(int i = 0; i < tangle_size; i++) {
-        tangle_edges[4 * i    ] = pd_code[tangle[i]][0];
-        tangle_edges[4 * i + 1] = pd_code[tangle[i]][1];
-        tangle_edges[4 * i + 2] = pd_code[tangle[i]][2];
-        tangle_edges[4 * i + 3] = pd_code[tangle[i]][3];
-    }
-
-    int edges_connected_to_tangle = 0;
-    for(int i = 0; i < 4; i++) {
-        if(in_array(crossing[i], 4 * tangle_size, tangle_edges)) {
-            edges_connected_to_tangle++;
-        }
-    }
-
-    return edges_connected_to_tangle == 2;
-
-}
-
-void get_flypes_from_tangle(int cr_num, int pd_code[cr_num][4], int tangle[cr_num], int flypable_crossings[2]) {
-
-    int flypes_found = -1;
-
-    // for each crossing, if it's not in the tangle, check to see if it shares
-    for(int i = 0; i < cr_num; i++) {
-        if(!in_array(i, cr_num, tangle)) {
-            if(is_crossing_flypable(cr_num, pd_code[i], pd_code, tangle)) {
-                flypable_crossings[++flypes_found] = i;
-            }
-        }
-    }
-
-    if(flypes_found > 1) {
-        printf("Error in get_flypes_from_tangle. Too many flypes found!\n");
-    }
-
-}
-
-int get_num_flypes(int cr_num, int pd_code[cr_num][4]) {
-
-    int num_tangles = num_non_trivial_tangles(cr_num, pd_code);
-    int non_trivial_tangle_list[num_tangles][cr_num];
-    memset(non_trivial_tangle_list, -1, sizeof(non_trivial_tangle_list));
-
-    get_non_trivial_tangles_from_pd_code(cr_num, pd_code, non_trivial_tangle_list);
-
-    int num_flypes_found = 0;
-    for(int i = 0; i < num_tangles; i++) {
-
-        int flypable_crossings[2];
-        memset(flypable_crossings, -1, sizeof(flypable_crossings));
-
-        get_flypes_from_tangle(cr_num, pd_code, non_trivial_tangle_list[i], flypable_crossings);
-
-        if(flypable_crossings[0] != -1) {
-            num_flypes_found++;
-        }
-
-        if(flypable_crossings[1] != -1) {
-            num_flypes_found++;
-        }
-
-    }
-
-    return num_flypes_found;
-}
+//
+//int num_non_trivial_tangles(int cr_num, int pd_code[cr_num][4]) {
+//
+//    int tangle_list[2 * four_edge_subsets_count[cr_num]][cr_num];
+//    memset(tangle_list, -1, sizeof(tangle_list));
+//    get_all_tangles_from_pd_code(cr_num, pd_code, tangle_list);
+//
+//    int tangle_count = 0;
+//    for(int i = 0; i < 2 * four_edge_subsets_count[cr_num]; i++) {
+//        if(!is_tangle_trivial(cr_num, tangle_list[i])) {
+//            tangle_count++;
+//        }
+//    }
+//
+//    return tangle_count;
+//
+//}
+//
+//void get_non_trivial_tangles_from_pd_code(int cr_num, int pd_code[cr_num][4], int non_trivial_tangle_list[][cr_num]) {
+//
+//    // tangle list should have first dimension length of num_tangles(cr_num, pd_code) and be initialized to all -1's
+//    int non_trivial_tangle_count = -1;
+//    int tangle_list[2 * four_edge_subsets_count[cr_num]][cr_num];
+//    memset(tangle_list, -1, sizeof(tangle_list));
+//
+//    get_all_tangles_from_pd_code(cr_num, pd_code, tangle_list);
+//
+//    for(int i = 0; i < 2 * four_edge_subsets_count[cr_num]; i++) {
+//        if(!is_tangle_trivial(cr_num, tangle_list[i])) {
+//            non_trivial_tangle_count++;
+//            for(int j = 0; j < cr_num; j++) {
+//                non_trivial_tangle_list[non_trivial_tangle_count][j] = tangle_list[i][j];
+//            }
+//        }
+//    }
+//
+//}
+//
+//int get_tangle_size(int cr_num, int tangle[cr_num]) {
+//    int size = 0;
+//    for(int i = 0; i < cr_num; i++) {
+//        if(tangle[i] == -1) return size;
+//        size++;
+//    }
+//    return size; // should technically never get here
+//}
+//
+//bool in_array(int val, int n, int arr[n]) {
+//    for(int i = 0; i < n; i++) {
+//        if(arr[i] == val) return true;
+//    }
+//    return false;
+//}
+//
+//bool is_crossing_in_tangle(int cr_num, int crossing[4], int pd_code[cr_num][4], int tangle[cr_num]) {
+//
+//    for(int i = 0; i < cr_num; i++) {
+//        if(tangle[i] == -1) return false;
+//
+//        if(pd_code[i][0] == crossing[0] && pd_code[i][1] == crossing[1] && pd_code[i][2] == crossing[2] && pd_code[i][3] == crossing[3]) {
+//            return true;
+//        }
+//    }
+//    return false;
+//
+//}
+//
+//bool is_crossing_flypable(int cr_num, int crossing[4], int pd_code[cr_num][4], int tangle[cr_num]) {
+//    int tangle_size = get_tangle_size(cr_num, tangle);
+//
+//    // load up all the edge values that are in the tangle
+//    int tangle_edges[4 * tangle_size];
+//    for(int i = 0; i < tangle_size; i++) {
+//        tangle_edges[4 * i    ] = pd_code[tangle[i]][0];
+//        tangle_edges[4 * i + 1] = pd_code[tangle[i]][1];
+//        tangle_edges[4 * i + 2] = pd_code[tangle[i]][2];
+//        tangle_edges[4 * i + 3] = pd_code[tangle[i]][3];
+//    }
+//
+//    int edges_connected_to_tangle = 0;
+//    for(int i = 0; i < 4; i++) {
+//        if(in_array(crossing[i], 4 * tangle_size, tangle_edges)) {
+//            edges_connected_to_tangle++;
+//        }
+//    }
+//
+//    return edges_connected_to_tangle == 2;
+//
+//}
+//
+//void get_flypes_from_tangle(int cr_num, int pd_code[cr_num][4], int tangle[cr_num], int flypable_crossings[2]) {
+//
+//    int flypes_found = -1;
+//
+//    // for each crossing, if it's not in the tangle, check to see if it shares
+//    for(int i = 0; i < cr_num; i++) {
+//        if(!in_array(i, cr_num, tangle)) {
+//            if(is_crossing_flypable(cr_num, pd_code[i], pd_code, tangle)) {
+//                flypable_crossings[++flypes_found] = i;
+//            }
+//        }
+//    }
+//
+//    if(flypes_found > 1) {
+//        printf("Error in get_flypes_from_tangle. Too many flypes found!\n");
+//    }
+//
+//}
+//
+//int get_num_flypes(int cr_num, int pd_code[cr_num][4]) {
+//
+//    int num_tangles = num_non_trivial_tangles(cr_num, pd_code);
+//    int non_trivial_tangle_list[num_tangles][cr_num];
+//    memset(non_trivial_tangle_list, -1, sizeof(non_trivial_tangle_list));
+//
+//    get_non_trivial_tangles_from_pd_code(cr_num, pd_code, non_trivial_tangle_list);
+//
+//    int num_flypes_found = 0;
+//    for(int i = 0; i < num_tangles; i++) {
+//
+//        int flypable_crossings[2];
+//        memset(flypable_crossings, -1, sizeof(flypable_crossings));
+//
+//        get_flypes_from_tangle(cr_num, pd_code, non_trivial_tangle_list[i], flypable_crossings);
+//
+//        if(flypable_crossings[0] != -1) {
+//            num_flypes_found++;
+//        }
+//
+//        if(flypable_crossings[1] != -1) {
+//            num_flypes_found++;
+//        }
+//
+//    }
+//
+//    return num_flypes_found;
+//}
 
 //void get_all_flypes_from_pd_code(int cr_num, int pd_code[cr_num][4], flype_t flypes[]) {
 //

@@ -22,6 +22,11 @@ struct pd_tangle {
     int* crossings; // a list of indices in the pd code array
 };
 
+struct pd_tangle_list {
+    int num_tangles;
+    struct pd_tangle* tangles;
+};
+
 struct pd_flype {
     struct pd_crossing cross;
     struct pd_tangle tangle;
@@ -76,11 +81,11 @@ void remove_four_edges_from_adjacency_matrix(int cr_num, int four_edge_subset[4]
 
 bool is_connected_after_removal_of_edges(int cr_num, int four_edge_subset[4][2], int adjacency_matrix[cr_num][cr_num]);
 
-struct pd_tangle* get_tangles_from_four_edge_subset(int cr_num, int pd_code[cr_num][4], int four_edge_subset[4][2]);
+struct pd_tangle_list get_tangles_from_four_edge_subset(int cr_num, int pd_code[cr_num][4], int four_edge_subset[4][2]);
 
-void get_all_tangles_from_pd_code(int cr_num, int pd_code[cr_num][4], int tangle_list[2 * four_edge_subsets_count[cr_num]][cr_num]);
+struct pd_tangle_list get_all_tangles_from_pd_code(int cr_num, int pd_code[cr_num][4]);
 
-bool is_tangle_trivial(int cr_num, const int *tangle);
+bool is_tangle_trivial(int cr_num, struct pd_tangle tangle);
 
 int num_non_trivial_tangles(int cr_num, int pd_code[cr_num][4]);
 
