@@ -245,44 +245,41 @@ struct pd_tangle_list get_all_tangles_from_pd_code(int cr_num, int pd_code[cr_nu
 bool is_tangle_trivial(int cr_num, struct pd_tangle tangle) {
     return tangle.cr_num == cr_num - 1 || tangle.cr_num == 1;
 }
-//
-//int num_non_trivial_tangles(int cr_num, int pd_code[cr_num][4]) {
-//
-//    int tangle_list[2 * four_edge_subsets_count[cr_num]][cr_num];
-//    memset(tangle_list, -1, sizeof(tangle_list));
-//    get_all_tangles_from_pd_code(cr_num, pd_code, tangle_list);
-//
-//    int tangle_count = 0;
-//    for(int i = 0; i < 2 * four_edge_subsets_count[cr_num]; i++) {
-//        if(!is_tangle_trivial(cr_num, tangle_list[i])) {
-//            tangle_count++;
-//        }
-//    }
-//
-//    return tangle_count;
-//
-//}
-//
-//void get_non_trivial_tangles_from_pd_code(int cr_num, int pd_code[cr_num][4], int non_trivial_tangle_list[][cr_num]) {
-//
-//    // tangle list should have first dimension length of num_tangles(cr_num, pd_code) and be initialized to all -1's
-//    int non_trivial_tangle_count = -1;
-//    int tangle_list[2 * four_edge_subsets_count[cr_num]][cr_num];
-//    memset(tangle_list, -1, sizeof(tangle_list));
-//
-//    get_all_tangles_from_pd_code(cr_num, pd_code, tangle_list);
-//
-//    for(int i = 0; i < 2 * four_edge_subsets_count[cr_num]; i++) {
-//        if(!is_tangle_trivial(cr_num, tangle_list[i])) {
-//            non_trivial_tangle_count++;
-//            for(int j = 0; j < cr_num; j++) {
-//                non_trivial_tangle_list[non_trivial_tangle_count][j] = tangle_list[i][j];
-//            }
-//        }
-//    }
-//
-//}
-//
+
+int num_non_trivial_tangles_from_tangle_list(int cr_num, struct pd_tangle_list tangles) {
+    int trivial_count = 0;
+
+    for(int i = 0; i < tangles.num_tangles; i++) {
+        if(is_tangle_trivial(cr_num, tangles.tangles[i])) trivial_count++;
+    }
+
+    return tangles.num_tangles - trivial_count;
+}
+
+int num_non_trivial_tangles(int cr_num, int pd_code[cr_num][4]) {
+    struct pd_tangle_list tangles = get_all_tangles_from_pd_code(cr_num, pd_code);
+    return num_non_trivial_tangles_from_tangle_list(cr_num, tangles);
+}
+
+struct pd_tangle_list get_non_trivial_tangles_from_pd_code(int cr_num, int pd_code[cr_num][4]) {
+
+    struct pd_tangle_list all_tangles = get_all_tangles_from_pd_code(cr_num, pd_code);
+    struct pd_tangle_list non_trivial_tangles;
+
+    non_trivial_tangles.num_tangles = num_non_trivial_tangles_from_tangle_list(cr_num, all_tangles);
+    non_trivial_tangles.tangles = malloc(non_trivial_tangles.num_tangles * sizeof(struct pd_tangle));
+
+    int non_trivial_tangle_count = -1;
+    for(int i = 0; i < all_tangles.num_tangles; i++) {
+        if(!is_tangle_trivial(cr_num, all_tangles.tangles[i])) {
+            non_trivial_tangles.tangles[++non_trivial_tangle_count] = all_tangles.tangles[i];
+        }
+    }
+
+    return non_trivial_tangles;
+
+}
+
 //int get_tangle_size(int cr_num, int tangle[cr_num]) {
 //    int size = 0;
 //    for(int i = 0; i < cr_num; i++) {

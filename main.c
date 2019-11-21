@@ -17,7 +17,7 @@ int main() {
     pd_crossing_t *crossing;
 
     // NOTE: the code starts not working for knots of 16 crossings
-    infile = fopen("knot_txt_files/knot_6_1.txt", "r");
+    infile = fopen("knot_txt_files/knot_16_1.txt", "r");
     next_pd_code = pd_read_KnotTheory(infile);
 
     int cr_num = next_pd_code->ncross;
@@ -49,13 +49,7 @@ int main() {
 //        print_pd_tangle(tangles.tangles[i]);
 //    }
 
-    
-
-//    int num_tangles = num_non_trivial_tangles(cr_num, pd_code);
-//    int non_trivial_tangle_list[num_tangles][cr_num];
-//    memset(non_trivial_tangle_list, -1, sizeof(non_trivial_tangle_list));
-//
-//    get_non_trivial_tangles_from_pd_code(cr_num, pd_code, non_trivial_tangle_list);
+    struct pd_tangle_list non_trivial_tangles = get_non_trivial_tangles_from_pd_code(cr_num, pd_code);
 
 //    printf("Flype Count: %d\n", get_num_flypes(cr_num, pd_code));
 

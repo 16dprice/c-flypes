@@ -87,9 +87,11 @@ struct pd_tangle_list get_all_tangles_from_pd_code(int cr_num, int pd_code[cr_nu
 
 bool is_tangle_trivial(int cr_num, struct pd_tangle tangle);
 
+int num_non_trivial_tangles_from_tangle_list(int cr_num, struct pd_tangle_list tangles);
+
 int num_non_trivial_tangles(int cr_num, int pd_code[cr_num][4]);
 
-void get_non_trivial_tangles_from_pd_code(int cr_num, int pd_code[cr_num][4], int non_trivial_tangle_list[][cr_num]);
+struct pd_tangle_list get_non_trivial_tangles_from_pd_code(int cr_num, int pd_code[cr_num][4]);
 
 int get_tangle_size(int cr_num, int tangle[cr_num]);
 
