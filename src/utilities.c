@@ -195,38 +195,35 @@ struct pd_tangle* get_tangles_from_four_edge_subset(int cr_num, int pd_code[cr_n
     int new_adjacency_matrix[cr_num][cr_num];
     remove_four_edges_from_adjacency_matrix(cr_num, four_edge_subset, adjacency_matrix, new_adjacency_matrix);
 
-    int component_designation[cr_num];
+    struct pd_tangle tangle1;
+    struct pd_tangle tangle2;
 
-    int tangle_1_crossing_count = 0;
-    int tangle_2_crossing_count = 0;
+    tangle1.cr_num = 0;
+    tangle2.cr_num = 0;
+
+    int component_designation[cr_num];
 
     for(int i = 0; i < cr_num; i++) {
         if(is_in_same_component(cr_num, new_adjacency_matrix, 0, i)) {
             component_designation[i] = IS_CONNECTED_TO_0;
-            tangle_1_crossing_count++;
+            tangle1.cr_num++;
         } else {
             component_designation[i] = NOT_CONNECTED_TO_0;
-            tangle_2_crossing_count++;
+            tangle2.cr_num++;
         }
     }
 
-    struct pd_tangle tangle1;
-    struct pd_tangle tangle2;
-
-    tangle1.cr_num = tangle_1_crossing_count;
-    tangle2.cr_num = tangle_2_crossing_count;
+    int tangle_1_crossing_count = -1;
+    int tangle_2_crossing_count = -1;
 
     tangle1.crossings = malloc(tangle1.cr_num * sizeof(int));
     tangle2.crossings = malloc(tangle2.cr_num * sizeof(int));
 
-    // TODO: does this reference to i cause problems later?? Seems questionable, but the compiler isn't mad...
     for(int i = 0; i < cr_num; i++) {
         if(component_designation[i] == IS_CONNECTED_TO_0) {
-            tangle1.crossings = &i;
-            tangle1.crossings++;
+            tangle1.crossings[++tangle_1_crossing_count] = i;
         } else {
-            tangle2.crossings = &i;
-            tangle2.crossings++;
+            tangle2.crossings[++tangle_2_crossing_count] = i;
         }
     }
 
