@@ -1,3 +1,4 @@
+#include "utilities.h"
 #include "print_structures.h"
 
 // print comment length >
@@ -6,6 +7,20 @@
 
 void print_end_sequence() {
     printf("------------------------------------------------\n");
+}
+
+void print_crossing(int pd_code[][4], int crossing_index) {
+
+    printf("\n------------------- Crossing -------------------\n");
+
+    printf("Crossing: {%d, %d, %d, %d}\n",
+           pd_code[crossing_index][0],
+           pd_code[crossing_index][1],
+           pd_code[crossing_index][2],
+           pd_code[crossing_index][3]
+    );
+
+    print_end_sequence();
 }
 
 void print_adjacency_matrix(int cr_num, int adjacency_matrix[cr_num][cr_num]) {
@@ -61,6 +76,28 @@ void print_pd_tangle(struct pd_tangle tangle) {
         }
         crossings++;
     }
+    print_end_sequence();
+
+}
+
+void print_pd_flype(int cr_num, int pd_code[cr_num][4], struct pd_flype flype) {
+
+    printf("\n------------------ Flype Info ------------------\n");
+
+    printf("Crossing: #%d, {%d, %d, %d, %d}\n",
+           flype.crossing,
+           pd_code[flype.crossing][0],
+           pd_code[flype.crossing][1],
+           pd_code[flype.crossing][2],
+           pd_code[flype.crossing][3]
+    );
+
+    int* crossings = (int*) flype.tangle.crossings;
+    for(int i = 0; i < flype.tangle.cr_num; i++) {
+        print_crossing(pd_code, *crossings);
+        crossings++;
+    }
+
     print_end_sequence();
 
 }

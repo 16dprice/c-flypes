@@ -1,5 +1,6 @@
 #include <stdint.h>
 
+#include "print_structures.h"
 #include "utilities.h"
 #include "queue.h"
 //#include "plcTopology.h"
@@ -393,8 +394,6 @@ struct pd_flype_list get_all_flypes_from_pd_code(int cr_num, int pd_code[cr_num]
     struct pd_flype_list all_flypes;
     all_flypes.flypes = malloc(2 * non_trivial_tangles.num_tangles * sizeof(struct pd_flype));
 
-    printf("Number of tangles: %d\n", non_trivial_tangles.num_tangles);
-
     // for each tangle, look at each crossing
     // if the instrands for that crossing and tangle is not NULL, that means the tangle can be flyped over it
     int flypes_found = 0;
@@ -415,6 +414,29 @@ struct pd_flype_list get_all_flypes_from_pd_code(int cr_num, int pd_code[cr_num]
     all_flypes.num_flypes = flypes_found;
 
     return all_flypes;
+
+}
+
+int get_next_strand(int strand, int crossing[4]) {
+    if(crossing[0] == strand) return crossing[2];
+    if(crossing[1] == strand) return crossing[3];
+    if(crossing[2] == strand) return crossing[0];
+    if(crossing[3] == strand) return crossing[1];
+}
+
+bool is_flype_parallel(int cr_num, int pd_code[cr_num][4], struct pd_flype flype) {
+
+    int* instrands = get_instrands(cr_num, pd_code, flype.crossing, flype.tangle);
+
+    int diff1 = instrands[0] - get_next_strand(instrands[0], pd_code[flype.crossing]);
+    if(diff1 > 1) diff1 = -1;
+    if(diff1 < -1) diff1 = 1;
+
+    int diff2 = instrands[1] - get_next_strand(instrands[1], pd_code[flype.crossing]);
+    if(diff2 > 1) diff2 = -1;
+    if(diff2 < -1) diff2 = 1;
+
+    return diff1 == diff2;
 
 }
 
