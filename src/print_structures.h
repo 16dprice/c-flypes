@@ -5,6 +5,12 @@
 
 #include "utilities.h"
 
+void print_pd_code(int cr_num, int pd_code[cr_num][4]);
+
+void print_crossing_array(int crossing[4]);
+
+void print_array(int arr[], int n);
+
 void print_adjacency_matrix(int cr_num, int adjacency_matrix[cr_num][cr_num]);
 
 void print_edge_list(int cr_num, int edge_list[2 * cr_num][2]);

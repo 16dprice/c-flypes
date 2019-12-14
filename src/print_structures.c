@@ -9,6 +9,23 @@ void print_end_sequence() {
     printf("------------------------------------------------\n");
 }
 
+void print_pd_code(int cr_num, int pd_code[cr_num][4]) {
+
+    printf("\n------------------- PD Code --------------------\n");
+
+    for(int i = 0; i < cr_num; i++) {
+        printf("{%d, %d, %d, %d} ",
+               pd_code[i][0],
+               pd_code[i][1],
+               pd_code[i][2],
+               pd_code[i][3]
+        );
+    }
+    printf("\n");
+    print_end_sequence();
+
+}
+
 void print_crossing(int pd_code[][4], int crossing_index) {
 
     printf("\n------------------- Crossing -------------------\n");
@@ -21,6 +38,30 @@ void print_crossing(int pd_code[][4], int crossing_index) {
     );
 
     print_end_sequence();
+}
+
+void print_crossing_array(int crossing[4]) {
+    printf("\n------------------- Crossing -------------------\n");
+
+    printf("Crossing: {%d, %d, %d, %d}\n",
+           crossing[0],
+           crossing[1],
+           crossing[2],
+           crossing[3]
+    );
+
+    print_end_sequence();
+}
+
+void print_array(int arr[], int n) {
+
+    printf("\n--------------------- Array --------------------\n");
+    for(int i = 0; i < n; i++) {
+        printf("%d : ", arr[i]);
+    }
+    printf("\n");
+    print_end_sequence();
+
 }
 
 void print_adjacency_matrix(int cr_num, int adjacency_matrix[cr_num][cr_num]) {
