@@ -1,4 +1,5 @@
 #include <stdint.h>
+#include <math.h>
 
 #include "print_structures.h"
 #include "utilities.h"
@@ -440,4 +441,303 @@ bool is_flype_parallel(int cr_num, int pd_code[cr_num][4], struct pd_flype flype
 
 }
 
+bool is_boundary_in_code(int cr_num, int pd_code[cr_num][4], struct pd_flype flype) {
 
+    if(in_array(1, 4, pd_code[flype.crossing]) && in_array(2 * cr_num, 4, pd_code[flype.crossing])) return true;
+
+    int* crossings = flype.tangle.crossings;
+    for(int i = 0; i < flype.tangle.cr_num; i++) {
+        if(in_array(1, 4, pd_code[*crossings]) && in_array(2 * cr_num, 4, pd_code[*crossings])) return true;
+        crossings++;
+    }
+
+    return false;
+
+}
+
+bool is_sorted(int arr[4]) {
+    for(int i = 0; i < 3; i++) {
+        if(arr[i] > arr[i + 1]) {
+            return false;
+        }
+    }
+    return true;
+}
+
+void sort_in_and_outstrands(int arr[4]) {
+
+    int temp;
+    while(!is_sorted(arr)) {
+        for(int i = 0; i < 3; i++) {
+            if(arr[i] > arr[i + 1]) {
+                temp = arr[i];
+                arr[i] = arr[i + 1];
+                arr[i + 1] = temp;
+            }
+        }
+    }
+
+}
+
+bool is_crossing_positive(int crossing[4]) {
+    return (crossing[1] - crossing[3] == 1 || crossing[1] - crossing[3] < -1);
+}
+
+void flip_crossing(int crossing[4]) {
+    int crossing_copy[] = {
+            crossing[0], crossing[1], crossing[2], crossing[3]
+    };
+
+    bool is_positive = is_crossing_positive(crossing);
+
+    if(is_positive) {
+        crossing[0] = crossing_copy[3];
+        crossing[1] = crossing_copy[2];
+        crossing[2] = crossing_copy[1];
+        crossing[3] = crossing_copy[0];
+    } else {
+        crossing[0] = crossing_copy[1];
+        crossing[1] = crossing_copy[0];
+        crossing[2] = crossing_copy[3];
+        crossing[3] = crossing_copy[2];
+    }
+
+}
+
+int ensure_strand_is_in_bounds(int strand, int cr_num) {
+    int return_strand = (strand + (2 * cr_num)) % (2 * cr_num);
+    if(return_strand == 0) return 2 * cr_num;
+    return return_strand;
+}
+
+void copy_crossing(int crossing[4], int new_crossing[4]) {
+    for(int j = 0; j < 4; j++) {
+        crossing[j] = new_crossing[j];
+    }
+}
+
+void anti_parallel_flype(int cr_num, int pd_code[cr_num][4], struct pd_flype flype, int new_pd_code[cr_num][4]) {
+
+    for(int i = 0; i < cr_num; i++) {
+        for(int j = 0; j < 4; j++) {
+            new_pd_code[i][j] = pd_code[i][j];
+        }
+    }
+
+    int count = 0; // extra safeguard
+    while(is_boundary_in_code(cr_num, new_pd_code, flype) && count <= 2 * cr_num) {
+        for(int i = 0; i < cr_num; i++) {
+            for(int j = 0; j < 4; j++) {
+                new_pd_code[i][j] += 1;
+            }
+        }
+        count++;
+    }
+
+    int* instrands =  get_instrands (cr_num, new_pd_code, flype.crossing, flype.tangle);
+    int* outstrands = get_outstrands(cr_num, new_pd_code, flype.crossing, flype.tangle);
+
+    int a, b;
+    if(instrands[0] - get_next_strand(instrands[0], new_pd_code[flype.crossing]) == 1) {
+        a = instrands[0];
+        b = instrands[1];
+    } else {
+        a = instrands[1];
+        b = instrands[0];
+    }
+
+    int in_and_outstrands[] = {
+            instrands[0], instrands[1], outstrands[0], outstrands[1]
+    };
+
+    sort_in_and_outstrands(in_and_outstrands);
+
+    bool is_parity_inf;
+    if((in_and_outstrands[0] == a && in_and_outstrands[1] == b) || (in_and_outstrands[2] == a && in_and_outstrands[3] == b)) {
+        is_parity_inf = true;
+    } else {
+        is_parity_inf = false;
+    }
+
+    int c, d;
+    if(is_parity_inf) {
+        // is parity infinity
+        if(outstrands[0] < outstrands[1]) {
+            c = outstrands[0];
+            d = outstrands[1];
+        } else {
+            c = outstrands[1];
+            d = outstrands[0];
+        }
+    } else {
+        // is NOT parity infinity
+        if(abs(a - outstrands[0]) + abs(b - outstrands[1]) == 2 * flype.tangle.cr_num) {
+            c = outstrands[0];
+            d = outstrands[1];
+        } else {
+            c = outstrands[1];
+            d = outstrands[0];
+        }
+    }
+
+    bool c_is_overpass = false;
+    int* tangle_crossing = flype.tangle.crossings;
+    for(int i = 0; i < flype.tangle.cr_num; i++) {
+        if(new_pd_code[*tangle_crossing][1] == c || new_pd_code[*tangle_crossing][3] == c) {
+            c_is_overpass = true;
+        }
+        tangle_crossing++;
+    }
+
+    bool is_positive = is_crossing_positive(new_pd_code[flype.crossing]);
+
+
+    tangle_crossing = flype.tangle.crossings;
+    for(int i = 0; i < flype.tangle.cr_num; i++) {
+        flip_crossing(new_pd_code[*tangle_crossing]);
+        tangle_crossing++;
+    }
+
+    int tangle_crossing_index_list[flype.tangle.cr_num + 1];
+    tangle_crossing_index_list[0] = flype.crossing;
+
+    tangle_crossing = flype.tangle.crossings;
+    for(int i = 1; i <= flype.tangle.cr_num; i++) {
+        tangle_crossing_index_list[i] = *tangle_crossing;
+        tangle_crossing++;
+    }
+
+    if(is_parity_inf) {
+        // TRUE: tangle is parity infinity
+        if(a < c) {
+            // TRUE: a < c
+            tangle_crossing = flype.tangle.crossings;
+            for(int i = 0; i < flype.tangle.cr_num; i++) {
+                for(int j = 0; j < 4; j++) {
+                    new_pd_code[*tangle_crossing][j] = ensure_strand_is_in_bounds(new_pd_code[*tangle_crossing][j] - 1, cr_num);
+                }
+                tangle_crossing++;
+            }
+            for(int i = 0; i < cr_num; i++) {
+                // if the crossing is not in the tangle and is not the flype crossing
+                if(!in_array(i, flype.tangle.cr_num + 1, tangle_crossing_index_list)) {
+
+                    for(int j = 0; j < 4; j++) {
+                        if(b < new_pd_code[i][j] && new_pd_code[i][j] <= c) {
+                            new_pd_code[i][j] = ensure_strand_is_in_bounds(new_pd_code[i][j] - 2, cr_num);
+                        }
+                    }
+
+                }
+            }
+        } else {
+            // FALSE: a > c
+            tangle_crossing = flype.tangle.crossings;
+            for(int i = 0; i < flype.tangle.cr_num; i++) {
+                for(int j = 0; j < 4; j++) {
+                    new_pd_code[*tangle_crossing][j] = ensure_strand_is_in_bounds(new_pd_code[*tangle_crossing][j] + 1, cr_num);
+                }
+                tangle_crossing++;
+            }
+            for(int i = 0; i < cr_num; i++) {
+                // if the crossing is not in the tangle and is not the flype crossing
+                if(!in_array(i, flype.tangle.cr_num + 1, tangle_crossing_index_list)) {
+
+                    for(int j = 0; j < 4; j++) {
+                        if(d <= new_pd_code[i][j] && new_pd_code[i][j] <= a) {
+                            new_pd_code[i][j] = ensure_strand_is_in_bounds(new_pd_code[i][j] + 2, cr_num);
+                        }
+                    }
+
+                }
+            }
+        }
+    } else {
+        // FALSE: tangle is NOT parity infinity
+        tangle_crossing = flype.tangle.crossings;
+        for(int i = 0; i < flype.tangle.cr_num; i++) {
+            for(int j = 0; j < 4; j++) {
+                if(a < new_pd_code[*tangle_crossing][j] && new_pd_code[*tangle_crossing][j] <= c) {
+                    new_pd_code[*tangle_crossing][j] = ensure_strand_is_in_bounds(new_pd_code[*tangle_crossing][j] - 1, cr_num);
+                }
+                if(d <= new_pd_code[*tangle_crossing][j] && new_pd_code[*tangle_crossing][j] <= b) {
+                    new_pd_code[*tangle_crossing][j] = ensure_strand_is_in_bounds(new_pd_code[*tangle_crossing][j] + 1, cr_num);
+                }
+            }
+            tangle_crossing++;
+        }
+    }
+
+    if(is_parity_inf) {
+        // TRUE: tangle is parity infinity
+        if(a < c) {
+            // a < c
+            if(is_positive) {
+                // crossing was POSITIVE
+                if(c_is_overpass) {
+                    int new_crossing[4] = {d - 1, c - 1, d, c - 2};
+                    copy_crossing(new_pd_code[flype.crossing], new_crossing);
+                } else {
+                    int new_crossing[4] = {c - 2, d, c - 1, d - 1};
+                    copy_crossing(new_pd_code[flype.crossing], new_crossing);
+                }
+            } else {
+                // crossing was NEGATIVE
+                if(c_is_overpass) {
+                    int new_crossing[4] = {d - 1, c - 2, d, c - 1};
+                    copy_crossing(new_pd_code[flype.crossing], new_crossing);
+                } else {
+                    int new_crossing[4] = {c - 2, d - 1, c - 1, d};
+                    copy_crossing(new_pd_code[flype.crossing], new_crossing);
+                }
+            }
+        } else {
+            // a > c
+            if(is_positive) {
+                // crossing was POSITIVE
+                if(c_is_overpass) {
+                    int new_crossing[4] = {d + 1, c + 1, d + 2, c};
+                    copy_crossing(new_pd_code[flype.crossing], new_crossing);
+                } else {
+                    int new_crossing[4] = {c, d + 2, c + 1, d + 1};
+                    copy_crossing(new_pd_code[flype.crossing], new_crossing);
+                }
+            } else {
+                // crossing was NEGATIVE
+                if(c_is_overpass) {
+                    int new_crossing[4] = {d + 1, c, d + 2, c + 1};
+                    copy_crossing(new_pd_code[flype.crossing], new_crossing);
+                } else {
+                    int new_crossing[4] = {c, d + 1, c + 1, d + 2};
+                    copy_crossing(new_pd_code[flype.crossing], new_crossing);
+                }
+            }
+        }
+    } else {
+        // FALSE: tangle is NOT parity infinity
+        if(is_positive) {
+            // crossing was POSITIVE
+            if(c_is_overpass) {
+                int new_crossing[4] = {d, c, d + 1, c - 1};
+                copy_crossing(new_pd_code[flype.crossing], new_crossing);
+            } else {
+                int new_crossing[4] = {c - 1, d + 1, c, d};
+                copy_crossing(new_pd_code[flype.crossing], new_crossing);
+            }
+        } else {
+            // crossing was NEGATIVE
+            if(c_is_overpass) {
+                int new_crossing[4] = {d, c - 1, d + 1, c};
+                copy_crossing(new_pd_code[flype.crossing], new_crossing);
+            } else {
+                int new_crossing[4] = {c - 1, d, c, d + 1};
+                copy_crossing(new_pd_code[flype.crossing], new_crossing);
+            }
+        }
+    }
+
+    for(int j = 0; j < 4; j++) {
+        new_pd_code[flype.crossing][j] = ensure_strand_is_in_bounds(new_pd_code[flype.crossing][j], cr_num);
+    }
+
+}
