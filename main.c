@@ -19,7 +19,7 @@ int main() {
     pd_crossing_t *crossing;
 
     // NOTE: the code starts not working for knots of 16 crossings
-    infile = fopen("knot_txt_files/knot_16_1.txt", "r");
+    infile = fopen("knot_txt_files/knot_6_1.txt", "r");
     next_pd_code = pd_read_KnotTheory(infile);
 
     int cr_num = next_pd_code->ncross;
@@ -71,10 +71,12 @@ int main() {
 //        printf("%s ", is_flype_parallel(cr_num, pd_code, all_flypes.flypes[i]) ? "T" : "F");
 //    }
 
-//    for(int i = 0; i < get_num_flypes(cr_num, pd_code); i++) {
-//        if(i == 2) print_flype_info(flypes[i]);
-//        printf("Is parallel: %s\n", is_flype_parallel(flypes[i]) ? "true" : "false");
-//    }
+    int new_pd_code[cr_num][4];
+
+    for(int i = 0; i < all_flypes.num_flypes; i++) {
+        anti_parallel_flype(cr_num, pd_code, all_flypes.flypes[i], new_pd_code);
+        print_pd_code(cr_num, new_pd_code);
+    }
 
     fclose(infile);
 
