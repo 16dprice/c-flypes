@@ -6,7 +6,8 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-#include "../libplcurve_src/src/plcTopology.h"
+//#include "../libplcurve_src/src/plcTopology.h"
+#include "plcTopology.h"
 
 #define IS_CONNECTED_TO_0 1
 #define NOT_CONNECTED_TO_0 0

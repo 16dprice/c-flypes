@@ -4,7 +4,6 @@
 #include "print_structures.h"
 #include "utilities.h"
 #include "queue.h"
-//#include "plcTopology.h"
 
 // the first three numbers are 0 so that the array can just be accessed by using the number of crossings
 const int four_edge_subsets_count[] = {
@@ -17,6 +16,10 @@ bool in_array(int val, int n, int arr[n]) {
         if(arr[i] == val) return true;
     }
     return false;
+}
+
+bool is_crossing_positive(int crossing[4]) {
+    return (crossing[1] - crossing[3] == 1 || crossing[1] - crossing[3] < -1);
 }
 
 void pd_code_t_to_int_array(int cr_num, pd_code_t *pd_code, int pd_code_arr[][4]) {
@@ -53,12 +56,19 @@ void int_array_to_pd_code_t(int cr_num, int pd_code_arr[][4], pd_code_t *pd_code
 
     for(int i = 0; i < cr_num; i++) {
         for(int j = 0; j < 4; j++) {
-            crossing->edge[j] = (pd_idx_t) pd_code_arr[i][j] - 1;
+            pd_code->cross->edge[j] = (pd_idx_t) pd_code_arr[i][j] - 1;
         }
-        crossing++;
+        pd_code->cross->sign = is_crossing_positive(pd_code_arr[i]) ? PD_POS_ORIENTATION : PD_NEG_ORIENTATION;
+        pd_code->cross++;
     }
+    pd_code->cross = crossing;
 
-    pd_regenerate_crossings(pd_code);
+//    pd_regenerate_crossings(pd_code);
+//    pd_regenerate_faces(pd_code);
+    pd_regenerate_edges(pd_code);
+//    pd_regenerate_comps(pd_code);
+//    pd_regenerate_hash(pd_code);
+    pd_regenerate(pd_code);
 
 }
 
@@ -479,10 +489,6 @@ void sort_in_and_outstrands(int arr[4]) {
 
 }
 
-bool is_crossing_positive(int crossing[4]) {
-    return (crossing[1] - crossing[3] == 1 || crossing[1] - crossing[3] < -1);
-}
-
 void flip_crossing(int crossing[4]) {
     int crossing_copy[] = {
             crossing[0], crossing[1], crossing[2], crossing[3]
@@ -528,7 +534,7 @@ void anti_parallel_flype(int cr_num, int pd_code[cr_num][4], struct pd_flype fly
     while(is_boundary_in_code(cr_num, new_pd_code, flype) && count <= 2 * cr_num) {
         for(int i = 0; i < cr_num; i++) {
             for(int j = 0; j < 4; j++) {
-                new_pd_code[i][j] += 1;
+                new_pd_code[i][j] = ensure_strand_is_in_bounds(new_pd_code[i][j] + 1, cr_num);
             }
         }
         count++;
@@ -580,6 +586,7 @@ void anti_parallel_flype(int cr_num, int pd_code[cr_num][4], struct pd_flype fly
         }
     }
 
+    // TODO: this might be an issue...
     bool c_is_overpass = false;
     int* tangle_crossing = flype.tangle.crossings;
     for(int i = 0; i < flype.tangle.cr_num; i++) {
@@ -657,7 +664,7 @@ void anti_parallel_flype(int cr_num, int pd_code[cr_num][4], struct pd_flype fly
         tangle_crossing = flype.tangle.crossings;
         for(int i = 0; i < flype.tangle.cr_num; i++) {
             for(int j = 0; j < 4; j++) {
-                if(a < new_pd_code[*tangle_crossing][j] && new_pd_code[*tangle_crossing][j] <= c) {
+                if(a <= new_pd_code[*tangle_crossing][j] && new_pd_code[*tangle_crossing][j] <= c) {
                     new_pd_code[*tangle_crossing][j] = ensure_strand_is_in_bounds(new_pd_code[*tangle_crossing][j] - 1, cr_num);
                 }
                 if(d <= new_pd_code[*tangle_crossing][j] && new_pd_code[*tangle_crossing][j] <= b) {
