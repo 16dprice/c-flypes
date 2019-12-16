@@ -125,7 +125,7 @@ void print_pd_flype(int cr_num, int pd_code[cr_num][4], struct pd_flype flype) {
 
     printf("\n------------------ Flype Info ------------------\n");
 
-    printf("Crossing: #%d, {%d, %d, %d, %d}\n",
+    printf("Crossing: No: %d -- {%d, %d, %d, %d}\n",
            flype.crossing,
            pd_code[flype.crossing][0],
            pd_code[flype.crossing][1],
