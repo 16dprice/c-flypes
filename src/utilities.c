@@ -18,6 +18,19 @@ bool in_array(int val, int n, int arr[n]) {
     return false;
 }
 
+int nelts_of_pd_stor(pd_stor_t* pdstor) {
+
+    pd_code_t *next_pd_code;
+    int count = 0;
+
+    for(next_pd_code = pd_stor_firstelt(pdstor); next_pd_code != NULL; next_pd_code = pd_stor_nextelt(pdstor)) {
+        count++;
+        free(next_pd_code);
+    }
+
+    return count;
+}
+
 bool is_crossing_positive(int crossing[4]) {
     return (crossing[1] - crossing[3] == 1 || crossing[1] - crossing[3] < -1);
 }

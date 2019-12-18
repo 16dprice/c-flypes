@@ -62,6 +62,8 @@ struct PD_code* pd_code_t_to_pd_code(pd_code_t* pd);
 
 void print_PD_code(struct PD_code* pd_code);
 
+int nelts_of_pd_stor(pd_stor_t* pdstor);
+
 /**
  * Basically just undoes pd_code_t_to_int_array
  * @param cr_num
