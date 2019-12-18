@@ -855,3 +855,11 @@ void parallel_flype(int cr_num, int pd_code[cr_num][4], struct pd_flype flype, i
     }
 
 }
+
+void perform_flype(int cr_num, int pd_code[cr_num][4], struct pd_flype flype, int new_pd_code[cr_num][4]) {
+    if(is_flype_parallel(cr_num, pd_code, flype)) {
+        parallel_flype(cr_num, pd_code, flype, new_pd_code);
+    } else {
+        anti_parallel_flype(cr_num, pd_code, flype, new_pd_code);
+    }
+}
