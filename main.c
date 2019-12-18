@@ -92,7 +92,12 @@ int main() {
             anti_parallel_flype(cr_num, pd_code, all_flypes.flypes[i], new_pd_code);
             int_array_to_pd_code_t(cr_num, new_pd_code, new_pd_code_t);
             pd_addto_pdstor(flyped_codes, new_pd_code_t, DIAGRAM_ISOTOPY);
-            print_pd_code(cr_num, new_pd_code);
+//            print_pd_code(cr_num, new_pd_code);
+        } else {
+            parallel_flype(cr_num, pd_code, all_flypes.flypes[i], new_pd_code);
+            int_array_to_pd_code_t(cr_num, new_pd_code, new_pd_code_t);
+            pd_addto_pdstor(flyped_codes, new_pd_code_t, DIAGRAM_ISOTOPY);
+//            print_pd_code(cr_num, new_pd_code);
         }
     }
 

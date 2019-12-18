@@ -599,6 +599,7 @@ void anti_parallel_flype(int cr_num, int pd_code[cr_num][4], struct pd_flype fly
     bool is_positive = is_crossing_positive(new_pd_code[flype.crossing]);
 
 
+    // flip the tangle
     tangle_crossing = flype.tangle.crossings;
     for(int i = 0; i < flype.tangle.cr_num; i++) {
         flip_crossing(new_pd_code[*tangle_crossing]);
@@ -738,6 +739,112 @@ void anti_parallel_flype(int cr_num, int pd_code[cr_num][4], struct pd_flype fly
                 copy_crossing(new_pd_code[flype.crossing], new_crossing);
             } else {
                 int new_crossing[4] = {c - 1, d, c, d + 1};
+                copy_crossing(new_pd_code[flype.crossing], new_crossing);
+            }
+        }
+    }
+
+    for(int j = 0; j < 4; j++) {
+        new_pd_code[flype.crossing][j] = ensure_strand_is_in_bounds(new_pd_code[flype.crossing][j], cr_num);
+    }
+
+}
+
+void parallel_flype(int cr_num, int pd_code[cr_num][4], struct pd_flype flype, int new_pd_code[cr_num][4]) {
+
+    for(int i = 0; i < cr_num; i++) {
+        for(int j = 0; j < 4; j++) {
+            new_pd_code[i][j] = pd_code[i][j];
+        }
+    }
+
+    int* instrands =  get_instrands (cr_num, new_pd_code, flype.crossing, flype.tangle);
+    int* outstrands = get_outstrands(cr_num, new_pd_code, flype.crossing, flype.tangle);
+
+    int a, b;
+    bool reverse;
+    if(instrands[0] == new_pd_code[flype.crossing][0] || instrands[1] == new_pd_code[flype.crossing][0]) {
+        a = pd_code[flype.crossing][0];
+        reverse = true;
+    } else {
+        a = pd_code[flype.crossing][2];
+        reverse = false;
+    }
+
+    if(instrands[0] == new_pd_code[flype.crossing][1] || instrands[1] == new_pd_code[flype.crossing][1]) {
+        b = pd_code[flype.crossing][1];
+    } else {
+        b = pd_code[flype.crossing][3];
+    }
+
+    bool negative = !is_crossing_positive(new_pd_code[flype.crossing]);
+
+    // flip the tangle
+    int* tangle_crossing;
+    tangle_crossing = flype.tangle.crossings;
+    for(int i = 0; i < flype.tangle.cr_num; i++) {
+        flip_crossing(new_pd_code[*tangle_crossing]);
+
+        for(int j = 0; j < 4; j++) {
+            if(reverse) {
+                new_pd_code[*tangle_crossing][j] = ensure_strand_is_in_bounds(new_pd_code[*tangle_crossing][j] + 1, cr_num);
+            } else {
+                new_pd_code[*tangle_crossing][j] = ensure_strand_is_in_bounds(new_pd_code[*tangle_crossing][j] - 1, cr_num);
+            }
+        }
+
+        tangle_crossing++;
+
+    }
+
+    int c, d;
+    if( abs(a - outstrands[0]) + abs(b - outstrands[1]) == 2 * flype.tangle.cr_num ) {
+        c = outstrands[0];
+        d = outstrands[1];
+    } else {
+        c = outstrands[1];
+        d = outstrands[0];
+    }
+
+    if( abs(a - c) % 2 == 1 ) {
+        // |a - c| is ODD => parity 1
+        if(reverse) {
+            // REVERSED
+            if(negative) {
+                int new_crossing[4] = {d, c, d + 1, c + 1};
+                copy_crossing(new_pd_code[flype.crossing], new_crossing);
+            } else {
+                int new_crossing[4] = {d, c + 1, d + 1, c};
+                copy_crossing(new_pd_code[flype.crossing], new_crossing);
+            }
+        } else {
+            // NOT REVERSED
+            if(negative) {
+                int new_crossing[4] = {d - 1, c - 1, d, c};
+                copy_crossing(new_pd_code[flype.crossing], new_crossing);
+            } else {
+                int new_crossing[4] = {d - 1, c, d, c - 1};
+                copy_crossing(new_pd_code[flype.crossing], new_crossing);
+            }
+        }
+    } else {
+        // |a - c| is EVEN => parity 0
+        if(reverse) {
+            // REVERSED
+            if(negative) {
+                int new_crossing[4] = {c, d, c + 1, d + 1};
+                copy_crossing(new_pd_code[flype.crossing], new_crossing);
+            } else {
+                int new_crossing[4] = {c, d + 1, c + 1, d};
+                copy_crossing(new_pd_code[flype.crossing], new_crossing);
+            }
+        } else {
+            // NOT REVERSED
+            if(negative) {
+                int new_crossing[4] = {c - 1, d - 1, c, d};
+                copy_crossing(new_pd_code[flype.crossing], new_crossing);
+            } else {
+                int new_crossing[4] = {c - 1, d, c, d - 1};
                 copy_crossing(new_pd_code[flype.crossing], new_crossing);
             }
         }

@@ -111,4 +111,6 @@ bool is_flype_parallel(int cr_num, int pd_code[cr_num][4], struct pd_flype flype
 
 void anti_parallel_flype(int cr_num, int pd_code[cr_num][4], struct pd_flype flype, int new_pd_code[cr_num][4]);
 
+void parallel_flype(int cr_num, int pd_code[cr_num][4], struct pd_flype flype, int new_pd_code[cr_num][4]);
+
 #endif //C_FLYPES_UTILITIES_H
