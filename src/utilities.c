@@ -5,6 +5,8 @@
 #include "utilities.h"
 #include "queue.h"
 
+pd_stor_t *codes_found;
+
 // the first three numbers are 0 so that the array can just be accessed by using the number of crossings
 const int four_edge_subsets_count[] = {
         0, 0, 0, // 0, 1, and 2 crossings have no meaning
@@ -875,4 +877,58 @@ void perform_flype(int cr_num, int pd_code[cr_num][4], struct pd_flype flype, in
     } else {
         anti_parallel_flype(cr_num, pd_code, flype, new_pd_code);
     }
+}
+
+bool has_pd_code_been_found(int cr_num, int pd_code[cr_num][4]) {
+
+    int old_num_codes, new_num_codes;
+
+    old_num_codes = nelts_of_pd_stor(codes_found);
+
+    pd_code_t* first_code = pd_stor_firstelt(codes_found);
+    pd_code_t* new_pd_code_t = pd_copy(first_code);
+
+    int_array_to_pd_code_t(cr_num, pd_code, new_pd_code_t);
+    pd_addto_pdstor(codes_found, new_pd_code_t, DIAGRAM_ISOTOPY);
+
+    new_num_codes = nelts_of_pd_stor(codes_found);
+
+    return (old_num_codes == new_num_codes);
+
+}
+
+void get_all_pd_codes_dfs(int cr_num, int pd_code[cr_num][4], bool first_pass) {
+
+    if(has_pd_code_been_found(cr_num, pd_code) && !first_pass) return;
+
+    pd_code_t* first_code = pd_stor_firstelt(codes_found);
+    pd_code_t* new_pd_code_t = pd_copy(first_code);
+
+    int_array_to_pd_code_t(cr_num, pd_code, new_pd_code_t);
+    pd_addto_pdstor(codes_found, new_pd_code_t, DIAGRAM_ISOTOPY);
+
+    struct pd_flype_list all_flypes = get_all_flypes_from_pd_code(cr_num, pd_code);
+
+    for(int i = 0; i < all_flypes.num_flypes; i++) {
+        int new_pd_code[cr_num][4];
+        perform_flype(cr_num, pd_code, all_flypes.flypes[i], new_pd_code);
+        get_all_pd_codes_dfs(cr_num, new_pd_code, false);
+    }
+
+}
+
+pd_stor_t* run_get_all_pd_codes_dfs(pd_code_t* first_code) {
+
+    int cr_num = first_code->ncross;
+    int pd_code[cr_num][4];
+
+    pd_code_t_to_int_array(cr_num, first_code, pd_code);
+
+    codes_found = pd_new_pdstor();
+    pd_addto_pdstor(codes_found, first_code, DIAGRAM_ISOTOPY);
+
+    get_all_pd_codes_dfs(cr_num, pd_code, true);
+
+    return codes_found;
+
 }

@@ -117,4 +117,6 @@ void parallel_flype(int cr_num, int pd_code[cr_num][4], struct pd_flype flype, i
 
 void perform_flype(int cr_num, int pd_code[cr_num][4], struct pd_flype flype, int new_pd_code[cr_num][4]);
 
+pd_stor_t* run_get_all_pd_codes_dfs(pd_code_t* first_code);
+
 #endif //C_FLYPES_UTILITIES_H
