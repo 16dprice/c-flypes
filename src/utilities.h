@@ -13,6 +13,7 @@
 #define NOT_CONNECTED_TO_0 0
 
 const int four_edge_subsets_count[17];
+const int number_of_alternating_knots[17];
 
 struct pd_crossing {
     int edge[4];
@@ -118,5 +119,7 @@ void parallel_flype(int cr_num, int pd_code[cr_num][4], struct pd_flype flype, i
 void perform_flype(int cr_num, int pd_code[cr_num][4], struct pd_flype flype, int new_pd_code[cr_num][4]);
 
 pd_stor_t* run_get_all_pd_codes_dfs(pd_code_t* first_code);
+
+pd_stor_t* get_all_pd_codes_bfs(pd_code_t* first_code);
 
 #endif //C_FLYPES_UTILITIES_H

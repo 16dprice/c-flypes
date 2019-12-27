@@ -7,10 +7,16 @@
 
 pd_stor_t *codes_found;
 
-// the first three numbers are 0 so that the array can just be accessed by using the number of crossings
+// the first three numbers of the following two arrays are 0 so that the array can just be accessed by using the number
+// of crossings
 const int four_edge_subsets_count[] = {
         0, 0, 0, // 0, 1, and 2 crossings have no meaning
         15, 70, 210, 495, 1001, 1820, 3060, 4845, 7315, 10626, 14950, 20475, 27405, 35960
+};
+
+const int number_of_alternating_knots[] = {
+        0, 0, 0, // 0, 1, and 2 crossings have no meaning
+        1, 1, 2, 3, 7, 18, 41, 123, 367, 1288, 4878, 19536, 85263, 379799
 };
 
 bool in_array(int val, int n, int arr[n]) {
@@ -932,3 +938,73 @@ pd_stor_t* run_get_all_pd_codes_dfs(pd_code_t* first_code) {
     return codes_found;
 
 }
+
+pd_stor_t* get_all_pd_codes_bfs(pd_code_t* first_code) {
+
+    codes_found = pd_new_pdstor();
+    pd_addto_pdstor(codes_found, first_code, DIAGRAM_ISOTOPY);
+
+    int old_size, new_size;
+    old_size = -1;
+    new_size = 0;
+
+    pd_code_t *next_pd_code, *new_pd_code_t;
+    int cr_num = first_code->ncross;
+    int pd_code[cr_num][4];
+    int new_pd_code[cr_num][4];
+
+    pd_stor_t *intermediate_results = pd_new_pdstor();
+
+    while(old_size != new_size) {
+
+        old_size = nelts_of_pd_stor(codes_found);
+
+        for(next_pd_code = pd_stor_firstelt(codes_found); next_pd_code != NULL; next_pd_code = pd_stor_nextelt(codes_found)) {
+
+            pd_code_t_to_int_array(cr_num, next_pd_code, pd_code);
+            struct pd_flype_list all_flypes = get_all_flypes_from_pd_code(cr_num, pd_code);
+
+            for(int i = 0; i < all_flypes.num_flypes; i++) {
+                perform_flype(cr_num, pd_code, all_flypes.flypes[i], new_pd_code);
+
+                new_pd_code_t = pd_copy(first_code);
+                int_array_to_pd_code_t(cr_num, new_pd_code, new_pd_code_t);
+                pd_addto_pdstor(intermediate_results, new_pd_code_t, DIAGRAM_ISOTOPY);
+
+            }
+
+        }
+
+        for(next_pd_code = pd_stor_firstelt(intermediate_results); next_pd_code != NULL; next_pd_code = pd_stor_nextelt(intermediate_results)) {
+            pd_addto_pdstor(codes_found, next_pd_code, DIAGRAM_ISOTOPY);
+        }
+
+        new_size = nelts_of_pd_stor(codes_found);
+
+        pd_free_pdstor(&intermediate_results);
+        intermediate_results = pd_new_pdstor();
+
+    }
+
+    return codes_found;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
