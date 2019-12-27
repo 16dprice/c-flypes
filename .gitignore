@@ -8,3 +8,11 @@ libplcurve_src/
 knot_txt_files/
 
 flype_output/
+
+print_structures.o
+
+queue.o
+
+a.out
+
+utilities.o
