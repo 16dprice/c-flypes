@@ -6,3 +6,5 @@ cmake-build-debug/
 libplcurve_src/
 
 knot_txt_files/
+
+flype_output/
