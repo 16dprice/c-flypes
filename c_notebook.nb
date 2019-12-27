@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     59226,       1300]
-NotebookOptionsPosition[     53147,       1205]
-NotebookOutlinePosition[     53482,       1220]
-CellTagsIndexPosition[     53439,       1217]
+NotebookDataLength[    134850,       2740]
+NotebookOptionsPosition[    123373,       2570]
+NotebookOutlinePosition[    123714,       2585]
+CellTagsIndexPosition[    123671,       2582]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -25,25 +25,27 @@ Cell[BoxData[{
   RowBox[{"NotebookDirectory", "[", "]"}], "]"}], "\[IndentingNewLine]", 
  RowBox[{"<<", "KnotTheory`"}]}], "Input",
  CellChangeTimes->{{3.7819942096873093`*^9, 3.781994244189986*^9}},
- CellLabel->"In[9]:=",ExpressionUUID->"a4b6f8f7-1c64-409e-8397-5d3258ac95a8"],
+ CellLabel->"In[5]:=",ExpressionUUID->"a4b6f8f7-1c64-409e-8397-5d3258ac95a8"],
 
 Cell[BoxData["\<\"/home/dj/CLionProjects/c-flypes\"\>"], "Output",
  CellChangeTimes->{
   3.781994215019905*^9, 3.78199424502514*^9, {3.7833453362928743`*^9, 
-   3.7833453382956963`*^9}, {3.785506844344184*^9, 3.78550685670632*^9}},
- CellLabel->"Out[9]=",ExpressionUUID->"12b55dd9-01a1-4bee-ae49-e4d8e3061b8e"],
+   3.7833453382956963`*^9}, {3.785506844344184*^9, 3.78550685670632*^9}, {
+   3.7857678319659367`*^9, 3.7857678350967417`*^9}},
+ CellLabel->"Out[5]=",ExpressionUUID->"fb5b9c2e-d7ed-4b17-98e3-f3f35dd50180"],
 
 Cell[BoxData[
  TemplateBox[{
   "Get","path",
    "\"\\!\\(\\*RowBox[{\\\"ParentDirectory\\\", \\\"[\\\", \\\"File\\\", \
-\\\"]\\\"}]\\) in $Path is not a string.\"",2,10,87,27382319419706752975,
+\\\"]\\\"}]\\) in $Path is not a string.\"",2,6,33,27384029745445814675,
    "Local"},
   "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{{3.785506844559729*^9, 3.785506856739223*^9}},
+ CellChangeTimes->{{3.785506844559729*^9, 3.785506856739223*^9}, {
+  3.785767832076075*^9, 3.7857678350990257`*^9}},
  CellLabel->
   "During evaluation of \
-In[9]:=",ExpressionUUID->"77b57180-630c-4b12-8cd5-bd647da6d242"],
+In[5]:=",ExpressionUUID->"343dac8b-71ce-4a24-a3b1-163ba382fa9a"],
 
 Cell[BoxData[
  TemplateBox[{
@@ -51,13 +53,14 @@ Cell[BoxData[
    "\"String or list of strings expected at position \\!\\(\\*RowBox[{\\\"1\\\
 \"}]\\) in \\!\\(\\*RowBox[{\\\"ToFileName\\\", \\\"[\\\", RowBox[{RowBox[{\\\
 \"ParentDirectory\\\", \\\"[\\\", \\\"File\\\", \\\"]\\\"}], \\\",\\\", \
-\\\"\\\\\\\"KnotTheory\\\\\\\"\\\"}], \\\"]\\\"}]\\).\"",2,10,88,
-   27382319419706752975,"Local"},
+\\\"\\\\\\\"KnotTheory\\\\\\\"\\\"}], \\\"]\\\"}]\\).\"",2,6,34,
+   27384029745445814675,"Local"},
   "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{{3.785506844559729*^9, 3.7855068567647552`*^9}},
+ CellChangeTimes->{{3.785506844559729*^9, 3.785506856739223*^9}, {
+  3.785767832076075*^9, 3.7857678351071777`*^9}},
  CellLabel->
   "During evaluation of \
-In[9]:=",ExpressionUUID->"14c35f33-3351-4005-a9ad-fc333d49d7e1"],
+In[5]:=",ExpressionUUID->"286e08a4-6607-48a1-82d7-cf452920fb87"],
 
 Cell[BoxData[
  TemplateBox[{
@@ -65,12 +68,13 @@ Cell[BoxData[
    "\"The specified argument \\!\\(\\*RowBox[{\\\"ToFileName\\\", \\\"[\\\", \
 RowBox[{RowBox[{\\\"ParentDirectory\\\", \\\"[\\\", \\\"File\\\", \
 \\\"]\\\"}], \\\",\\\", \\\"\\\\\\\"KnotTheory\\\\\\\"\\\"}], \\\"]\\\"}]\\) \
-should be a valid string or File.\"",2,10,89,27382319419706752975,"Local"},
+should be a valid string or File.\"",2,6,35,27384029745445814675,"Local"},
   "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{{3.785506844559729*^9, 3.785506856773303*^9}},
+ CellChangeTimes->{{3.785506844559729*^9, 3.785506856739223*^9}, {
+  3.785767832076075*^9, 3.78576783511383*^9}},
  CellLabel->
   "During evaluation of \
-In[9]:=",ExpressionUUID->"e867bc5e-882a-4ada-a807-a8988f0c8da7"],
+In[5]:=",ExpressionUUID->"c38329e4-6558-43e5-bf1a-882313567d8d"],
 
 Cell[BoxData[
  TemplateBox[{
@@ -80,13 +84,14 @@ Cell[BoxData[
 \"ToFileName\\\", \\\"[\\\", RowBox[{\\\"{\\\", RowBox[{\\\"File\\\", \\\",\\\
 \", \\\"\\\\\\\"WikiLink\\\\\\\"\\\", \\\",\\\", \
 \\\"\\\\\\\"mathematica\\\\\\\"\\\"}], \\\"}\\\"}], \\\"]\\\"}], \\\",\\\", \
-\\\"\\\\\\\"KnotTheory\\\\\\\"\\\"}], \\\"]\\\"}]\\).\"",2,10,90,
-   27382319419706752975,"Local"},
+\\\"\\\\\\\"KnotTheory\\\\\\\"\\\"}], \\\"]\\\"}]\\).\"",2,6,36,
+   27384029745445814675,"Local"},
   "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{{3.785506844559729*^9, 3.785506856800297*^9}},
+ CellChangeTimes->{{3.785506844559729*^9, 3.785506856739223*^9}, {
+  3.785767832076075*^9, 3.78576783512281*^9}},
  CellLabel->
   "During evaluation of \
-In[9]:=",ExpressionUUID->"a6301ac6-91f9-4f8b-91d9-2dec13b01c29"],
+In[5]:=",ExpressionUUID->"5534908b-0dfb-4122-98b7-e80c0fdbd615"],
 
 Cell[BoxData[
  TemplateBox[{
@@ -96,12 +101,13 @@ RowBox[{RowBox[{\\\"ToFileName\\\", \\\"[\\\", RowBox[{\\\"{\\\", \
 RowBox[{\\\"File\\\", \\\",\\\", \\\"\\\\\\\"WikiLink\\\\\\\"\\\", \\\",\\\", \
 \\\"\\\\\\\"mathematica\\\\\\\"\\\"}], \\\"}\\\"}], \\\"]\\\"}], \\\",\\\", \
 \\\"\\\\\\\"KnotTheory\\\\\\\"\\\"}], \\\"]\\\"}]\\) should be a valid string \
-or File.\"",2,10,91,27382319419706752975,"Local"},
+or File.\"",2,6,37,27384029745445814675,"Local"},
   "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{{3.785506844559729*^9, 3.785506856814135*^9}},
+ CellChangeTimes->{{3.785506844559729*^9, 3.785506856739223*^9}, {
+  3.785767832076075*^9, 3.785767835129609*^9}},
  CellLabel->
   "During evaluation of \
-In[9]:=",ExpressionUUID->"35c27045-49bd-4106-b48b-9a9589ba2cc4"],
+In[5]:=",ExpressionUUID->"8f21ff8a-2d00-405e-ae91-050dcea6075d"],
 
 Cell[BoxData[
  TemplateBox[{
@@ -110,25 +116,27 @@ Cell[BoxData[
 \"}]\\) in \\!\\(\\*RowBox[{\\\"ToFileName\\\", \\\"[\\\", RowBox[{RowBox[{\\\
 \"ToFileName\\\", \\\"[\\\", RowBox[{\\\"{\\\", RowBox[{\\\"File\\\", \\\",\\\
 \", \\\"\\\\\\\"QuantumGroups\\\\\\\"\\\"}], \\\"}\\\"}], \\\"]\\\"}], \
-\\\",\\\", \\\"\\\\\\\"KnotTheory\\\\\\\"\\\"}], \\\"]\\\"}]\\).\"",2,10,92,
-   27382319419706752975,"Local"},
+\\\",\\\", \\\"\\\\\\\"KnotTheory\\\\\\\"\\\"}], \\\"]\\\"}]\\).\"",2,6,38,
+   27384029745445814675,"Local"},
   "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{{3.785506844559729*^9, 3.78550685682658*^9}},
+ CellChangeTimes->{{3.785506844559729*^9, 3.785506856739223*^9}, {
+  3.785767832076075*^9, 3.7857678351357183`*^9}},
  CellLabel->
   "During evaluation of \
-In[9]:=",ExpressionUUID->"198d0694-6600-4dc4-8cd5-707cb2a7c4e7"],
+In[5]:=",ExpressionUUID->"d95cc3a2-2543-44fe-a154-d61b968980ca"],
 
 Cell[BoxData[
  TemplateBox[{
   "General","stop",
    "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"ToFileName\\\", \
 \\\"::\\\", \\\"strse\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
-during this calculation.\"",2,10,93,27382319419706752975,"Local"},
+during this calculation.\"",2,6,39,27384029745445814675,"Local"},
   "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{{3.785506844559729*^9, 3.785506856842083*^9}},
+ CellChangeTimes->{{3.785506844559729*^9, 3.785506856739223*^9}, {
+  3.785767832076075*^9, 3.785767835141615*^9}},
  CellLabel->
   "During evaluation of \
-In[9]:=",ExpressionUUID->"df343226-fa0f-4f91-9308-036c5ef60511"],
+In[5]:=",ExpressionUUID->"f3587aac-be12-452d-be2c-0bd9a2cf4235"],
 
 Cell[BoxData[
  TemplateBox[{
@@ -137,25 +145,27 @@ Cell[BoxData[
 RowBox[{RowBox[{\\\"ToFileName\\\", \\\"[\\\", RowBox[{\\\"{\\\", \
 RowBox[{\\\"File\\\", \\\",\\\", \\\"\\\\\\\"QuantumGroups\\\\\\\"\\\"}], \
 \\\"}\\\"}], \\\"]\\\"}], \\\",\\\", \\\"\\\\\\\"KnotTheory\\\\\\\"\\\"}], \\\
-\"]\\\"}]\\) should be a valid string or File.\"",2,10,94,
-   27382319419706752975,"Local"},
+\"]\\\"}]\\) should be a valid string or File.\"",2,6,40,27384029745445814675,
+   "Local"},
   "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{{3.785506844559729*^9, 3.785506856863493*^9}},
+ CellChangeTimes->{{3.785506844559729*^9, 3.785506856739223*^9}, {
+  3.785767832076075*^9, 3.7857678351465693`*^9}},
  CellLabel->
   "During evaluation of \
-In[9]:=",ExpressionUUID->"01f9c378-293b-4d3d-bc93-d4256a4f61ca"],
+In[5]:=",ExpressionUUID->"e256328b-d1d4-4ae6-93b8-eef3388f1f24"],
 
 Cell[BoxData[
  TemplateBox[{
   "General","stop",
    "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"FileInformation\\\", \\\
 \"::\\\", \\\"badfile\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
-during this calculation.\"",2,10,95,27382319419706752975,"Local"},
+during this calculation.\"",2,6,41,27384029745445814675,"Local"},
   "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{{3.785506844559729*^9, 3.785506856893359*^9}},
+ CellChangeTimes->{{3.785506844559729*^9, 3.785506856739223*^9}, {
+  3.785767832076075*^9, 3.785767835152134*^9}},
  CellLabel->
   "During evaluation of \
-In[9]:=",ExpressionUUID->"daaac2bb-b250-4ee0-81ed-cc6acbe458bb"],
+In[5]:=",ExpressionUUID->"05c993d6-37d5-4983-8fe9-cf262496aab3"],
 
 Cell[BoxData[
  TemplateBox[{
@@ -163,10 +173,11 @@ Cell[BoxData[
    "\"\\!\\(\\*RowBox[{\\\"{\\\", \
 RowBox[{RowBox[{\\\"\\\\\\\"AbsoluteFileName\\\\\\\"\\\", \\\"\[Rule]\\\", \\\
 \"\\\\\\\"/usr/local/Wolfram/Mathematica/12.0/AddOns/ExtraPackages/KnotTheory\
-\\\\\\\"\\\"}], \\\",\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"35\\\", \\\"\
-\[RightSkeleton]\\\"}], \\\",\\\", RowBox[{\\\"FileInformation\\\", \
-\\\"[\\\", RowBox[{\\\"ToFileName\\\", \\\"[\\\", \
-RowBox[{RowBox[{\\\"ToFileName\\\", \\\"[\\\", RowBox[{\\\"{\\\", \
+\\\\\\\"\\\"}], \\\",\\\", RowBox[{\\\"\\\\\\\"BlockCount\\\\\\\"\\\", \\\"\
+\[Rule]\\\", \\\"8\\\"}], \\\",\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
+\\\"28\\\", \\\"\[RightSkeleton]\\\"}], \\\",\\\", \
+RowBox[{\\\"FileInformation\\\", \\\"[\\\", RowBox[{\\\"ToFileName\\\", \\\"[\
+\\\", RowBox[{RowBox[{\\\"ToFileName\\\", \\\"[\\\", RowBox[{\\\"{\\\", \
 RowBox[{RowBox[{\\\"File\\\", \\\"/.\\\", \\\"\[VeryThinSpace]\\\", \
 RowBox[{\\\"{\\\", RowBox[{RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\
 \[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \
@@ -189,10 +200,109 @@ RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \
 RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \
 \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \
 \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\
-\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"10\\\", \\\
-\"\[RightSkeleton]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", \
-RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\
-\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\
+\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\
+\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \
+\\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
+\\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \
+\\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \
+\\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\
+\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\
+\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \
+\\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
+\\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \
+\\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \
+\\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\
+\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\
+\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \
+\\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
+\\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \
+\\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \
+\\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\
+\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\
+\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \
+\\\",\\\", RowBox[{\\\"FileInformation\\\", \\\"[\\\", RowBox[{\\\"\
+\[LeftSkeleton]\\\", \\\"1\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \
+\\\",\\\", RowBox[{\\\"FileInformation\\\", \\\"[\\\", RowBox[{\\\"\
+\[LeftSkeleton]\\\", \\\"1\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \
+\\\",\\\", RowBox[{\\\"FileInformation\\\", \\\"[\\\", RowBox[{\\\"\
+\[LeftSkeleton]\\\", \\\"1\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}]}], \\\
+\"}\\\"}]}], \\\",\\\", \\\"\\\\\\\"QuantumGroups\\\\\\\"\\\"}], \\\"}\\\"}], \
+\\\"]\\\"}], \\\",\\\", \\\"\\\\\\\"KnotTheory\\\\\\\"\\\"}], \\\"]\\\"}], \\\
+\"]\\\"}]}], \\\"}\\\"}]\\) is neither a list of replacement rules nor a \
+valid dispatch table, and so cannot be used for replacing.\"",2,6,42,
+   27384029745445814675,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.785506844559729*^9, 3.785506856739223*^9}, {
+  3.785767832076075*^9, 3.785767835157804*^9}},
+ CellLabel->
+  "During evaluation of \
+In[5]:=",ExpressionUUID->"6409e093-ced9-4b77-b092-83b2534cfa70"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "ParentDirectory","nums",
+   "\"Argument \\!\\(\\*RowBox[{\\\"File\\\", \\\"/.\\\", \
+\\\"\[VeryThinSpace]\\\", RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"\\\\\\\"AbsoluteFileName\\\\\\\"\\\", \\\"\[Rule]\\\", \\\
+\"\\\\\\\"/usr/local/Wolfram/Mathematica/12.0/AddOns/ExtraPackages/KnotTheory\
+\\\\\\\"\\\"}], \\\",\\\", RowBox[{\\\"\\\\\\\"BlockCount\\\\\\\"\\\", \\\"\
+\[Rule]\\\", \\\"8\\\"}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"BlockSize\\\\\\\"\\\", \\\"\[Rule]\\\", \\\"4096\\\"}], \
+\\\",\\\", RowBox[{\\\"\\\\\\\"ByteCount\\\\\\\"\\\", \\\"\[Rule]\\\", \
+\\\"4096\\\"}], \\\",\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"23\\\", \\\"\
+\[RightSkeleton]\\\"}], \\\",\\\", RowBox[{\\\"FileInformation\\\", \
+\\\"[\\\", RowBox[{\\\"ToFileName\\\", \\\"[\\\", \
+RowBox[{RowBox[{\\\"ToFileName\\\", \\\"[\\\", RowBox[{\\\"{\\\", \
+RowBox[{\\\"File\\\", \\\",\\\", \\\"\\\\\\\"QuantumGroups\\\\\\\"\\\"}], \
+\\\"}\\\"}], \\\"]\\\"}], \\\",\\\", \\\"\\\\\\\"KnotTheory\\\\\\\"\\\"}], \\\
+\"]\\\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"FileInformation\\\", \
+\\\"[\\\", RowBox[{\\\"ToFileName\\\", \\\"[\\\", \
+RowBox[{RowBox[{\\\"ParentDirectory\\\", \\\"[\\\", RowBox[{\\\"File\\\", \
+\\\"/.\\\", \\\"\[VeryThinSpace]\\\", RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
+\\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \
+\\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \
+\\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\
+\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\
+\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \
+\\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
+\\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \
+\\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \
+\\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\
+\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\
+\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \
+\\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
+\\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \
+\\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \
+\\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\
+\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\
+\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \
+\\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
+\\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \
+\\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \
+\\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\
+\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\
+\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \
+\\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
+\\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \
+\\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \
+\\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\
+\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\
+\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \
+\\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
+\\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \
+\\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \
+\\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\
+\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\
 \[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \
 \\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
 \\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", \
@@ -201,166 +311,201 @@ RowBox[{\\\"FileInformation\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
 RowBox[{\\\"FileInformation\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
 \\\"1\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", \
 RowBox[{\\\"FileInformation\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
-\\\"1\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", \
-RowBox[{\\\"FileInformation\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
-\\\"1\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", \
-RowBox[{\\\"FileInformation\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
-\\\"1\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", \
-RowBox[{\\\"FileInformation\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
-\\\"1\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", \
+\\\"1\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}]}], \\\"}\\\"}]}], \
+\\\"]\\\"}], \\\",\\\", \\\"\\\\\\\"KnotTheory\\\\\\\"\\\"}], \\\"]\\\"}], \\\
+\"]\\\"}], \\\",\\\", RowBox[{\\\"FileInformation\\\", \\\"[\\\", \
+RowBox[{\\\"ToFileName\\\", \\\"[\\\", RowBox[{RowBox[{\\\"ToFileName\\\", \\\
+\"[\\\", RowBox[{\\\"{\\\", RowBox[{RowBox[{\\\"File\\\", \\\"/.\\\", \\\"\
+\[VeryThinSpace]\\\", RowBox[{\\\"{\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
+\\\"28\\\", \\\"\[RightSkeleton]\\\"}], \\\"}\\\"}]}], \\\",\\\", \
+\\\"\\\\\\\"WikiLink\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"mathematica\\\\\\\"\\\"}], \\\"}\\\"}], \\\"]\\\"}], \\\",\\\", \
+\\\"\\\\\\\"KnotTheory\\\\\\\"\\\"}], \\\"]\\\"}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"FileInformation\\\", \\\"[\\\", RowBox[{\\\"ToFileName\\\", \\\"[\
+\\\", RowBox[{RowBox[{\\\"ToFileName\\\", \\\"[\\\", RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"File\\\", \\\"/.\\\", \\\"\[VeryThinSpace]\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"28\\\", \\\"\
+\[RightSkeleton]\\\"}], \\\"}\\\"}]}], \\\",\\\", \\\"\\\\\\\"QuantumGroups\\\
+\\\\\"\\\"}], \\\"}\\\"}], \\\"]\\\"}], \\\",\\\", \\\"\\\\\\\"KnotTheory\\\\\
+\\\"\\\"}], \\\"]\\\"}], \\\"]\\\"}]}], \\\"}\\\"}]}]\\) should be a positive \
+machine-size integer, a nonempty string, or a File specification.\"",2,6,43,
+   27384029745445814675,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.785506844559729*^9, 3.785506856739223*^9}, {
+  3.785767832076075*^9, 3.785767835169783*^9}},
+ CellLabel->
+  "During evaluation of \
+In[5]:=",ExpressionUUID->"12ca6012-88c0-4b45-812a-b2a2a859ab5c"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "ParentDirectory","nums",
+   "\"Argument \\!\\(\\*RowBox[{\\\"File\\\", \\\"/.\\\", \
+\\\"\[VeryThinSpace]\\\", RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"\\\\\\\"AbsoluteFileName\\\\\\\"\\\", \\\"\[Rule]\\\", \\\
+\"\\\\\\\"/usr/local/Wolfram/Mathematica/12.0/AddOns/ExtraPackages/KnotTheory\
+\\\\\\\"\\\"}], \\\",\\\", RowBox[{\\\"\\\\\\\"BlockCount\\\\\\\"\\\", \\\"\
+\[Rule]\\\", \\\"8\\\"}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"BlockSize\\\\\\\"\\\", \\\"\[Rule]\\\", \\\"4096\\\"}], \
+\\\",\\\", RowBox[{\\\"\\\\\\\"ByteCount\\\\\\\"\\\", \\\"\[Rule]\\\", \
+\\\"4096\\\"}], \\\",\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"23\\\", \\\"\
+\[RightSkeleton]\\\"}], \\\",\\\", RowBox[{\\\"FileInformation\\\", \
+\\\"[\\\", RowBox[{\\\"ToFileName\\\", \\\"[\\\", \
+RowBox[{RowBox[{\\\"ToFileName\\\", \\\"[\\\", RowBox[{\\\"{\\\", \
+RowBox[{\\\"File\\\", \\\",\\\", \\\"\\\\\\\"QuantumGroups\\\\\\\"\\\"}], \
+\\\"}\\\"}], \\\"]\\\"}], \\\",\\\", \\\"\\\\\\\"KnotTheory\\\\\\\"\\\"}], \\\
+\"]\\\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"FileInformation\\\", \
+\\\"[\\\", RowBox[{\\\"ToFileName\\\", \\\"[\\\", \
+RowBox[{RowBox[{\\\"ParentDirectory\\\", \\\"[\\\", RowBox[{\\\"File\\\", \
+\\\"/.\\\", \\\"\[VeryThinSpace]\\\", RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
+\\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \
+\\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \
+\\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\
+\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\
+\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \
+\\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
+\\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \
+\\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \
+\\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\
+\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\
+\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \
+\\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
+\\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \
+\\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \
+\\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\
+\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\
+\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \
+\\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
+\\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \
+\\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \
+\\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\
+\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\
+\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \
+\\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
+\\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \
+\\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \
+\\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\
+\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\
+\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \
+\\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
+\\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \
+\\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \
+\\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\
+\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\
+\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \
+\\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
+\\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", \
 RowBox[{\\\"FileInformation\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
 \\\"1\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", \
 RowBox[{\\\"FileInformation\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
 \\\"1\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", \
 RowBox[{\\\"FileInformation\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
 \\\"1\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}]}], \\\"}\\\"}]}], \
-\\\",\\\", RowBox[{\\\"\\\\\\\"\\\\\\\"\\\", \\\"\[Ellipsis]\\\", \
-\\\"\\\\\\\"\\\\\\\"\\\"}]}], \\\"}\\\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\
-\"\\\\\\\"\\\\\\\"\\\", \\\"\[Ellipsis]\\\", \\\"\\\\\\\"\\\\\\\"\\\"}]}], \\\
-\"]\\\"}], \\\"]\\\"}]}], \\\"}\\\"}]\\) is neither a list of replacement \
-rules nor a valid dispatch table, and so cannot be used for replacing.\"",2,
-   10,96,27382319419706752975,"Local"},
-  "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{{3.785506844559729*^9, 3.785506856927658*^9}},
- CellLabel->
-  "During evaluation of \
-In[9]:=",ExpressionUUID->"b2575183-2b3f-4713-8a2e-f0e06bbdde0e"],
-
-Cell[BoxData[
- TemplateBox[{
-  "ParentDirectory","nums",
-   "\"Argument \\!\\(\\*RowBox[{\\\"File\\\", \\\"/.\\\", \
-\\\"\[VeryThinSpace]\\\", RowBox[{\\\"{\\\", \
-RowBox[{RowBox[{\\\"\\\\\\\"AbsoluteFileName\\\\\\\"\\\", \\\"\[Rule]\\\", \\\
-\"\\\\\\\"/usr/local/Wolfram/Mathematica/12.0/AddOns/ExtraPackages/KnotTheory\
-\\\\\\\"\\\"}], \\\",\\\", RowBox[{\\\"\\\\\\\"BlockCount\\\\\\\"\\\", \\\"\
-\[Rule]\\\", \\\"8\\\"}], \\\",\\\", \
-RowBox[{\\\"\\\\\\\"BlockSize\\\\\\\"\\\", \\\"\[Rule]\\\", \\\"4096\\\"}], \
-\\\",\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"32\\\", \
-\\\"\[RightSkeleton]\\\"}], \\\",\\\", RowBox[{\\\"FileInformation\\\", \\\"[\
-\\\", RowBox[{\\\"ToFileName\\\", \\\"[\\\", RowBox[{RowBox[{\\\"ToFileName\\\
-\", \\\"[\\\", RowBox[{\\\"{\\\", RowBox[{RowBox[{\\\"File\\\", \\\"/.\\\", \
-\\\"\[VeryThinSpace]\\\", RowBox[{\\\"{\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
-\\\"34\\\", \\\"\[RightSkeleton]\\\"}], \\\"}\\\"}]}], \\\",\\\", \
+\\\"]\\\"}], \\\",\\\", \\\"\\\\\\\"KnotTheory\\\\\\\"\\\"}], \\\"]\\\"}], \\\
+\"]\\\"}], \\\",\\\", RowBox[{\\\"FileInformation\\\", \\\"[\\\", \
+RowBox[{\\\"ToFileName\\\", \\\"[\\\", RowBox[{RowBox[{\\\"ToFileName\\\", \\\
+\"[\\\", RowBox[{\\\"{\\\", RowBox[{RowBox[{\\\"File\\\", \\\"/.\\\", \\\"\
+\[VeryThinSpace]\\\", RowBox[{\\\"{\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
+\\\"28\\\", \\\"\[RightSkeleton]\\\"}], \\\"}\\\"}]}], \\\",\\\", \
 \\\"\\\\\\\"WikiLink\\\\\\\"\\\", \\\",\\\", \
 \\\"\\\\\\\"mathematica\\\\\\\"\\\"}], \\\"}\\\"}], \\\"]\\\"}], \\\",\\\", \
 \\\"\\\\\\\"KnotTheory\\\\\\\"\\\"}], \\\"]\\\"}], \\\"]\\\"}], \\\",\\\", \
 RowBox[{\\\"FileInformation\\\", \\\"[\\\", RowBox[{\\\"ToFileName\\\", \\\"[\
 \\\", RowBox[{RowBox[{\\\"ToFileName\\\", \\\"[\\\", RowBox[{\\\"{\\\", \
 RowBox[{RowBox[{\\\"File\\\", \\\"/.\\\", \\\"\[VeryThinSpace]\\\", \
-RowBox[{\\\"{\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"34\\\", \\\"\
+RowBox[{\\\"{\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"28\\\", \\\"\
 \[RightSkeleton]\\\"}], \\\"}\\\"}]}], \\\",\\\", \\\"\\\\\\\"QuantumGroups\\\
 \\\\\"\\\"}], \\\"}\\\"}], \\\"]\\\"}], \\\",\\\", \\\"\\\\\\\"KnotTheory\\\\\
 \\\"\\\"}], \\\"]\\\"}], \\\"]\\\"}]}], \\\"}\\\"}]}]\\) should be a positive \
-machine-size integer, a nonempty string, or a File specification.\"",2,10,97,
-   27382319419706752975,"Local"},
+machine-size integer, a nonempty string, or a File specification.\"",2,6,44,
+   27384029745445814675,"Local"},
   "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{{3.785506844559729*^9, 3.78550685695362*^9}},
+ CellChangeTimes->{{3.785506844559729*^9, 3.785506856739223*^9}, {
+  3.785767832076075*^9, 3.785767835180019*^9}},
  CellLabel->
   "During evaluation of \
-In[9]:=",ExpressionUUID->"eb18cdce-0633-44ba-b391-4fdfe325a232"],
-
-Cell[BoxData[
- TemplateBox[{
-  "ParentDirectory","nums",
-   "\"Argument \\!\\(\\*RowBox[{\\\"File\\\", \\\"/.\\\", \
-\\\"\[VeryThinSpace]\\\", RowBox[{\\\"{\\\", \
-RowBox[{RowBox[{\\\"\\\\\\\"AbsoluteFileName\\\\\\\"\\\", \\\"\[Rule]\\\", \\\
-\"\\\\\\\"/usr/local/Wolfram/Mathematica/12.0/AddOns/ExtraPackages/KnotTheory\
-\\\\\\\"\\\"}], \\\",\\\", RowBox[{\\\"\\\\\\\"BlockCount\\\\\\\"\\\", \\\"\
-\[Rule]\\\", \\\"8\\\"}], \\\",\\\", \
-RowBox[{\\\"\\\\\\\"BlockSize\\\\\\\"\\\", \\\"\[Rule]\\\", \\\"4096\\\"}], \
-\\\",\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"32\\\", \
-\\\"\[RightSkeleton]\\\"}], \\\",\\\", RowBox[{\\\"FileInformation\\\", \\\"[\
-\\\", RowBox[{\\\"ToFileName\\\", \\\"[\\\", RowBox[{RowBox[{\\\"ToFileName\\\
-\", \\\"[\\\", RowBox[{\\\"{\\\", RowBox[{RowBox[{\\\"File\\\", \\\"/.\\\", \
-\\\"\[VeryThinSpace]\\\", RowBox[{\\\"{\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
-\\\"34\\\", \\\"\[RightSkeleton]\\\"}], \\\"}\\\"}]}], \\\",\\\", \
-\\\"\\\\\\\"WikiLink\\\\\\\"\\\", \\\",\\\", \
-\\\"\\\\\\\"mathematica\\\\\\\"\\\"}], \\\"}\\\"}], \\\"]\\\"}], \\\",\\\", \
-\\\"\\\\\\\"KnotTheory\\\\\\\"\\\"}], \\\"]\\\"}], \\\"]\\\"}], \\\",\\\", \
-RowBox[{\\\"FileInformation\\\", \\\"[\\\", RowBox[{\\\"ToFileName\\\", \\\"[\
-\\\", RowBox[{RowBox[{\\\"ToFileName\\\", \\\"[\\\", RowBox[{\\\"{\\\", \
-RowBox[{RowBox[{\\\"File\\\", \\\"/.\\\", \\\"\[VeryThinSpace]\\\", \
-RowBox[{\\\"{\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"34\\\", \\\"\
-\[RightSkeleton]\\\"}], \\\"}\\\"}]}], \\\",\\\", \\\"\\\\\\\"QuantumGroups\\\
-\\\\\"\\\"}], \\\"}\\\"}], \\\"]\\\"}], \\\",\\\", \\\"\\\\\\\"KnotTheory\\\\\
-\\\"\\\"}], \\\"]\\\"}], \\\"]\\\"}]}], \\\"}\\\"}]}]\\) should be a positive \
-machine-size integer, a nonempty string, or a File specification.\"",2,10,98,
-   27382319419706752975,"Local"},
-  "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{{3.785506844559729*^9, 3.785506856992139*^9}},
- CellLabel->
-  "During evaluation of \
-In[9]:=",ExpressionUUID->"8d37713f-ce6a-4306-9647-d86a129c4736"],
+In[5]:=",ExpressionUUID->"2a4cae22-4117-4932-9756-eb339bfc89f2"],
 
 Cell[BoxData["\<\"Loading KnotTheory` version of September 6, 2014, \
 13:37:37.2841.\\nRead more at http://katlas.org/wiki/KnotTheory.\"\>"], \
 "Print",
  CellChangeTimes->{
   3.7819942450385857`*^9, {3.783345336366365*^9, 3.7833453383065853`*^9}, {
-   3.785506844788018*^9, 3.785506857019045*^9}},
+   3.785506844788018*^9, 3.785506857019045*^9}, {3.785767832108528*^9, 
+   3.7857678351888847`*^9}},
  CellLabel->
   "During evaluation of \
-In[9]:=",ExpressionUUID->"cbb9b7a5-c523-4f79-8550-de5b69f8d48c"],
+In[5]:=",ExpressionUUID->"275c1ab6-8579-428c-81fd-f5668c37683d"],
 
 Cell[BoxData[
  TemplateBox[{
   "Get","path",
    "\"\\!\\(\\*RowBox[{\\\"ParentDirectory\\\", \\\"[\\\", \\\"File\\\", \
-\\\"]\\\"}]\\) in $Path is not a string.\"",2,10,99,27382319419706752975,
+\\\"]\\\"}]\\) in $Path is not a string.\"",2,6,45,27384029745445814675,
    "Local"},
   "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{{3.785506844559729*^9, 3.785506857021595*^9}},
+ CellChangeTimes->{{3.785506844559729*^9, 3.785506856739223*^9}, {
+  3.785767832076075*^9, 3.7857678351899557`*^9}},
  CellLabel->
   "During evaluation of \
-In[9]:=",ExpressionUUID->"da505442-64ee-4da9-8f7e-46b87421d987"],
+In[5]:=",ExpressionUUID->"7e9f3d68-c484-41ca-b842-19b3b0f03f8d"],
 
 Cell[BoxData[
  TemplateBox[{
   "Get","path",
    "\"\\!\\(\\*RowBox[{\\\"ParentDirectory\\\", \\\"[\\\", \\\"File\\\", \
-\\\"]\\\"}]\\) in $Path is not a string.\"",2,10,100,27382319419706752975,
+\\\"]\\\"}]\\) in $Path is not a string.\"",2,6,46,27384029745445814675,
    "Local"},
   "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{{3.785506844559729*^9, 3.785506857041534*^9}},
+ CellChangeTimes->{{3.785506844559729*^9, 3.785506856739223*^9}, {
+  3.785767832076075*^9, 3.785767835195101*^9}},
  CellLabel->
   "During evaluation of \
-In[9]:=",ExpressionUUID->"498e6053-4ad8-4554-a9f8-477ff75894da"],
+In[5]:=",ExpressionUUID->"6d09319b-bceb-4621-90de-965a3df77e32"],
 
 Cell[BoxData[
  TemplateBox[{
   "General","stop",
    "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"Get\\\", \\\"::\\\", \\\
 \"path\\\"}], \\\"MessageName\\\"]\\) will be suppressed during this \
-calculation.\"",2,10,101,27382319419706752975,"Local"},
+calculation.\"",2,6,47,27384029745445814675,"Local"},
   "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{{3.785506844559729*^9, 3.7855068570522623`*^9}},
+ CellChangeTimes->{{3.785506844559729*^9, 3.785506856739223*^9}, {
+  3.785767832076075*^9, 3.785767835200301*^9}},
  CellLabel->
   "During evaluation of \
-In[9]:=",ExpressionUUID->"52bf7a27-16ee-40f9-9baa-44ea82cb2c15"],
+In[5]:=",ExpressionUUID->"d60dc667-4cb5-4426-9bd2-b2a5492c81cf"],
 
 Cell[BoxData[
  TemplateBox[{
   "Get","noopen",
    "\"Cannot open \\!\\(\\*RowBox[{\\\"\\\\\\\"WikiLink`\\\\\\\"\\\"}]\\).\"",
-   2,10,102,27382319419706752975,"Local"},
+   2,6,48,27384029745445814675,"Local"},
   "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{{3.785506844559729*^9, 3.7855068570762787`*^9}},
+ CellChangeTimes->{{3.785506844559729*^9, 3.785506856739223*^9}, {
+  3.785767832076075*^9, 3.7857678352057743`*^9}},
  CellLabel->
   "During evaluation of \
-In[9]:=",ExpressionUUID->"3db4a0f5-0a7f-46ed-86ae-0b21df4c5a10"],
+In[5]:=",ExpressionUUID->"0725d926-86e6-4c8a-8f04-42c148d3df2c"],
 
 Cell[BoxData[
  TemplateBox[{
   "Needs","nocont",
    "\"Context \\!\\(\\*RowBox[{\\\"\\\\\\\"WikiLink`\\\\\\\"\\\"}]\\) was not \
-created when Needs was evaluated.\"",2,10,103,27382319419706752975,"Local"},
+created when Needs was evaluated.\"",2,6,49,27384029745445814675,"Local"},
   "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{{3.785506844559729*^9, 3.7855068570909157`*^9}},
+ CellChangeTimes->{{3.785506844559729*^9, 3.785506856739223*^9}, {
+  3.785767832076075*^9, 3.785767835210713*^9}},
  CellLabel->
   "During evaluation of \
-In[9]:=",ExpressionUUID->"fb59124b-729b-4ee5-b432-bc615df79420"],
+In[5]:=",ExpressionUUID->"da303711-7bba-403f-9654-b5bc2e6e6d5f"],
 
 Cell[BoxData[
  TemplateBox[{
@@ -380,34 +525,37 @@ RowBox[{\\\"\\\\\\\"CreateWikiConnection\\\\\\\"\\\", \\\",\\\", \
 \\\"\\\\\\\"WikiStringReplace\\\\\\\"\\\", \\\",\\\", \
 \\\"\\\\\\\"WikiStringCases\\\\\\\"\\\", \\\",\\\", \
 \\\"\\\\\\\"WikiAllPages\\\\\\\"\\\"}], \\\"}\\\"}]}], \\\"]\\\"}]\\) has \
-already been declared.\"",2,10,104,27382319419706752975,"Local"},
+already been declared.\"",2,6,50,27384029745445814675,"Local"},
   "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{{3.785506844559729*^9, 3.785506857105976*^9}},
+ CellChangeTimes->{{3.785506844559729*^9, 3.785506856739223*^9}, {
+  3.785767832076075*^9, 3.785767835215753*^9}},
  CellLabel->
   "During evaluation of \
-In[9]:=",ExpressionUUID->"4a27d816-d9ed-4574-9045-9477bd92cf39"],
+In[5]:=",ExpressionUUID->"cf7786c9-3c02-4b06-9eb9-a59dbbd43cc9"],
 
 Cell[BoxData[
  TemplateBox[{
   "Get","noopen",
    "\"Cannot open \\!\\(\\*RowBox[{\\\"\\\\\\\"WikiLink`\\\\\\\"\\\"}]\\).\"",
-   2,10,105,27382319419706752975,"Local"},
+   2,6,51,27384029745445814675,"Local"},
   "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{{3.785506844559729*^9, 3.7855068571786423`*^9}},
+ CellChangeTimes->{{3.785506844559729*^9, 3.785506856739223*^9}, {
+  3.785767832076075*^9, 3.78576783522266*^9}},
  CellLabel->
   "During evaluation of \
-In[9]:=",ExpressionUUID->"5bbf8200-d6b8-4d05-b30d-fb9018bd6d1d"],
+In[5]:=",ExpressionUUID->"47317f98-6c28-49f3-83a8-281f8cc321be"],
 
 Cell[BoxData[
  TemplateBox[{
   "Needs","nocont",
    "\"Context \\!\\(\\*RowBox[{\\\"\\\\\\\"WikiLink`\\\\\\\"\\\"}]\\) was not \
-created when Needs was evaluated.\"",2,10,106,27382319419706752975,"Local"},
+created when Needs was evaluated.\"",2,6,52,27384029745445814675,"Local"},
   "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{{3.785506844559729*^9, 3.785506857204441*^9}},
+ CellChangeTimes->{{3.785506844559729*^9, 3.785506856739223*^9}, {
+  3.785767832076075*^9, 3.785767835229154*^9}},
  CellLabel->
   "During evaluation of \
-In[9]:=",ExpressionUUID->"ee652ab2-ee0e-47b5-b686-99b56473c34c"],
+In[5]:=",ExpressionUUID->"b6ce3ab0-fd35-4682-b339-c71b91cffdeb"],
 
 Cell[BoxData[
  TemplateBox[{
@@ -426,58 +574,63 @@ RowBox[{\\\"\\\\\\\"CreateWikiConnection\\\\\\\"\\\", \\\",\\\", \
 \\\"\\\\\\\"WikiStringReplace\\\\\\\"\\\", \\\",\\\", \
 \\\"\\\\\\\"WikiStringCases\\\\\\\"\\\", \\\",\\\", \
 \\\"\\\\\\\"WikiAllPages\\\\\\\"\\\"}], \\\"}\\\"}]}], \\\"]\\\"}]\\) has \
-already been declared.\"",2,10,107,27382319419706752975,"Local"},
+already been declared.\"",2,6,53,27384029745445814675,"Local"},
   "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{{3.785506844559729*^9, 3.785506857242716*^9}},
+ CellChangeTimes->{{3.785506844559729*^9, 3.785506856739223*^9}, {
+  3.785767832076075*^9, 3.785767835235405*^9}},
  CellLabel->
   "During evaluation of \
-In[9]:=",ExpressionUUID->"9567c38a-831f-4b2a-bf3a-197f78299d7e"],
+In[5]:=",ExpressionUUID->"ea8c9aed-42ff-42f7-bf90-9cf376007e32"],
 
 Cell[BoxData[
  TemplateBox[{
   "Get","noopen",
    "\"Cannot open \\!\\(\\*RowBox[{\\\"\\\\\\\"WikiLink`\\\\\\\"\\\"}]\\).\"",
-   2,10,108,27382319419706752975,"Local"},
+   2,6,54,27384029745445814675,"Local"},
   "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{{3.785506844559729*^9, 3.785506857438304*^9}},
+ CellChangeTimes->{{3.785506844559729*^9, 3.785506856739223*^9}, {
+  3.785767832076075*^9, 3.785767835242969*^9}},
  CellLabel->
   "During evaluation of \
-In[9]:=",ExpressionUUID->"0910a6d0-06ef-4d4c-b73f-e1d0f06f63f1"],
+In[5]:=",ExpressionUUID->"5aa2f691-53ff-4f12-93b5-35a9485428e1"],
 
 Cell[BoxData[
  TemplateBox[{
   "General","stop",
    "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"Get\\\", \\\"::\\\", \\\
 \"noopen\\\"}], \\\"MessageName\\\"]\\) will be suppressed during this \
-calculation.\"",2,10,109,27382319419706752975,"Local"},
+calculation.\"",2,6,55,27384029745445814675,"Local"},
   "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{{3.785506844559729*^9, 3.7855068574568644`*^9}},
+ CellChangeTimes->{{3.785506844559729*^9, 3.785506856739223*^9}, {
+  3.785767832076075*^9, 3.7857678352497263`*^9}},
  CellLabel->
   "During evaluation of \
-In[9]:=",ExpressionUUID->"8cd60773-ab17-4bd9-b943-a9cd09f6ffa4"],
+In[5]:=",ExpressionUUID->"7810aa76-87f7-4221-b754-c741ae928c63"],
 
 Cell[BoxData[
  TemplateBox[{
   "Needs","nocont",
    "\"Context \\!\\(\\*RowBox[{\\\"\\\\\\\"WikiLink`\\\\\\\"\\\"}]\\) was not \
-created when Needs was evaluated.\"",2,10,110,27382319419706752975,"Local"},
+created when Needs was evaluated.\"",2,6,56,27384029745445814675,"Local"},
   "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{{3.785506844559729*^9, 3.785506857481077*^9}},
+ CellChangeTimes->{{3.785506844559729*^9, 3.785506856739223*^9}, {
+  3.785767832076075*^9, 3.785767835255801*^9}},
  CellLabel->
   "During evaluation of \
-In[9]:=",ExpressionUUID->"0f19264a-7369-43ae-9467-8b28453bfd44"],
+In[5]:=",ExpressionUUID->"1e933903-3448-4ed1-b596-e7ad2ca13a8c"],
 
 Cell[BoxData[
  TemplateBox[{
   "General","stop",
    "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"Needs\\\", \\\"::\\\", \
 \\\"nocont\\\"}], \\\"MessageName\\\"]\\) will be suppressed during this \
-calculation.\"",2,10,111,27382319419706752975,"Local"},
+calculation.\"",2,6,57,27384029745445814675,"Local"},
   "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{{3.785506844559729*^9, 3.785506857498292*^9}},
+ CellChangeTimes->{{3.785506844559729*^9, 3.785506856739223*^9}, {
+  3.785767832076075*^9, 3.785767835266926*^9}},
  CellLabel->
   "During evaluation of \
-In[9]:=",ExpressionUUID->"6abc712d-2c15-415c-9029-89f9df224b6c"],
+In[5]:=",ExpressionUUID->"e72ae266-b688-4435-8870-81e7129b722f"],
 
 Cell[BoxData[
  TemplateBox[{
@@ -496,24 +649,26 @@ RowBox[{\\\"\\\\\\\"CreateWikiConnection\\\\\\\"\\\", \\\",\\\", \
 \\\"\\\\\\\"WikiStringReplace\\\\\\\"\\\", \\\",\\\", \
 \\\"\\\\\\\"WikiStringCases\\\\\\\"\\\", \\\",\\\", \
 \\\"\\\\\\\"WikiAllPages\\\\\\\"\\\"}], \\\"}\\\"}]}], \\\"]\\\"}]\\) has \
-already been declared.\"",2,10,112,27382319419706752975,"Local"},
+already been declared.\"",2,6,58,27384029745445814675,"Local"},
   "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{{3.785506844559729*^9, 3.78550685751672*^9}},
+ CellChangeTimes->{{3.785506844559729*^9, 3.785506856739223*^9}, {
+  3.785767832076075*^9, 3.785767835275016*^9}},
  CellLabel->
   "During evaluation of \
-In[9]:=",ExpressionUUID->"961ba24f-8504-45c7-bd7a-4742d8e5e1a6"],
+In[5]:=",ExpressionUUID->"57985aa3-5772-4b19-b5b9-7e00f8b63f5f"],
 
 Cell[BoxData[
  TemplateBox[{
   "General","stop",
    "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"DeclarePackage\\\", \
 \\\"::\\\", \\\"aldec\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
-during this calculation.\"",2,10,113,27382319419706752975,"Local"},
+during this calculation.\"",2,6,59,27384029745445814675,"Local"},
   "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{{3.785506844559729*^9, 3.785506857530613*^9}},
+ CellChangeTimes->{{3.785506844559729*^9, 3.785506856739223*^9}, {
+  3.785767832076075*^9, 3.7857678352821302`*^9}},
  CellLabel->
   "During evaluation of \
-In[9]:=",ExpressionUUID->"63581052-130e-4f94-a47f-c11ef5237cbd"]
+In[5]:=",ExpressionUUID->"cf03bdd2-2ae0-4fe2-a57b-a98daf0b1111"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -623,6 +778,876 @@ In[18]:=",ExpressionUUID->"abc9b947-990a-4346-95fe-577205aeb389"],
 Cell[BoxData["\<\"knot_txt_files/knot_16_1.txt\"\>"], "Output",
  CellChangeTimes->{3.781994303488057*^9},
  CellLabel->"Out[18]=",ExpressionUUID->"18f960ad-23ab-4aab-b3ca-fa1ff28b9e26"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Export", "[", 
+  RowBox[{"\"\<knot_txt_files/knot_8_14.txt\>\"", ",", 
+   RowBox[{"PD", "[", 
+    RowBox[{"Knot", "[", 
+     RowBox[{"8", ",", "14"}], "]"}], "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.785690019319496*^9, 3.785690029534487*^9}},
+ CellLabel->"In[16]:=",ExpressionUUID->"689545e5-a425-4786-8941-e8eba89792a6"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "ParentDirectory","nums",
+   "\"Argument \\!\\(\\*RowBox[{\\\"File\\\"}]\\) should be a positive \
+machine-size integer, a nonempty string, or a File specification.\"",2,16,125,
+   27382319419706752975,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.785690030102518*^9},
+ CellLabel->
+  "During evaluation of \
+In[16]:=",ExpressionUUID->"b7b907b2-a362-4d68-9d8e-6f9c558d2e64"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "ToFileName","strse",
+   "\"String or list of strings expected at position \\!\\(\\*RowBox[{\\\"1\\\
+\"}]\\) in \\!\\(\\*RowBox[{\\\"ToFileName\\\", \\\"[\\\", RowBox[{RowBox[{\\\
+\"ParentDirectory\\\", \\\"[\\\", \\\"File\\\", \\\"]\\\"}], \\\",\\\", \
+\\\"\\\\\\\"KnotTheory\\\\\\\"\\\"}], \\\"]\\\"}]\\).\"",2,16,126,
+   27382319419706752975,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.7856900301851597`*^9},
+ CellLabel->
+  "During evaluation of \
+In[16]:=",ExpressionUUID->"c1b4a932-03b8-4709-951d-4e8d7693aeec"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "FileInformation","badfile",
+   "\"The specified argument \\!\\(\\*RowBox[{\\\"ToFileName\\\", \\\"[\\\", \
+RowBox[{RowBox[{\\\"ParentDirectory\\\", \\\"[\\\", \\\"File\\\", \
+\\\"]\\\"}], \\\",\\\", \\\"\\\\\\\"KnotTheory\\\\\\\"\\\"}], \\\"]\\\"}]\\) \
+should be a valid string or File.\"",2,16,127,27382319419706752975,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.785690030198176*^9},
+ CellLabel->
+  "During evaluation of \
+In[16]:=",ExpressionUUID->"0ebe0311-1136-4d48-bd54-8ffb42142fe5"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "ReplaceAll","reps",
+   "\"\\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"\\\\\\\"AbsoluteFileName\\\\\\\"\\\", \\\"\[Rule]\\\", \\\
+\"\\\\\\\"/usr/local/Wolfram/Mathematica/12.0/AddOns/ExtraPackages/KnotTheory\
+\\\\\\\"\\\"}], \\\",\\\", RowBox[{\\\"\\\\\\\"BlockCount\\\\\\\"\\\", \\\"\
+\[Rule]\\\", \\\"8\\\"}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"BlockSize\\\\\\\"\\\", \\\"\[Rule]\\\", \\\"4096\\\"}], \
+\\\",\\\", RowBox[{\\\"\\\\\\\"ByteCount\\\\\\\"\\\", \\\"\[Rule]\\\", \
+\\\"4096\\\"}], \\\",\\\", RowBox[{\\\"\\\\\\\"Device\\\\\\\"\\\", \
+\\\"\[Rule]\\\", \\\"2049\\\"}], \\\",\\\", RowBox[{\\\"\\\\\\\"DirectoryName\
+\\\\\\\"\\\", \\\"\[Rule]\\\", \
+\\\"\\\\\\\"/usr/local/Wolfram/Mathematica/12.0/AddOns/ExtraPackages\\\\\\\"\\\
+\"}], \\\",\\\", RowBox[{\\\"\\\\\\\"FileAttributes\\\\\\\"\\\", \
+\\\"\[Rule]\\\", RowBox[{\\\"Missing\\\", \\\"[\\\", \\\"\\\\\\\"NotAvailable\
+\\\\\\\"\\\", \\\"]\\\"}]}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"FileBaseName\\\\\\\"\\\", \\\"\[Rule]\\\", \
+\\\"\\\\\\\"KnotTheory\\\\\\\"\\\"}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"FileExtension\\\\\\\"\\\", \\\"\[Rule]\\\", \
+\\\"\\\\\\\"\\\\\\\"\\\"}], \\\",\\\", RowBox[{\\\"\\\\\\\"FileName\\\\\\\"\\\
+\", \\\"\[Rule]\\\", \
+\\\"\\\\\\\"/usr/local/Wolfram/Mathematica/12.0/AddOns/ExtraPackages/\
+KnotTheory\\\\\\\"\\\"}], \\\",\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"8\\\
+\", \\\"\[RightSkeleton]\\\"}], \\\",\\\", RowBox[{\\\"\\\\\\\"RawByteCount\\\
+\\\\\"\\\", \\\"\[Rule]\\\", \\\"4096\\\"}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"SetGroupID\\\\\\\"\\\", \\\"\[Rule]\\\", \\\"False\\\"}], \
+\\\",\\\", RowBox[{\\\"\\\\\\\"SetUserID\\\\\\\"\\\", \\\"\[Rule]\\\", \
+\\\"False\\\"}], \\\",\\\", RowBox[{\\\"\\\\\\\"Sticky\\\\\\\"\\\", \\\"\
+\[Rule]\\\", \\\"False\\\"}], \\\",\\\", RowBox[{\\\"\\\\\\\"UID\\\\\\\"\\\", \
+\\\"\[Rule]\\\", \\\"1000\\\"}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"UnixPermissionsCode\\\\\\\"\\\", \\\"\[Rule]\\\", \
+\\\"\\\\\\\"0775\\\\\\\"\\\"}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"UnixPermissionsString\\\\\\\"\\\", \\\"\[Rule]\\\", \
+\\\"\\\\\\\"drwxrwxr-x\\\\\\\"\\\"}], \\\",\\\", \
+RowBox[{\\\"FileInformation\\\", \\\"[\\\", RowBox[{\\\"ToFileName\\\", \\\"[\
+\\\", RowBox[{RowBox[{\\\"ParentDirectory\\\", \\\"[\\\", \\\"File\\\", \\\"]\
+\\\"}], \\\",\\\", \\\"\\\\\\\"KnotTheory\\\\\\\"\\\"}], \\\"]\\\"}], \\\"]\\\
+\"}], \\\",\\\", RowBox[{\\\"FileInformation\\\", \\\"[\\\", \
+RowBox[{\\\"ToFileName\\\", \\\"[\\\", RowBox[{RowBox[{\\\"ToFileName\\\", \\\
+\"[\\\", RowBox[{\\\"{\\\", RowBox[{\\\"File\\\", \\\",\\\", \
+\\\"\\\\\\\"WikiLink\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"mathematica\\\\\\\"\\\"}], \\\"}\\\"}], \\\"]\\\"}], \\\",\\\", \
+\\\"\\\\\\\"KnotTheory\\\\\\\"\\\"}], \\\"]\\\"}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"FileInformation\\\", \\\"[\\\", RowBox[{\\\"ToFileName\\\", \\\"[\
+\\\", RowBox[{RowBox[{\\\"ToFileName\\\", \\\"[\\\", RowBox[{\\\"{\\\", \
+RowBox[{\\\"File\\\", \\\",\\\", \\\"\\\\\\\"QuantumGroups\\\\\\\"\\\"}], \
+\\\"}\\\"}], \\\"]\\\"}], \\\",\\\", \\\"\\\\\\\"KnotTheory\\\\\\\"\\\"}], \\\
+\"]\\\"}], \\\"]\\\"}]}], \\\"}\\\"}]\\) is neither a list of replacement \
+rules nor a valid dispatch table, and so cannot be used for replacing.\"",2,
+   16,128,27382319419706752975,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.7856900302718782`*^9},
+ CellLabel->
+  "During evaluation of \
+In[16]:=",ExpressionUUID->"d0a144bd-4fe4-4f95-bfbf-b9f835ba79be"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "ParentDirectory","nums",
+   "\"Argument \\!\\(\\*RowBox[{\\\"File\\\", \\\"/.\\\", \
+\\\"\[VeryThinSpace]\\\", RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"\\\\\\\"AbsoluteFileName\\\\\\\"\\\", \\\"\[Rule]\\\", \\\
+\"\\\\\\\"/usr/local/Wolfram/Mathematica/12.0/AddOns/ExtraPackages/KnotTheory\
+\\\\\\\"\\\"}], \\\",\\\", RowBox[{\\\"\\\\\\\"BlockCount\\\\\\\"\\\", \\\"\
+\[Rule]\\\", \\\"8\\\"}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"BlockSize\\\\\\\"\\\", \\\"\[Rule]\\\", \\\"4096\\\"}], \
+\\\",\\\", RowBox[{\\\"\\\\\\\"ByteCount\\\\\\\"\\\", \\\"\[Rule]\\\", \
+\\\"4096\\\"}], \\\",\\\", RowBox[{\\\"\\\\\\\"Device\\\\\\\"\\\", \
+\\\"\[Rule]\\\", \\\"2049\\\"}], \\\",\\\", RowBox[{\\\"\\\\\\\"DirectoryName\
+\\\\\\\"\\\", \\\"\[Rule]\\\", \
+\\\"\\\\\\\"/usr/local/Wolfram/Mathematica/12.0/AddOns/ExtraPackages\\\\\\\"\\\
+\"}], \\\",\\\", RowBox[{\\\"\\\\\\\"FileAttributes\\\\\\\"\\\", \
+\\\"\[Rule]\\\", RowBox[{\\\"Missing\\\", \\\"[\\\", \\\"\\\\\\\"NotAvailable\
+\\\\\\\"\\\", \\\"]\\\"}]}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"FileBaseName\\\\\\\"\\\", \\\"\[Rule]\\\", \
+\\\"\\\\\\\"KnotTheory\\\\\\\"\\\"}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"FileExtension\\\\\\\"\\\", \\\"\[Rule]\\\", \
+\\\"\\\\\\\"\\\\\\\"\\\"}], \\\",\\\", RowBox[{\\\"\\\\\\\"FileName\\\\\\\"\\\
+\", \\\"\[Rule]\\\", \
+\\\"\\\\\\\"/usr/local/Wolfram/Mathematica/12.0/AddOns/ExtraPackages/\
+KnotTheory\\\\\\\"\\\"}], \\\",\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"8\\\
+\", \\\"\[RightSkeleton]\\\"}], \\\",\\\", RowBox[{\\\"\\\\\\\"RawByteCount\\\
+\\\\\"\\\", \\\"\[Rule]\\\", \\\"4096\\\"}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"SetGroupID\\\\\\\"\\\", \\\"\[Rule]\\\", \\\"False\\\"}], \
+\\\",\\\", RowBox[{\\\"\\\\\\\"SetUserID\\\\\\\"\\\", \\\"\[Rule]\\\", \
+\\\"False\\\"}], \\\",\\\", RowBox[{\\\"\\\\\\\"Sticky\\\\\\\"\\\", \\\"\
+\[Rule]\\\", \\\"False\\\"}], \\\",\\\", RowBox[{\\\"\\\\\\\"UID\\\\\\\"\\\", \
+\\\"\[Rule]\\\", \\\"1000\\\"}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"UnixPermissionsCode\\\\\\\"\\\", \\\"\[Rule]\\\", \
+\\\"\\\\\\\"0775\\\\\\\"\\\"}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"UnixPermissionsString\\\\\\\"\\\", \\\"\[Rule]\\\", \
+\\\"\\\\\\\"drwxrwxr-x\\\\\\\"\\\"}], \\\",\\\", \
+RowBox[{\\\"FileInformation\\\", \\\"[\\\", RowBox[{\\\"ToFileName\\\", \\\"[\
+\\\", RowBox[{RowBox[{\\\"ParentDirectory\\\", \\\"[\\\", \\\"File\\\", \\\"]\
+\\\"}], \\\",\\\", \\\"\\\\\\\"KnotTheory\\\\\\\"\\\"}], \\\"]\\\"}], \\\"]\\\
+\"}], \\\",\\\", RowBox[{\\\"FileInformation\\\", \\\"[\\\", \
+RowBox[{\\\"ToFileName\\\", \\\"[\\\", RowBox[{RowBox[{\\\"ToFileName\\\", \\\
+\"[\\\", RowBox[{\\\"{\\\", RowBox[{\\\"File\\\", \\\",\\\", \
+\\\"\\\\\\\"WikiLink\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"mathematica\\\\\\\"\\\"}], \\\"}\\\"}], \\\"]\\\"}], \\\",\\\", \
+\\\"\\\\\\\"KnotTheory\\\\\\\"\\\"}], \\\"]\\\"}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"FileInformation\\\", \\\"[\\\", RowBox[{\\\"ToFileName\\\", \\\"[\
+\\\", RowBox[{RowBox[{\\\"ToFileName\\\", \\\"[\\\", RowBox[{\\\"{\\\", \
+RowBox[{\\\"File\\\", \\\",\\\", \\\"\\\\\\\"QuantumGroups\\\\\\\"\\\"}], \
+\\\"}\\\"}], \\\"]\\\"}], \\\",\\\", \\\"\\\\\\\"KnotTheory\\\\\\\"\\\"}], \\\
+\"]\\\"}], \\\"]\\\"}]}], \\\"}\\\"}]}]\\) should be a positive machine-size \
+integer, a nonempty string, or a File specification.\"",2,16,129,
+   27382319419706752975,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.785690030290822*^9},
+ CellLabel->
+  "During evaluation of \
+In[16]:=",ExpressionUUID->"f045ea9c-c30b-46ed-87ae-e0259973d546"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "ToFileName","strse",
+   "\"String or list of strings expected at position \\!\\(\\*RowBox[{\\\"1\\\
+\"}]\\) in \\!\\(\\*RowBox[{\\\"ToFileName\\\", \\\"[\\\", RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"File\\\", \\\"/.\\\", \\\"\[VeryThinSpace]\\\", \
+RowBox[{\\\"{\\\", RowBox[{RowBox[{\\\"\\\\\\\"AbsoluteFileName\\\\\\\"\\\", \
+\\\"\[Rule]\\\", \
+\\\"\\\\\\\"/usr/local/Wolfram/Mathematica/12.0/AddOns/ExtraPackages/\
+KnotTheory\\\\\\\"\\\"}], \\\",\\\", RowBox[{\\\"\\\\\\\"BlockCount\\\\\\\"\\\
+\", \\\"\[Rule]\\\", \\\"8\\\"}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"BlockSize\\\\\\\"\\\", \\\"\[Rule]\\\", \\\"4096\\\"}], \
+\\\",\\\", RowBox[{\\\"\\\\\\\"ByteCount\\\\\\\"\\\", \\\"\[Rule]\\\", \
+\\\"4096\\\"}], \\\",\\\", RowBox[{\\\"\\\\\\\"Device\\\\\\\"\\\", \
+\\\"\[Rule]\\\", \\\"2049\\\"}], \\\",\\\", RowBox[{\\\"\\\\\\\"DirectoryName\
+\\\\\\\"\\\", \\\"\[Rule]\\\", \
+\\\"\\\\\\\"/usr/local/Wolfram/Mathematica/12.0/AddOns/ExtraPackages\\\\\\\"\\\
+\"}], \\\",\\\", RowBox[{\\\"\\\\\\\"FileAttributes\\\\\\\"\\\", \
+\\\"\[Rule]\\\", RowBox[{\\\"Missing\\\", \\\"[\\\", \\\"\\\\\\\"NotAvailable\
+\\\\\\\"\\\", \\\"]\\\"}]}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"FileBaseName\\\\\\\"\\\", \\\"\[Rule]\\\", \
+\\\"\\\\\\\"KnotTheory\\\\\\\"\\\"}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"FileExtension\\\\\\\"\\\", \\\"\[Rule]\\\", \
+\\\"\\\\\\\"\\\\\\\"\\\"}], \\\",\\\", RowBox[{\\\"\\\\\\\"FileName\\\\\\\"\\\
+\", \\\"\[Rule]\\\", \
+\\\"\\\\\\\"/usr/local/Wolfram/Mathematica/12.0/AddOns/ExtraPackages/\
+KnotTheory\\\\\\\"\\\"}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"FileType\\\\\\\"\\\", \\\"\[Rule]\\\", \
+\\\"\\\\\\\"Directory\\\\\\\"\\\"}], \\\",\\\", RowBox[{\\\"\[LeftSkeleton]\\\
+\", \\\"7\\\", \\\"\[RightSkeleton]\\\"}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"RawByteCount\\\\\\\"\\\", \\\"\[Rule]\\\", \
+\\\"4096\\\"}], \\\",\\\", RowBox[{\\\"\\\\\\\"SetGroupID\\\\\\\"\\\", \\\"\
+\[Rule]\\\", \\\"False\\\"}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"SetUserID\\\\\\\"\\\", \\\"\[Rule]\\\", \\\"False\\\"}], \
+\\\",\\\", RowBox[{\\\"\\\\\\\"Sticky\\\\\\\"\\\", \\\"\[Rule]\\\", \\\"False\
+\\\"}], \\\",\\\", RowBox[{\\\"\\\\\\\"UID\\\\\\\"\\\", \\\"\[Rule]\\\", \
+\\\"1000\\\"}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"UnixPermissionsCode\\\\\\\"\\\", \\\"\[Rule]\\\", \
+\\\"\\\\\\\"0775\\\\\\\"\\\"}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"UnixPermissionsString\\\\\\\"\\\", \\\"\[Rule]\\\", \
+\\\"\\\\\\\"drwxrwxr-x\\\\\\\"\\\"}], \\\",\\\", \
+RowBox[{\\\"FileInformation\\\", \\\"[\\\", RowBox[{\\\"ToFileName\\\", \\\"[\
+\\\", RowBox[{RowBox[{\\\"ParentDirectory\\\", \\\"[\\\", \\\"File\\\", \\\"]\
+\\\"}], \\\",\\\", \\\"\\\\\\\"KnotTheory\\\\\\\"\\\"}], \\\"]\\\"}], \\\"]\\\
+\"}], \\\",\\\", RowBox[{\\\"FileInformation\\\", \\\"[\\\", \
+RowBox[{\\\"ToFileName\\\", \\\"[\\\", RowBox[{RowBox[{\\\"ToFileName\\\", \\\
+\"[\\\", RowBox[{\\\"{\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"3\\\", \\\"\
+\[RightSkeleton]\\\"}], \\\"}\\\"}], \\\"]\\\"}], \\\",\\\", \
+\\\"\\\\\\\"KnotTheory\\\\\\\"\\\"}], \\\"]\\\"}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"FileInformation\\\", \\\"[\\\", RowBox[{\\\"ToFileName\\\", \\\"[\
+\\\", RowBox[{RowBox[{\\\"ToFileName\\\", \\\"[\\\", RowBox[{\\\"{\\\", \
+RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"}\
+\\\"}], \\\"]\\\"}], \\\",\\\", \\\"\\\\\\\"KnotTheory\\\\\\\"\\\"}], \\\"]\\\
+\"}], \\\"]\\\"}]}], \\\"}\\\"}]}], \\\",\\\", \\\"\\\\\\\"WikiLink\\\\\\\"\\\
+\", \\\",\\\", \\\"\\\\\\\"mathematica\\\\\\\"\\\"}], \\\"}\\\"}], \
+\\\"]\\\"}]\\).\"",2,16,130,27382319419706752975,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.785690030300453*^9},
+ CellLabel->
+  "During evaluation of \
+In[16]:=",ExpressionUUID->"9ed23a0c-7ba7-49d2-b772-2489af460215"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "ToFileName","strse",
+   "\"String or list of strings expected at position \\!\\(\\*RowBox[{\\\"1\\\
+\"}]\\) in \\!\\(\\*RowBox[{\\\"ToFileName\\\", \\\"[\\\", RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"File\\\", \\\"/.\\\", \\\"\[VeryThinSpace]\\\", \
+RowBox[{\\\"{\\\", RowBox[{RowBox[{\\\"\\\\\\\"AbsoluteFileName\\\\\\\"\\\", \
+\\\"\[Rule]\\\", \
+\\\"\\\\\\\"/usr/local/Wolfram/Mathematica/12.0/AddOns/ExtraPackages/\
+KnotTheory\\\\\\\"\\\"}], \\\",\\\", RowBox[{\\\"\\\\\\\"BlockCount\\\\\\\"\\\
+\", \\\"\[Rule]\\\", \\\"8\\\"}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"BlockSize\\\\\\\"\\\", \\\"\[Rule]\\\", \\\"4096\\\"}], \
+\\\",\\\", RowBox[{\\\"\\\\\\\"ByteCount\\\\\\\"\\\", \\\"\[Rule]\\\", \
+\\\"4096\\\"}], \\\",\\\", RowBox[{\\\"\\\\\\\"Device\\\\\\\"\\\", \
+\\\"\[Rule]\\\", \\\"2049\\\"}], \\\",\\\", RowBox[{\\\"\\\\\\\"DirectoryName\
+\\\\\\\"\\\", \\\"\[Rule]\\\", \
+\\\"\\\\\\\"/usr/local/Wolfram/Mathematica/12.0/AddOns/ExtraPackages\\\\\\\"\\\
+\"}], \\\",\\\", RowBox[{\\\"\\\\\\\"FileAttributes\\\\\\\"\\\", \
+\\\"\[Rule]\\\", RowBox[{\\\"Missing\\\", \\\"[\\\", \\\"\\\\\\\"NotAvailable\
+\\\\\\\"\\\", \\\"]\\\"}]}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"FileBaseName\\\\\\\"\\\", \\\"\[Rule]\\\", \
+\\\"\\\\\\\"KnotTheory\\\\\\\"\\\"}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"FileExtension\\\\\\\"\\\", \\\"\[Rule]\\\", \
+\\\"\\\\\\\"\\\\\\\"\\\"}], \\\",\\\", RowBox[{\\\"\\\\\\\"FileName\\\\\\\"\\\
+\", \\\"\[Rule]\\\", \
+\\\"\\\\\\\"/usr/local/Wolfram/Mathematica/12.0/AddOns/ExtraPackages/\
+KnotTheory\\\\\\\"\\\"}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"FileType\\\\\\\"\\\", \\\"\[Rule]\\\", \
+\\\"\\\\\\\"Directory\\\\\\\"\\\"}], \\\",\\\", RowBox[{\\\"\[LeftSkeleton]\\\
+\", \\\"7\\\", \\\"\[RightSkeleton]\\\"}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"RawByteCount\\\\\\\"\\\", \\\"\[Rule]\\\", \
+\\\"4096\\\"}], \\\",\\\", RowBox[{\\\"\\\\\\\"SetGroupID\\\\\\\"\\\", \\\"\
+\[Rule]\\\", \\\"False\\\"}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"SetUserID\\\\\\\"\\\", \\\"\[Rule]\\\", \\\"False\\\"}], \
+\\\",\\\", RowBox[{\\\"\\\\\\\"Sticky\\\\\\\"\\\", \\\"\[Rule]\\\", \\\"False\
+\\\"}], \\\",\\\", RowBox[{\\\"\\\\\\\"UID\\\\\\\"\\\", \\\"\[Rule]\\\", \
+\\\"1000\\\"}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"UnixPermissionsCode\\\\\\\"\\\", \\\"\[Rule]\\\", \
+\\\"\\\\\\\"0775\\\\\\\"\\\"}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"UnixPermissionsString\\\\\\\"\\\", \\\"\[Rule]\\\", \
+\\\"\\\\\\\"drwxrwxr-x\\\\\\\"\\\"}], \\\",\\\", \
+RowBox[{\\\"FileInformation\\\", \\\"[\\\", RowBox[{\\\"ToFileName\\\", \\\"[\
+\\\", RowBox[{RowBox[{\\\"ParentDirectory\\\", \\\"[\\\", \\\"File\\\", \\\"]\
+\\\"}], \\\",\\\", \\\"\\\\\\\"KnotTheory\\\\\\\"\\\"}], \\\"]\\\"}], \\\"]\\\
+\"}], \\\",\\\", RowBox[{\\\"FileInformation\\\", \\\"[\\\", \
+RowBox[{\\\"ToFileName\\\", \\\"[\\\", RowBox[{RowBox[{\\\"ToFileName\\\", \\\
+\"[\\\", RowBox[{\\\"{\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"3\\\", \\\"\
+\[RightSkeleton]\\\"}], \\\"}\\\"}], \\\"]\\\"}], \\\",\\\", \
+\\\"\\\\\\\"KnotTheory\\\\\\\"\\\"}], \\\"]\\\"}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"FileInformation\\\", \\\"[\\\", RowBox[{\\\"ToFileName\\\", \\\"[\
+\\\", RowBox[{RowBox[{\\\"ToFileName\\\", \\\"[\\\", RowBox[{\\\"{\\\", \
+RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"}\
+\\\"}], \\\"]\\\"}], \\\",\\\", \\\"\\\\\\\"KnotTheory\\\\\\\"\\\"}], \\\"]\\\
+\"}], \\\"]\\\"}]}], \\\"}\\\"}]}], \\\",\\\", \
+\\\"\\\\\\\"QuantumGroups\\\\\\\"\\\"}], \\\"}\\\"}], \\\"]\\\"}]\\).\"",2,16,
+   131,27382319419706752975,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.785690030310833*^9},
+ CellLabel->
+  "During evaluation of \
+In[16]:=",ExpressionUUID->"ba8a2c6f-8361-42ad-91c9-2576dff42c80"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"ToFileName\\\", \
+\\\"::\\\", \\\"strse\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,16,132,27382319419706752975,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.785690030393592*^9},
+ CellLabel->
+  "During evaluation of \
+In[16]:=",ExpressionUUID->"567afa32-b0ef-438b-b7df-ea1d1361dae4"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "FileInformation","badfile",
+   "\"The specified argument \\!\\(\\*RowBox[{\\\"ToFileName\\\", \\\"[\\\", \
+RowBox[{RowBox[{\\\"ParentDirectory\\\", \\\"[\\\", \\\"File\\\", \
+\\\"]\\\"}], \\\",\\\", \\\"\\\\\\\"KnotTheory\\\\\\\"\\\"}], \\\"]\\\"}]\\) \
+should be a valid string or File.\"",2,16,133,27382319419706752975,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.7856900304054947`*^9},
+ CellLabel->
+  "During evaluation of \
+In[16]:=",ExpressionUUID->"05b6fd1e-87fd-46ae-958b-bf9482d704c3"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "FileInformation","badfile",
+   "\"The specified argument \\!\\(\\*RowBox[{\\\"ToFileName\\\", \\\"[\\\", \
+RowBox[{RowBox[{\\\"ParentDirectory\\\", \\\"[\\\", RowBox[{\\\"File\\\", \
+\\\"/.\\\", \\\"\[VeryThinSpace]\\\", RowBox[{\\\"{\\\", RowBox[{RowBox[{\\\"\
+\\\\\\\"AbsoluteFileName\\\\\\\"\\\", \\\"\[Rule]\\\", \
+\\\"\\\\\\\"/usr/local/Wolfram/Mathematica/12.0/AddOns/ExtraPackages/\
+KnotTheory\\\\\\\"\\\"}], \\\",\\\", RowBox[{\\\"\\\\\\\"BlockCount\\\\\\\"\\\
+\", \\\"\[Rule]\\\", \\\"8\\\"}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"BlockSize\\\\\\\"\\\", \\\"\[Rule]\\\", \\\"4096\\\"}], \
+\\\",\\\", RowBox[{\\\"\\\\\\\"ByteCount\\\\\\\"\\\", \\\"\[Rule]\\\", \
+\\\"4096\\\"}], \\\",\\\", RowBox[{\\\"\\\\\\\"Device\\\\\\\"\\\", \
+\\\"\[Rule]\\\", \\\"2049\\\"}], \\\",\\\", RowBox[{\\\"\\\\\\\"DirectoryName\
+\\\\\\\"\\\", \\\"\[Rule]\\\", \
+\\\"\\\\\\\"/usr/local/Wolfram/Mathematica/12.0/AddOns/ExtraPackages\\\\\\\"\\\
+\"}], \\\",\\\", RowBox[{\\\"\\\\\\\"FileAttributes\\\\\\\"\\\", \
+\\\"\[Rule]\\\", RowBox[{\\\"Missing\\\", \\\"[\\\", \\\"\\\\\\\"NotAvailable\
+\\\\\\\"\\\", \\\"]\\\"}]}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"FileBaseName\\\\\\\"\\\", \\\"\[Rule]\\\", \
+\\\"\\\\\\\"KnotTheory\\\\\\\"\\\"}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"FileExtension\\\\\\\"\\\", \\\"\[Rule]\\\", \
+\\\"\\\\\\\"\\\\\\\"\\\"}], \\\",\\\", RowBox[{\\\"\\\\\\\"FileName\\\\\\\"\\\
+\", \\\"\[Rule]\\\", \
+\\\"\\\\\\\"/usr/local/Wolfram/Mathematica/12.0/AddOns/ExtraPackages/\
+KnotTheory\\\\\\\"\\\"}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"FileType\\\\\\\"\\\", \\\"\[Rule]\\\", \
+\\\"\\\\\\\"Directory\\\\\\\"\\\"}], \\\",\\\", RowBox[{\\\"\[LeftSkeleton]\\\
+\", \\\"7\\\", \\\"\[RightSkeleton]\\\"}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"RawByteCount\\\\\\\"\\\", \\\"\[Rule]\\\", \
+\\\"4096\\\"}], \\\",\\\", RowBox[{\\\"\\\\\\\"SetGroupID\\\\\\\"\\\", \\\"\
+\[Rule]\\\", \\\"False\\\"}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"SetUserID\\\\\\\"\\\", \\\"\[Rule]\\\", \\\"False\\\"}], \
+\\\",\\\", RowBox[{\\\"\\\\\\\"Sticky\\\\\\\"\\\", \\\"\[Rule]\\\", \\\"False\
+\\\"}], \\\",\\\", RowBox[{\\\"\\\\\\\"UID\\\\\\\"\\\", \\\"\[Rule]\\\", \
+\\\"1000\\\"}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"UnixPermissionsCode\\\\\\\"\\\", \\\"\[Rule]\\\", \
+\\\"\\\\\\\"0775\\\\\\\"\\\"}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"UnixPermissionsString\\\\\\\"\\\", \\\"\[Rule]\\\", \
+\\\"\\\\\\\"drwxrwxr-x\\\\\\\"\\\"}], \\\",\\\", \
+RowBox[{\\\"FileInformation\\\", \\\"[\\\", RowBox[{\\\"ToFileName\\\", \\\"[\
+\\\", RowBox[{RowBox[{\\\"ParentDirectory\\\", \\\"[\\\", \\\"File\\\", \\\"]\
+\\\"}], \\\",\\\", \\\"\\\\\\\"KnotTheory\\\\\\\"\\\"}], \\\"]\\\"}], \\\"]\\\
+\"}], \\\",\\\", RowBox[{\\\"FileInformation\\\", \\\"[\\\", \
+RowBox[{\\\"ToFileName\\\", \\\"[\\\", RowBox[{RowBox[{\\\"ToFileName\\\", \\\
+\"[\\\", RowBox[{\\\"{\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"3\\\", \\\"\
+\[RightSkeleton]\\\"}], \\\"}\\\"}], \\\"]\\\"}], \\\",\\\", \
+\\\"\\\\\\\"KnotTheory\\\\\\\"\\\"}], \\\"]\\\"}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"FileInformation\\\", \\\"[\\\", RowBox[{\\\"ToFileName\\\", \\\"[\
+\\\", RowBox[{RowBox[{\\\"ToFileName\\\", \\\"[\\\", RowBox[{\\\"{\\\", \
+RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"}\
+\\\"}], \\\"]\\\"}], \\\",\\\", \\\"\\\\\\\"KnotTheory\\\\\\\"\\\"}], \\\"]\\\
+\"}], \\\"]\\\"}]}], \\\"}\\\"}]}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"K\\\\\\\"\\\", \\\"\[Ellipsis]\\\", \\\"\\\\\\\"y\\\\\\\"\
+\\\"}]}], \\\"]\\\"}]\\) should be a valid string or File.\"",2,16,134,
+   27382319419706752975,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.785690030413712*^9},
+ CellLabel->
+  "During evaluation of \
+In[16]:=",ExpressionUUID->"7e56ed48-9cd8-4ff4-bdde-ce56e8350b83"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"FileInformation\\\", \\\
+\"::\\\", \\\"badfile\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,16,135,27382319419706752975,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.785690030488606*^9},
+ CellLabel->
+  "During evaluation of \
+In[16]:=",ExpressionUUID->"d6f76079-358e-4ffb-aa8c-c3c734da2b1b"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "ReplaceAll","reps",
+   "\"\\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"\\\\\\\"AbsoluteFileName\\\\\\\"\\\", \\\"\[Rule]\\\", \\\
+\"\\\\\\\"/usr/local/Wolfram/Mathematica/12.0/AddOns/ExtraPackages/KnotTheory\
+\\\\\\\"\\\"}], \\\",\\\", RowBox[{\\\"\\\\\\\"BlockCount\\\\\\\"\\\", \\\"\
+\[Rule]\\\", \\\"8\\\"}], \\\",\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
+\\\"28\\\", \\\"\[RightSkeleton]\\\"}], \\\",\\\", \
+RowBox[{\\\"FileInformation\\\", \\\"[\\\", RowBox[{\\\"ToFileName\\\", \\\"[\
+\\\", RowBox[{RowBox[{\\\"ToFileName\\\", \\\"[\\\", RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"File\\\", \\\"/.\\\", \\\"\[VeryThinSpace]\\\", \
+RowBox[{\\\"{\\\", RowBox[{RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\
+\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \
+\\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
+\\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \
+\\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \
+\\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\
+\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\
+\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \
+\\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
+\\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \
+\\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \
+\\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\
+\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\
+\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \
+\\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
+\\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \
+\\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \
+\\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\
+\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\
+\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \
+\\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
+\\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \
+\\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \
+\\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\
+\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\
+\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \
+\\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
+\\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \
+\\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \
+\\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\
+\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\
+\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \
+\\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
+\\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \
+\\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \
+\\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\
+\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\
+\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \
+\\\",\\\", RowBox[{\\\"FileInformation\\\", \\\"[\\\", RowBox[{\\\"\
+\[LeftSkeleton]\\\", \\\"1\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \
+\\\",\\\", RowBox[{\\\"FileInformation\\\", \\\"[\\\", RowBox[{\\\"\
+\[LeftSkeleton]\\\", \\\"1\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \
+\\\",\\\", RowBox[{\\\"FileInformation\\\", \\\"[\\\", RowBox[{\\\"\
+\[LeftSkeleton]\\\", \\\"1\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}]}], \\\
+\"}\\\"}]}], \\\",\\\", \\\"\\\\\\\"QuantumGroups\\\\\\\"\\\"}], \\\"}\\\"}], \
+\\\"]\\\"}], \\\",\\\", \\\"\\\\\\\"KnotTheory\\\\\\\"\\\"}], \\\"]\\\"}], \\\
+\"]\\\"}]}], \\\"}\\\"}]\\) is neither a list of replacement rules nor a \
+valid dispatch table, and so cannot be used for replacing.\"",2,16,136,
+   27382319419706752975,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.785690030500429*^9},
+ CellLabel->
+  "During evaluation of \
+In[16]:=",ExpressionUUID->"9da7649b-4ee6-4df0-904e-3bd04f05bf5f"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "ParentDirectory","nums",
+   "\"Argument \\!\\(\\*RowBox[{\\\"File\\\", \\\"/.\\\", \
+\\\"\[VeryThinSpace]\\\", RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"\\\\\\\"AbsoluteFileName\\\\\\\"\\\", \\\"\[Rule]\\\", \\\
+\"\\\\\\\"/usr/local/Wolfram/Mathematica/12.0/AddOns/ExtraPackages/KnotTheory\
+\\\\\\\"\\\"}], \\\",\\\", RowBox[{\\\"\\\\\\\"BlockCount\\\\\\\"\\\", \\\"\
+\[Rule]\\\", \\\"8\\\"}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"BlockSize\\\\\\\"\\\", \\\"\[Rule]\\\", \\\"4096\\\"}], \
+\\\",\\\", RowBox[{\\\"\\\\\\\"ByteCount\\\\\\\"\\\", \\\"\[Rule]\\\", \
+\\\"4096\\\"}], \\\",\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"23\\\", \\\"\
+\[RightSkeleton]\\\"}], \\\",\\\", RowBox[{\\\"FileInformation\\\", \
+\\\"[\\\", RowBox[{\\\"ToFileName\\\", \\\"[\\\", \
+RowBox[{RowBox[{\\\"ToFileName\\\", \\\"[\\\", RowBox[{\\\"{\\\", \
+RowBox[{\\\"File\\\", \\\",\\\", \\\"\\\\\\\"QuantumGroups\\\\\\\"\\\"}], \
+\\\"}\\\"}], \\\"]\\\"}], \\\",\\\", \\\"\\\\\\\"KnotTheory\\\\\\\"\\\"}], \\\
+\"]\\\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"FileInformation\\\", \
+\\\"[\\\", RowBox[{\\\"ToFileName\\\", \\\"[\\\", \
+RowBox[{RowBox[{\\\"ParentDirectory\\\", \\\"[\\\", RowBox[{\\\"File\\\", \
+\\\"/.\\\", \\\"\[VeryThinSpace]\\\", RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
+\\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \
+\\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \
+\\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\
+\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\
+\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \
+\\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
+\\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \
+\\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \
+\\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\
+\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\
+\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \
+\\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
+\\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \
+\\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \
+\\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\
+\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\
+\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \
+\\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
+\\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \
+\\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \
+\\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\
+\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\
+\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \
+\\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
+\\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \
+\\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \
+\\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\
+\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\
+\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \
+\\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
+\\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \
+\\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \
+\\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\
+\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\
+\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \
+\\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
+\\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"FileInformation\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
+\\\"1\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"FileInformation\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
+\\\"1\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"FileInformation\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
+\\\"1\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}]}], \\\"}\\\"}]}], \
+\\\"]\\\"}], \\\",\\\", \\\"\\\\\\\"KnotTheory\\\\\\\"\\\"}], \\\"]\\\"}], \\\
+\"]\\\"}], \\\",\\\", RowBox[{\\\"FileInformation\\\", \\\"[\\\", \
+RowBox[{\\\"ToFileName\\\", \\\"[\\\", RowBox[{RowBox[{\\\"ToFileName\\\", \\\
+\"[\\\", RowBox[{\\\"{\\\", RowBox[{RowBox[{\\\"File\\\", \\\"/.\\\", \\\"\
+\[VeryThinSpace]\\\", RowBox[{\\\"{\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
+\\\"28\\\", \\\"\[RightSkeleton]\\\"}], \\\"}\\\"}]}], \\\",\\\", \
+\\\"\\\\\\\"WikiLink\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"mathematica\\\\\\\"\\\"}], \\\"}\\\"}], \\\"]\\\"}], \\\",\\\", \
+\\\"\\\\\\\"KnotTheory\\\\\\\"\\\"}], \\\"]\\\"}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"FileInformation\\\", \\\"[\\\", RowBox[{\\\"ToFileName\\\", \\\"[\
+\\\", RowBox[{RowBox[{\\\"ToFileName\\\", \\\"[\\\", RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"File\\\", \\\"/.\\\", \\\"\[VeryThinSpace]\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"28\\\", \\\"\
+\[RightSkeleton]\\\"}], \\\"}\\\"}]}], \\\",\\\", \\\"\\\\\\\"QuantumGroups\\\
+\\\\\"\\\"}], \\\"}\\\"}], \\\"]\\\"}], \\\",\\\", \\\"\\\\\\\"KnotTheory\\\\\
+\\\"\\\"}], \\\"]\\\"}], \\\"]\\\"}]}], \\\"}\\\"}]}]\\) should be a positive \
+machine-size integer, a nonempty string, or a File specification.\"",2,16,137,
+   27382319419706752975,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.785690030576621*^9},
+ CellLabel->
+  "During evaluation of \
+In[16]:=",ExpressionUUID->"dace6500-1725-42b1-8aac-af9a271a72d7"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"ParentDirectory\\\", \\\
+\"::\\\", \\\"nums\\\"}], \\\"MessageName\\\"]\\) will be suppressed during \
+this calculation.\"",2,16,138,27382319419706752975,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.7856900305921383`*^9},
+ CellLabel->
+  "During evaluation of \
+In[16]:=",ExpressionUUID->"8805ad06-8a58-4f2b-93b7-34fa9823efd9"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "ReplaceAll","reps",
+   "\"\\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"\\\\\\\"AbsoluteFileName\\\\\\\"\\\", \\\"\[Rule]\\\", \\\
+\"\\\\\\\"/usr/local/Wolfram/Mathematica/12.0/AddOns/ExtraPackages/KnotTheory\
+\\\\\\\"\\\"}], \\\",\\\", RowBox[{\\\"\\\\\\\"BlockCount\\\\\\\"\\\", \\\"\
+\[Rule]\\\", \\\"8\\\"}], \\\",\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
+\\\"31\\\", \\\"\[RightSkeleton]\\\"}], \\\",\\\", \
+RowBox[{\\\"FileInformation\\\", \\\"[\\\", RowBox[{\\\"ToFileName\\\", \\\"[\
+\\\", RowBox[{RowBox[{\\\"ToFileName\\\", \\\"[\\\", RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"File\\\", \\\"/.\\\", \\\"\[VeryThinSpace]\\\", \
+RowBox[{\\\"{\\\", RowBox[{RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\
+\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \
+\\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
+\\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \
+\\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \
+\\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\
+\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\
+\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \
+\\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
+\\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \
+\\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \
+\\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\
+\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\
+\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \
+\\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
+\\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \
+\\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \
+\\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\
+\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\
+\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \
+\\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
+\\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \
+\\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \
+\\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\
+\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\
+\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \
+\\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
+\\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \
+\\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \
+\\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\
+\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\
+\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \
+\\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
+\\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \
+\\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \
+\\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\
+\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"Rule\\\", \\\"[\\\", RowBox[{\\\"\
+\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \
+\\\",\\\", RowBox[{\\\"FileInformation\\\", \\\"[\\\", RowBox[{\\\"\
+\[LeftSkeleton]\\\", \\\"1\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \
+\\\",\\\", RowBox[{\\\"FileInformation\\\", \\\"[\\\", RowBox[{\\\"\
+\[LeftSkeleton]\\\", \\\"1\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \
+\\\",\\\", RowBox[{\\\"FileInformation\\\", \\\"[\\\", RowBox[{\\\"\
+\[LeftSkeleton]\\\", \\\"1\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \
+\\\",\\\", RowBox[{\\\"FileInformation\\\", \\\"[\\\", RowBox[{\\\"\
+\[LeftSkeleton]\\\", \\\"1\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \
+\\\",\\\", RowBox[{\\\"FileInformation\\\", \\\"[\\\", RowBox[{\\\"\
+\[LeftSkeleton]\\\", \\\"1\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \
+\\\",\\\", RowBox[{\\\"FileInformation\\\", \\\"[\\\", RowBox[{\\\"\
+\[LeftSkeleton]\\\", \\\"1\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}]}], \\\
+\"}\\\"}]}], \\\",\\\", \\\"\\\\\\\"QuantumGroups\\\\\\\"\\\"}], \\\"}\\\"}], \
+\\\"]\\\"}], \\\",\\\", \\\"\\\\\\\"KnotTheory\\\\\\\"\\\"}], \\\"]\\\"}], \\\
+\"]\\\"}]}], \\\"}\\\"}]\\) is neither a list of replacement rules nor a \
+valid dispatch table, and so cannot be used for replacing.\"",2,16,139,
+   27382319419706752975,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.785690030601204*^9},
+ CellLabel->
+  "During evaluation of \
+In[16]:=",ExpressionUUID->"2a44d49b-eed0-4e70-bd54-05c9fbd404ca"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"ReplaceAll\\\", \
+\\\"::\\\", \\\"reps\\\"}], \\\"MessageName\\\"]\\) will be suppressed during \
+this calculation.\"",2,16,140,27382319419706752975,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.785690030682715*^9},
+ CellLabel->
+  "During evaluation of \
+In[16]:=",ExpressionUUID->"3851eeba-60e9-4ed6-86df-f4dc1279efd3"],
+
+Cell[BoxData["\<\"knot_txt_files/knot_8_14.txt\"\>"], "Output",
+ CellChangeTimes->{3.785690030695747*^9},
+ CellLabel->"Out[16]=",ExpressionUUID->"48700fab-6aa6-4cd5-9755-4229c73a092d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Export", "[", 
+  RowBox[{"\"\<knot_txt_files/knot_12_499.txt\>\"", ",", 
+   RowBox[{"PD", "[", 
+    RowBox[{"Knot", "[", 
+     RowBox[{"12", ",", "Alternating", ",", "499"}], "]"}], "]"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.785690118706007*^9, 3.785690127145385*^9}},
+ CellLabel->"In[19]:=",ExpressionUUID->"182fe2c4-c03d-44aa-aa2c-ace6867bbade"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "KnotTheory","loading",
+   "\"Loading precomputed data in \
+\\!\\(\\*RowBox[{\\\"\\\\\\\"KnotTheory/12A.dts\\\\\\\"\\\"}]\\).\"",2,19,143,
+   27382319419706752975,"Local","KnotTheory`KnotTheory"},
+  "MessageTemplate2"]], "Message", "MSG",
+ CellChangeTimes->{3.785690127723146*^9},
+ CellLabel->
+  "During evaluation of \
+In[19]:=",ExpressionUUID->"a8aa6076-a5b6-4ba3-8cc1-537a74c833d7"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "KnotTheory","credits",
+   "\"\\!\\(\\*RowBox[{\\\"\\\\\\\"The GaussCode to PD conversion was written \
+by Siddarth Sankaran at the University of Toronto in the summer of \
+2005.\\\\\\\"\\\"}]\\)\"",2,19,144,27382319419706752975,"Local",
+   "KnotTheory`KnotTheory"},
+  "MessageTemplate2"]], "Message", "MSG",
+ CellChangeTimes->{3.785690127732511*^9},
+ CellLabel->
+  "During evaluation of \
+In[19]:=",ExpressionUUID->"d61d56ec-ba1c-4595-917d-403f24fbe4ff"],
+
+Cell[BoxData["\<\"knot_txt_files/knot_12_499.txt\"\>"], "Output",
+ CellChangeTimes->{3.785690127740655*^9},
+ CellLabel->"Out[19]=",ExpressionUUID->"5cd519c8-a9fa-4a31-a96e-0d1103a4d9dd"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"GetAllMinimalPDCodes", "[", 
+  RowBox[{"Knot", "[", 
+   RowBox[{"8", ",", "14"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.785689997944961*^9, 3.7856900105058327`*^9}},
+ CellLabel->"In[15]:=",ExpressionUUID->"15005752-7c57-4efd-8386-b2f6bcb7cf64"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Get","path",
+   "\"\\!\\(\\*RowBox[{\\\"ParentDirectory\\\", \\\"[\\\", \\\"File\\\", \
+\\\"]\\\"}]\\) in $Path is not a string.\"",2,15,123,27382319419706752975,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.785690005727623*^9, 3.785690011215166*^9}},
+ CellLabel->
+  "During evaluation of \
+In[15]:=",ExpressionUUID->"a71efbc2-51d0-4780-a2c2-0ec846ee86da"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "KnotTheory","loading",
+   "\"Loading precomputed data in \
+\\!\\(\\*RowBox[{\\\"\\\\\\\"MinimalPDCodes4AlternatingKnots`\\\\\\\"\\\"}]\\)\
+.\"",2,15,124,27382319419706752975,"Local","KnotTheory`KnotTheory"},
+  "MessageTemplate2"]], "Message", "MSG",
+ CellChangeTimes->{{3.785690005727623*^9, 3.7856900112255993`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[15]:=",ExpressionUUID->"c19bf53b-06e7-4fb5-a406-0f5ebcfdb657"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"PD", "[", 
+    RowBox[{
+     RowBox[{"X", "[", 
+      RowBox[{"1", ",", "4", ",", "2", ",", "5"}], "]"}], ",", 
+     RowBox[{"X", "[", 
+      RowBox[{"13", ",", "16", ",", "14", ",", "1"}], "]"}], ",", 
+     RowBox[{"X", "[", 
+      RowBox[{"11", ",", "3", ",", "12", ",", "2"}], "]"}], ",", 
+     RowBox[{"X", "[", 
+      RowBox[{"3", ",", "11", ",", "4", ",", "10"}], "]"}], ",", 
+     RowBox[{"X", "[", 
+      RowBox[{"5", ",", "12", ",", "6", ",", "13"}], "]"}], ",", 
+     RowBox[{"X", "[", 
+      RowBox[{"9", ",", "6", ",", "10", ",", "7"}], "]"}], ",", 
+     RowBox[{"X", "[", 
+      RowBox[{"7", ",", "14", ",", "8", ",", "15"}], "]"}], ",", 
+     RowBox[{"X", "[", 
+      RowBox[{"15", ",", "8", ",", "16", ",", "9"}], "]"}]}], "]"}], ",", 
+   RowBox[{"PD", "[", 
+    RowBox[{
+     RowBox[{"X", "[", 
+      RowBox[{"1", ",", "4", ",", "2", ",", "5"}], "]"}], ",", 
+     RowBox[{"X", "[", 
+      RowBox[{"7", ",", "1", ",", "8", ",", "16"}], "]"}], ",", 
+     RowBox[{"X", "[", 
+      RowBox[{"11", ",", "2", ",", "12", ",", "3"}], "]"}], ",", 
+     RowBox[{"X", "[", 
+      RowBox[{"3", ",", "12", ",", "4", ",", "13"}], "]"}], ",", 
+     RowBox[{"X", "[", 
+      RowBox[{"5", ",", "14", ",", "6", ",", "15"}], "]"}], ",", 
+     RowBox[{"X", "[", 
+      RowBox[{"9", ",", "6", ",", "10", ",", "7"}], "]"}], ",", 
+     RowBox[{"X", "[", 
+      RowBox[{"15", ",", "9", ",", "16", ",", "8"}], "]"}], ",", 
+     RowBox[{"X", "[", 
+      RowBox[{"13", ",", "10", ",", "14", ",", "11"}], "]"}]}], "]"}], ",", 
+   RowBox[{"PD", "[", 
+    RowBox[{
+     RowBox[{"X", "[", 
+      RowBox[{"7", ",", "16", ",", "8", ",", "1"}], "]"}], ",", 
+     RowBox[{"X", "[", 
+      RowBox[{"1", ",", "10", ",", "2", ",", "11"}], "]"}], ",", 
+     RowBox[{"X", "[", 
+      RowBox[{"11", ",", "2", ",", "12", ",", "3"}], "]"}], ",", 
+     RowBox[{"X", "[", 
+      RowBox[{"3", ",", "6", ",", "4", ",", "7"}], "]"}], ",", 
+     RowBox[{"X", "[", 
+      RowBox[{"15", ",", "5", ",", "16", ",", "4"}], "]"}], ",", 
+     RowBox[{"X", "[", 
+      RowBox[{"5", ",", "15", ",", "6", ",", "14"}], "]"}], ",", 
+     RowBox[{"X", "[", 
+      RowBox[{"13", ",", "8", ",", "14", ",", "9"}], "]"}], ",", 
+     RowBox[{"X", "[", 
+      RowBox[{"9", ",", "12", ",", "10", ",", "13"}], "]"}]}], "]"}], ",", 
+   RowBox[{"PD", "[", 
+    RowBox[{
+     RowBox[{"X", "[", 
+      RowBox[{"1", ",", "6", ",", "2", ",", "7"}], "]"}], ",", 
+     RowBox[{"X", "[", 
+      RowBox[{"9", ",", "1", ",", "10", ",", "16"}], "]"}], ",", 
+     RowBox[{"X", "[", 
+      RowBox[{"5", ",", "2", ",", "6", ",", "3"}], "]"}], ",", 
+     RowBox[{"X", "[", 
+      RowBox[{"3", ",", "12", ",", "4", ",", "13"}], "]"}], ",", 
+     RowBox[{"X", "[", 
+      RowBox[{"13", ",", "4", ",", "14", ",", "5"}], "]"}], ",", 
+     RowBox[{"X", "[", 
+      RowBox[{"7", ",", "14", ",", "8", ",", "15"}], "]"}], ",", 
+     RowBox[{"X", "[", 
+      RowBox[{"11", ",", "8", ",", "12", ",", "9"}], "]"}], ",", 
+     RowBox[{"X", "[", 
+      RowBox[{"15", ",", "11", ",", "16", ",", "10"}], "]"}]}], "]"}], ",", 
+   RowBox[{"PD", "[", 
+    RowBox[{
+     RowBox[{"X", "[", 
+      RowBox[{"1", ",", "4", ",", "2", ",", "5"}], "]"}], ",", 
+     RowBox[{"X", "[", 
+      RowBox[{"11", ",", "16", ",", "12", ",", "1"}], "]"}], ",", 
+     RowBox[{"X", "[", 
+      RowBox[{"9", ",", "3", ",", "10", ",", "2"}], "]"}], ",", 
+     RowBox[{"X", "[", 
+      RowBox[{"3", ",", "9", ",", "4", ",", "8"}], "]"}], ",", 
+     RowBox[{"X", "[", 
+      RowBox[{"5", ",", "10", ",", "6", ",", "11"}], "]"}], ",", 
+     RowBox[{"X", "[", 
+      RowBox[{"13", ",", "6", ",", "14", ",", "7"}], "]"}], ",", 
+     RowBox[{"X", "[", 
+      RowBox[{"7", ",", "14", ",", "8", ",", "15"}], "]"}], ",", 
+     RowBox[{"X", "[", 
+      RowBox[{"15", ",", "12", ",", "16", ",", "13"}], "]"}]}], "]"}], ",", 
+   RowBox[{"PD", "[", 
+    RowBox[{
+     RowBox[{"X", "[", 
+      RowBox[{"5", ",", "1", ",", "6", ",", "16"}], "]"}], ",", 
+     RowBox[{"X", "[", 
+      RowBox[{"1", ",", "10", ",", "2", ",", "11"}], "]"}], ",", 
+     RowBox[{"X", "[", 
+      RowBox[{"11", ",", "2", ",", "12", ",", "3"}], "]"}], ",", 
+     RowBox[{"X", "[", 
+      RowBox[{"3", ",", "14", ",", "4", ",", "15"}], "]"}], ",", 
+     RowBox[{"X", "[", 
+      RowBox[{"7", ",", "4", ",", "8", ",", "5"}], "]"}], ",", 
+     RowBox[{"X", "[", 
+      RowBox[{"15", ",", "7", ",", "16", ",", "6"}], "]"}], ",", 
+     RowBox[{"X", "[", 
+      RowBox[{"13", ",", "8", ",", "14", ",", "9"}], "]"}], ",", 
+     RowBox[{"X", "[", 
+      RowBox[{"9", ",", "12", ",", "10", ",", "13"}], "]"}]}], "]"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.7856900057633963`*^9, 3.785690011304994*^9}},
+ CellLabel->"Out[15]=",ExpressionUUID->"109f558e-bf59-4b5d-842b-b49cd988853c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "@", 
+  RowBox[{"GetAllMinimalPDCodes", "[", 
+   RowBox[{"Knot", "[", 
+    RowBox[{"12", ",", "Alternating", ",", "499"}], "]"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.7856900913823147`*^9, 3.785690106466853*^9}},
+ CellLabel->"In[18]:=",ExpressionUUID->"4a2b3b28-30f5-4fec-9e51-26a56ffe78f5"],
+
+Cell[BoxData["128"], "Output",
+ CellChangeTimes->{{3.785690099776998*^9, 3.785690107070722*^9}},
+ CellLabel->"Out[18]=",ExpressionUUID->"5c96c5cf-36dc-487e-9449-56c6beb3b877"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -933,7 +1958,7 @@ Cell[BoxData[
        RowBox[{"ParallelCheck", "[", 
         RowBox[{
          RowBox[{"Knot", "[", 
-          RowBox[{"6", ",", "1"}], "]"}], ",", 
+          RowBox[{"6", ",", "3"}], "]"}], ",", 
          RowBox[{"#", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
          ",", 
          RowBox[{
@@ -950,8 +1975,9 @@ Cell[BoxData[
  CellChangeTimes->{{3.783351020113739*^9, 3.783351094571597*^9}, {
   3.78338361870173*^9, 3.783383641115636*^9}, {3.7833836778538923`*^9, 
   3.783383704466792*^9}, {3.783384252495668*^9, 3.783384258043787*^9}, {
-  3.783384470297484*^9, 3.783384483973515*^9}},
- CellLabel->"In[9]:=",ExpressionUUID->"3708e17c-65bd-4eae-a0c7-b69b366cacb6"],
+  3.783384470297484*^9, 3.783384483973515*^9}, {3.785687620510396*^9, 
+  3.7856876205950317`*^9}},
+ CellLabel->"In[13]:=",ExpressionUUID->"3708e17c-65bd-4eae-a0c7-b69b366cacb6"],
 
 Cell[BoxData[
  TagBox[
@@ -1181,30 +2207,369 @@ Cell[BoxData[
         RowBox[{"{", 
          RowBox[{"9", ",", "3", ",", "10", ",", "2"}], "}"}]}], "}"}]}
     },
-    GridBoxAlignment->{
-     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
-      "RowsIndexed" -> {}},
+    GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
     GridBoxSpacings->{"Columns" -> {
         Offset[0.27999999999999997`], {
          Offset[0.7]}, 
-        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.27999999999999997`]}, "Rows" -> {
         Offset[0.2], {
          Offset[0.4]}, 
-        Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+        Offset[0.2]}}], "\[NoBreak]", ")"}],
   Function[BoxForm`e$, 
    MatrixForm[BoxForm`e$]]]], "Output",
  CellChangeTimes->{{3.7833510257194967`*^9, 3.783351046024888*^9}, {
    3.783351086578117*^9, 3.7833510949608517`*^9}, 3.783351297883067*^9, {
    3.7833836277299356`*^9, 3.7833836418880453`*^9}, {3.783383680472666*^9, 
    3.783383704931797*^9}, 3.783384258805334*^9, {3.78338447244519*^9, 
-   3.783384484445052*^9}, 3.7835226261167603`*^9},
+   3.783384484445052*^9}, 3.7835226261167603`*^9, 3.785687623287613*^9},
  CellLabel->
-  "Out[9]//MatrixForm=",ExpressionUUID->"a12a7b74-6104-4194-8a39-\
-4249aef2f868"]
+  "Out[13]//MatrixForm=",ExpressionUUID->"e0154966-9c96-408d-81b7-\
+adbeb26749a1"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SortBy", "[", 
+  RowBox[{
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"i", ",", 
+       RowBox[{"Length", "[", 
+        RowBox[{"GetAllFlypesFromPD", "[", 
+         RowBox[{"PD", "@", 
+          RowBox[{"Knot", "[", 
+           RowBox[{"16", ",", "Alternating", ",", "i"}], "]"}]}], "]"}], 
+        "]"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", 
+       RowBox[{"NumberOfKnots", "[", 
+        RowBox[{"16", ",", "Alternating"}], "]"}]}], "}"}]}], "]"}], ",", 
+   "Last"}], "]"}]], "Input",
+ CellChangeTimes->{{3.785690392949712*^9, 3.7856905374933662`*^9}},
+ CellLabel->"In[24]:=",ExpressionUUID->"8fcac157-22ce-4706-abb4-2479d0436e67"],
+
+Cell[BoxData["$Aborted"], "Output",
+ CellChangeTimes->{{3.7856904245906076`*^9, 3.7856904296103497`*^9}, {
+   3.785690472133452*^9, 3.785690487821796*^9}, 3.7856907768286333`*^9},
+ CellLabel->"Out[24]=",ExpressionUUID->"914b05e6-9f62-4126-9bd5-d7cb1e52c140"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ReverseSortBy", "[", 
+  RowBox[{
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"i", ",", 
+       RowBox[{"Length", "[", 
+        RowBox[{"GetAllFlypesFromPD", "[", 
+         RowBox[{"PD", "@", 
+          RowBox[{"Knot", "[", 
+           RowBox[{"8", ",", "i"}], "]"}]}], "]"}], "]"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", 
+       RowBox[{"NumberOfKnots", "[", 
+        RowBox[{"8", ",", "Alternating"}], "]"}]}], "}"}]}], "]"}], ",", 
+   "Last"}], "]"}]], "Input",
+ CellChangeTimes->{{3.7856905597804193`*^9, 3.7856905621877117`*^9}, {
+  3.785690923801695*^9, 3.78569092858188*^9}, {3.785690986132756*^9, 
+  3.785690986880433*^9}},
+ CellLabel->"In[27]:=",ExpressionUUID->"7beb2aeb-4066-4a6f-bd43-e25dff88e586"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"1", ",", "52"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"3", ",", "36"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "36"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"4", ",", "28"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"6", ",", "26"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"7", ",", "24"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"11", ",", "20"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"9", ",", "20"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"8", ",", "20"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"12", ",", "18"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"5", ",", "18"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"13", ",", "16"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"14", ",", "14"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"10", ",", "14"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"15", ",", "10"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"17", ",", "4"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"16", ",", "4"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"18", ",", "0"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.7856909196477623`*^9, 3.785690940126268*^9}, 
+   3.785690998011318*^9},
+ CellLabel->"Out[27]=",ExpressionUUID->"3af6926e-f16e-48e6-86c3-3ea8e1c365a5"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"For", "[", 
+  RowBox[{
+   RowBox[{"crNum", "=", "11"}], ",", 
+   RowBox[{"crNum", "\[LessEqual]", "16"}], ",", 
+   RowBox[{"crNum", "++"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"For", "[", 
+    RowBox[{
+     RowBox[{"ordering", "=", "1"}], ",", 
+     RowBox[{"ordering", "\[LessEqual]", 
+      RowBox[{"NumberOfKnots", "[", 
+       RowBox[{"crNum", ",", "Alternating"}], "]"}]}], ",", 
+     RowBox[{"ordering", "++"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Export", "[", 
+       RowBox[{
+        RowBox[{"\"\<knot_txt_files/\>\"", "<>", 
+         RowBox[{"ToString", "[", "crNum", "]"}], "<>", 
+         "\"\<_crossings/knot_\>\"", "<>", 
+         RowBox[{"ToString", "[", "crNum", "]"}], "<>", "\"\<_\>\"", "<>", 
+         RowBox[{"ToString", "[", "ordering", "]"}], "<>", "\"\<.txt\>\""}], 
+        ",", 
+        RowBox[{"PD", "[", 
+         RowBox[{"Knot", "[", 
+          RowBox[{"crNum", ",", "Alternating", ",", "ordering"}], "]"}], 
+         "]"}]}], "]"}], ";"}]}], "\[IndentingNewLine]", "]"}]}], 
+  "\[IndentingNewLine]", "]"}]], "Input",
+ CellChangeTimes->{{3.78569101479947*^9, 3.785691139319983*^9}, {
+  3.785691170824768*^9, 3.785691174327577*^9}, {3.785693037999797*^9, 
+  3.785693041204253*^9}},
+ CellLabel->"In[33]:=",ExpressionUUID->"77f5ac8b-e13c-46e3-b163-761ad6c3561c"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "KnotTheory","loading",
+   "\"Loading precomputed data in \
+\\!\\(\\*RowBox[{\\\"\\\\\\\"KnotTheory/13A.dts\\\\\\\"\\\"}]\\).\"",2,33,160,
+   27382319419706752975,"Local","KnotTheory`KnotTheory"},
+  "MessageTemplate2"]], "Message", "MSG",
+ CellChangeTimes->{3.785693080902801*^9},
+ CellLabel->
+  "During evaluation of \
+In[33]:=",ExpressionUUID->"bd72e08f-0869-47a9-b8c8-1898a9c54487"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "KnotTheory","loading",
+   "\"Loading precomputed data in \
+\\!\\(\\*RowBox[{\\\"\\\\\\\"KnotTheory/14A.dts\\\\\\\"\\\"}]\\).\"",2,33,161,
+   27382319419706752975,"Local","KnotTheory`KnotTheory"},
+  "MessageTemplate2"]], "Message", "MSG",
+ CellChangeTimes->{3.785693115108555*^9},
+ CellLabel->
+  "During evaluation of \
+In[33]:=",ExpressionUUID->"0240ed86-a7c1-4674-b642-0ec724a4ad51"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "KnotTheory","loading",
+   "\"Loading precomputed data in \
+\\!\\(\\*RowBox[{\\\"\\\\\\\"KnotTheory/15A.dts\\\\\\\"\\\"}]\\).\"",2,33,162,
+   27382319419706752975,"Local","KnotTheory`KnotTheory"},
+  "MessageTemplate2"]], "Message", "MSG",
+ CellChangeTimes->{3.785693261478702*^9},
+ CellLabel->
+  "During evaluation of \
+In[33]:=",ExpressionUUID->"0048fdbe-7bb9-4e47-b675-d44b2e623b56"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"KnotTheory\\\", \
+\\\"::\\\", \\\"loading\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,33,163,27382319419706752975,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.785693261490012*^9},
+ CellLabel->
+  "During evaluation of \
+In[33]:=",ExpressionUUID->"94d40fa4-11fb-41fd-abc3-ab666301ec20"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"For", "[", 
+  RowBox[{
+   RowBox[{"i", "=", "11"}], ",", 
+   RowBox[{"i", "\[LessEqual]", "16"}], ",", 
+   RowBox[{"i", "++"}], ",", 
+   RowBox[{"Print", "[", 
+    RowBox[{"NumberOfKnots", "[", 
+     RowBox[{"i", ",", "Alternating"}], "]"}], "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.78569144981339*^9, 3.785691463900708*^9}},
+ CellLabel->"In[31]:=",ExpressionUUID->"25136797-47a2-4996-b6dc-023753a64868"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["367"], "Print",
+ CellChangeTimes->{3.785691464229144*^9},
+ CellLabel->
+  "During evaluation of \
+In[31]:=",ExpressionUUID->"b729e265-3c07-4bb1-98ba-ff7eb2d8a823"],
+
+Cell[BoxData["1288"], "Print",
+ CellChangeTimes->{3.785691464231435*^9},
+ CellLabel->
+  "During evaluation of \
+In[31]:=",ExpressionUUID->"f2a8f898-1965-47a6-b609-1d45130552a0"],
+
+Cell[BoxData["4878"], "Print",
+ CellChangeTimes->{3.785691464235075*^9},
+ CellLabel->
+  "During evaluation of \
+In[31]:=",ExpressionUUID->"17109778-617c-4e2a-afe2-f5b4b7bd0677"],
+
+Cell[BoxData["19536"], "Print",
+ CellChangeTimes->{3.785691464236163*^9},
+ CellLabel->
+  "During evaluation of \
+In[31]:=",ExpressionUUID->"36cd547f-e5e3-42ab-a832-241262b0dd9e"],
+
+Cell[BoxData["85263"], "Print",
+ CellChangeTimes->{3.785691464237561*^9},
+ CellLabel->
+  "During evaluation of \
+In[31]:=",ExpressionUUID->"749c2790-74f2-472d-89cf-596632955d61"],
+
+Cell[BoxData["379799"], "Print",
+ CellChangeTimes->{3.7856914642388477`*^9},
+ CellLabel->
+  "During evaluation of \
+In[31]:=",ExpressionUUID->"01392896-87dc-41d6-becb-5c4946fdb00d"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Checking BFS Against DFS", "Section",
+ CellChangeTimes->{{3.7857678495435247`*^9, 
+  3.7857678546632843`*^9}},ExpressionUUID->"13f03185-5d8a-4ea4-8447-\
+69614dbada1a"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"TotalDiagramsForCrossingNumber", "[", "crNum_", "]"}], ":=", 
+   RowBox[{"Total", "[", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"Length", "[", 
+       RowBox[{"GetAllMinimalPDCodes", "[", 
+        RowBox[{"Knot", "[", 
+         RowBox[{"crNum", ",", "Alternating", ",", "i"}], "]"}], "]"}], "]"}],
+       ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", 
+        RowBox[{"NumberOfKnots", "[", 
+         RowBox[{"crNum", ",", "Alternating"}], "]"}]}], "}"}]}], "]"}], 
+    "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"TotalDiagramsForCrossingNumberDFS", "[", "crNum_", "]"}], ":=", 
+  RowBox[{"Total", "[", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"Length", "[", 
+      RowBox[{"Import", "[", 
+       RowBox[{
+        RowBox[{"\"\<flype_output/\>\"", "<>", 
+         RowBox[{"ToString", "[", "crNum", "]"}], "<>", 
+         "\"\<_crossings/knot_\>\"", "<>", 
+         RowBox[{"ToString", "[", "crNum", "]"}], "<>", "\"\<_\>\"", "<>", 
+         RowBox[{"ToString", "[", "i", "]"}], "<>", "\"\<.txt\>\""}], ",", 
+        "\"\<Data\>\""}], "]"}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", 
+       RowBox[{"NumberOfKnots", "[", 
+        RowBox[{"crNum", ",", "Alternating"}], "]"}]}], "}"}]}], "]"}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"TotalDiagramsForCrossingNumberBFS", "[", "crNum_", "]"}], ":=", 
+  RowBox[{"Total", "[", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"Length", "[", 
+      RowBox[{"Import", "[", 
+       RowBox[{
+        RowBox[{"\"\<flype_output/bfs/\>\"", "<>", 
+         RowBox[{"ToString", "[", "crNum", "]"}], "<>", 
+         "\"\<_crossings/knot_\>\"", "<>", 
+         RowBox[{"ToString", "[", "crNum", "]"}], "<>", "\"\<_\>\"", "<>", 
+         RowBox[{"ToString", "[", "i", "]"}], "<>", "\"\<.txt\>\""}], ",", 
+        "\"\<Data\>\""}], "]"}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", 
+       RowBox[{"NumberOfKnots", "[", 
+        RowBox[{"crNum", ",", "Alternating"}], "]"}]}], "}"}]}], "]"}], 
+   "]"}]}]}], "Input",
+ CellChangeTimes->{{3.785768035682378*^9, 3.78576816857736*^9}, {
+  3.785768213311323*^9, 
+  3.78576822214013*^9}},ExpressionUUID->"ef904adf-2c77-4cb3-b306-\
+7cb2f63813eb"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"TotalDiagramsForCrossingNumber", "[", "9", 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"TotalDiagramsForCrossingNumberDFS", "[", "9", "]"}]}], "Input",
+ CellChangeTimes->{{3.785768074060583*^9, 3.785768083689939*^9}, {
+  3.785768171364159*^9, 3.785768175559539*^9}},
+ CellLabel->"In[22]:=",ExpressionUUID->"7560f3fe-81e7-45d8-b3db-6f6391e09056"],
+
+Cell[BoxData["41"], "Output",
+ CellChangeTimes->{{3.785768078530118*^9, 3.7857680840516577`*^9}, {
+  3.7857681760281067`*^9, 3.785768188332123*^9}},
+ CellLabel->"Out[22]=",ExpressionUUID->"83107146-0ca8-4837-9797-c099d57d7e83"],
+
+Cell[BoxData["152"], "Output",
+ CellChangeTimes->{{3.785768078530118*^9, 3.7857680840516577`*^9}, {
+  3.7857681760281067`*^9, 3.785768188672859*^9}},
+ CellLabel->"Out[23]=",ExpressionUUID->"dd668ef5-a505-47df-9d4e-ab7bb09d88aa"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Import", "[", 
+  RowBox[{
+  "\"\<flype_output/8_crossings/knot_8_3.txt\>\"", ",", "\"\<Data\>\""}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.785767857910277*^9, 3.785767919181015*^9}, {
+  3.7857680264428787`*^9, 3.785768027087265*^9}, {3.785768108666726*^9, 
+  3.7857681129100246`*^9}},ExpressionUUID->"9bdd03cb-1d1d-46ca-9348-\
+7bef9b1f37af"],
+
+Cell[BoxData["2"], "Output",
+ CellChangeTimes->{{3.785767884267663*^9, 3.7857679196287622`*^9}, 
+   3.785768027746191*^9, 3.7857681100857353`*^9},
+ CellLabel->"Out[17]=",ExpressionUUID->"0bd9792a-535f-4bca-91ba-e46695109758"]
+}, Open  ]]
 }, Open  ]]
 },
-WindowSize->{1245, 666},
-WindowMargins->{{67, Automatic}, {Automatic, 67}},
+WindowSize->{1920, 1052},
+WindowMargins->{{-1920, Automatic}, {-533, Automatic}},
 FrontEndVersion->"12.0 for Linux x86 (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
 ]
@@ -1221,86 +2586,161 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[580, 22, 308, 5, 55, "Input",ExpressionUUID->"a4b6f8f7-1c64-409e-8397-5d3258ac95a8"],
-Cell[891, 29, 309, 4, 35, "Output",ExpressionUUID->"12b55dd9-01a1-4bee-ae49-e4d8e3061b8e"],
-Cell[1203, 35, 417, 10, 23, "Message",ExpressionUUID->"77b57180-630c-4b12-8cd5-bd647da6d242"],
-Cell[1623, 47, 597, 12, 23, "Message",ExpressionUUID->"14c35f33-3351-4005-a9ad-fc333d49d7e1"],
-Cell[2223, 61, 572, 11, 23, "Message",ExpressionUUID->"e867bc5e-882a-4ada-a807-a8988f0c8da7"],
-Cell[2798, 74, 729, 14, 23, "Message",ExpressionUUID->"a6301ac6-91f9-4f8b-91d9-2dec13b01c29"],
-Cell[3530, 90, 706, 13, 23, "Message",ExpressionUUID->"35c27045-49bd-4106-b48b-9a9589ba2cc4"],
-Cell[4239, 105, 683, 13, 23, "Message",ExpressionUUID->"198d0694-6600-4dc4-8cd5-707cb2a7c4e7"],
-Cell[4925, 120, 472, 10, 23, "Message",ExpressionUUID->"df343226-fa0f-4f91-9308-036c5ef60511"],
-Cell[5400, 132, 665, 13, 23, "Message",ExpressionUUID->"01f9c378-293b-4d3d-bc93-d4256a4f61ca"],
-Cell[6068, 147, 479, 10, 23, "Message",ExpressionUUID->"daaac2bb-b250-4ee0-81ed-cc6acbe458bb"],
-Cell[6550, 159, 4617, 67, 100, "Message",ExpressionUUID->"b2575183-2b3f-4713-8a2e-f0e06bbdde0e"],
-Cell[11170, 228, 2012, 32, 62, "Message",ExpressionUUID->"eb18cdce-0633-44ba-b391-4fdfe325a232"],
-Cell[13185, 262, 2013, 32, 62, "Message",ExpressionUUID->"8d37713f-ce6a-4306-9647-d86a129c4736"],
-Cell[15201, 296, 401, 8, 48, "Print",ExpressionUUID->"cbb9b7a5-c523-4f79-8550-de5b69f8d48c"],
-Cell[15605, 306, 417, 10, 23, "Message",ExpressionUUID->"da505442-64ee-4da9-8f7e-46b87421d987"],
-Cell[16025, 318, 418, 10, 23, "Message",ExpressionUUID->"498e6053-4ad8-4554-a9f8-477ff75894da"],
-Cell[16446, 330, 467, 10, 23, "Message",ExpressionUUID->"52bf7a27-16ee-40f9-9baa-44ea82cb2c15"],
-Cell[16916, 342, 381, 9, 23, "Message",ExpressionUUID->"3db4a0f5-0a7f-46ed-86ae-0b21df4c5a10"],
-Cell[17300, 353, 418, 9, 23, "Message",ExpressionUUID->"fb59124b-729b-4ee5-b432-bc615df79420"],
-Cell[17721, 364, 1227, 23, 43, "Message",ExpressionUUID->"4a27d816-d9ed-4574-9045-9477bd92cf39"],
-Cell[18951, 389, 381, 9, 23, "Message",ExpressionUUID->"5bbf8200-d6b8-4d05-b30d-fb9018bd6d1d"],
-Cell[19335, 400, 416, 9, 23, "Message",ExpressionUUID->"ee652ab2-ee0e-47b5-b686-99b56473c34c"],
-Cell[19754, 411, 1220, 22, 43, "Message",ExpressionUUID->"9567c38a-831f-4b2a-bf3a-197f78299d7e"],
-Cell[20977, 435, 379, 9, 23, "Message",ExpressionUUID->"0910a6d0-06ef-4d4c-b73f-e1d0f06f63f1"],
-Cell[21359, 446, 469, 10, 23, "Message",ExpressionUUID->"8cd60773-ab17-4bd9-b943-a9cd09f6ffa4"],
-Cell[21831, 458, 416, 9, 23, "Message",ExpressionUUID->"0f19264a-7369-43ae-9467-8b28453bfd44"],
-Cell[22250, 469, 469, 10, 23, "Message",ExpressionUUID->"6abc712d-2c15-415c-9029-89f9df224b6c"],
-Cell[22722, 481, 1220, 22, 43, "Message",ExpressionUUID->"961ba24f-8504-45c7-bd7a-4742d8e5e1a6"],
-Cell[23945, 505, 477, 10, 23, "Message",ExpressionUUID->"63581052-130e-4f94-a47f-c11ef5237cbd"]
+Cell[891, 29, 363, 5, 35, "Output",ExpressionUUID->"fb5b9c2e-d7ed-4b17-98e3-f3f35dd50180"],
+Cell[1257, 36, 467, 11, 23, "Message",ExpressionUUID->"343dac8b-71ce-4a24-a3b1-163ba382fa9a"],
+Cell[1727, 49, 645, 13, 23, "Message",ExpressionUUID->"286e08a4-6607-48a1-82d7-cf452920fb87"],
+Cell[2375, 64, 619, 12, 23, "Message",ExpressionUUID->"c38329e4-6558-43e5-bf1a-882313567d8d"],
+Cell[2997, 78, 776, 15, 23, "Message",ExpressionUUID->"5534908b-0dfb-4122-98b7-e80c0fdbd615"],
+Cell[3776, 95, 754, 14, 23, "Message",ExpressionUUID->"8f21ff8a-2d00-405e-ae91-050dcea6075d"],
+Cell[4533, 111, 734, 14, 23, "Message",ExpressionUUID->"d95cc3a2-2543-44fe-a154-d61b968980ca"],
+Cell[5270, 127, 520, 11, 23, "Message",ExpressionUUID->"f3587aac-be12-452d-be2c-0bd9a2cf4235"],
+Cell[5793, 140, 715, 14, 23, "Message",ExpressionUUID->"e256328b-d1d4-4ae6-93b8-eef3388f1f24"],
+Cell[6511, 156, 527, 11, 23, "Message",ExpressionUUID->"05c993d6-37d5-4983-8fe9-cf262496aab3"],
+Cell[7041, 169, 5033, 72, 62, "Message",ExpressionUUID->"6409e093-ced9-4b77-b092-83b2534cfa70"],
+Cell[12077, 243, 6577, 94, 100, "Message",ExpressionUUID->"12ca6012-88c0-4b45-812a-b2a2a859ab5c"],
+Cell[18657, 339, 6577, 94, 100, "Message",ExpressionUUID->"2a4cae22-4117-4932-9756-eb339bfc89f2"],
+Cell[25237, 435, 453, 9, 48, "Print",ExpressionUUID->"275c1ab6-8579-428c-81fd-f5668c37683d"],
+Cell[25693, 446, 467, 11, 23, "Message",ExpressionUUID->"7e9f3d68-c484-41ca-b842-19b3b0f03f8d"],
+Cell[26163, 459, 465, 11, 23, "Message",ExpressionUUID->"6d09319b-bceb-4621-90de-965a3df77e32"],
+Cell[26631, 472, 512, 11, 23, "Message",ExpressionUUID->"d60dc667-4cb5-4426-9bd2-b2a5492c81cf"],
+Cell[27146, 485, 428, 10, 23, "Message",ExpressionUUID->"0725d926-86e6-4c8a-8f04-42c148d3df2c"],
+Cell[27577, 497, 463, 10, 23, "Message",ExpressionUUID->"da303711-7bba-403f-9654-b5bc2e6e6d5f"],
+Cell[28043, 509, 1274, 24, 43, "Message",ExpressionUUID->"cf7786c9-3c02-4b06-9eb9-a59dbbd43cc9"],
+Cell[29320, 535, 425, 10, 23, "Message",ExpressionUUID->"47317f98-6c28-49f3-83a8-281f8cc321be"],
+Cell[29748, 547, 463, 10, 23, "Message",ExpressionUUID->"b6ce3ab0-fd35-4682-b339-c71b91cffdeb"],
+Cell[30214, 559, 1267, 23, 43, "Message",ExpressionUUID->"ea8c9aed-42ff-42f7-bf90-9cf376007e32"],
+Cell[31484, 584, 426, 10, 23, "Message",ExpressionUUID->"5aa2f691-53ff-4f12-93b5-35a9485428e1"],
+Cell[31913, 596, 516, 11, 23, "Message",ExpressionUUID->"7810aa76-87f7-4221-b754-c741ae928c63"],
+Cell[32432, 609, 463, 10, 23, "Message",ExpressionUUID->"1e933903-3448-4ed1-b596-e7ad2ca13a8c"],
+Cell[32898, 621, 516, 11, 23, "Message",ExpressionUUID->"e72ae266-b688-4435-8870-81e7129b722f"],
+Cell[33417, 634, 1268, 23, 43, "Message",ExpressionUUID->"57985aa3-5772-4b19-b5b9-7e00f8b63f5f"],
+Cell[34688, 659, 526, 11, 23, "Message",ExpressionUUID->"cf03bdd2-2ae0-4fe2-a57b-a98daf0b1111"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[24459, 520, 354, 7, 31, "Input",ExpressionUUID->"a8a2598a-2fae-41a9-bf2f-0e265f8fc04b"],
-Cell[24816, 529, 405, 10, 23, "Message",ExpressionUUID->"6075ee21-5810-4119-b460-752922b49218"],
-Cell[25224, 541, 182, 2, 35, "Output",ExpressionUUID->"9cb6c42c-7240-41d7-b977-b6503ac71309"]
+Cell[35251, 675, 354, 7, 31, "Input",ExpressionUUID->"a8a2598a-2fae-41a9-bf2f-0e265f8fc04b"],
+Cell[35608, 684, 405, 10, 23, "Message",ExpressionUUID->"6075ee21-5810-4119-b460-752922b49218"],
+Cell[36016, 696, 182, 2, 35, "Output",ExpressionUUID->"9cb6c42c-7240-41d7-b977-b6503ac71309"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[25443, 548, 354, 8, 31, "Input",ExpressionUUID->"b72a3bcf-fdab-4857-b8bb-af241e5d8400"],
-Cell[25800, 558, 187, 3, 35, "Output",ExpressionUUID->"207226ea-ba83-4291-ae80-aa7e2990691f"]
+Cell[36235, 703, 354, 8, 31, "Input",ExpressionUUID->"b72a3bcf-fdab-4857-b8bb-af241e5d8400"],
+Cell[36592, 713, 187, 3, 35, "Output",ExpressionUUID->"207226ea-ba83-4291-ae80-aa7e2990691f"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[26024, 566, 432, 10, 31, "Input",ExpressionUUID->"4dee500d-03ce-4dc2-968b-99ad8f481dae"],
-Cell[26459, 578, 240, 4, 35, "Output",ExpressionUUID->"8eec164f-55a1-41e0-be66-d8c47301c41a"]
+Cell[36816, 721, 432, 10, 31, "Input",ExpressionUUID->"4dee500d-03ce-4dc2-968b-99ad8f481dae"],
+Cell[37251, 733, 240, 4, 35, "Output",ExpressionUUID->"8eec164f-55a1-41e0-be66-d8c47301c41a"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[26736, 587, 375, 8, 31, "Input",ExpressionUUID->"fafe923d-d13d-4707-b2f5-5ce60f50466e"],
-Cell[27114, 597, 414, 10, 23, "Message",ExpressionUUID->"d75c7737-5bd9-4f4e-9136-c54f6f8018e6"],
-Cell[27531, 609, 484, 11, 23, "Message",ExpressionUUID->"abc9b947-990a-4346-95fe-577205aeb389"],
-Cell[28018, 622, 184, 2, 35, "Output",ExpressionUUID->"18f960ad-23ab-4aab-b3ca-fa1ff28b9e26"]
+Cell[37528, 742, 375, 8, 31, "Input",ExpressionUUID->"fafe923d-d13d-4707-b2f5-5ce60f50466e"],
+Cell[37906, 752, 414, 10, 23, "Message",ExpressionUUID->"d75c7737-5bd9-4f4e-9136-c54f6f8018e6"],
+Cell[38323, 764, 484, 11, 23, "Message",ExpressionUUID->"abc9b947-990a-4346-95fe-577205aeb389"],
+Cell[38810, 777, 184, 2, 35, "Output",ExpressionUUID->"18f960ad-23ab-4aab-b3ca-fa1ff28b9e26"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[28239, 629, 331, 8, 31, "Input",ExpressionUUID->"4aea9dd7-f1bc-433b-8e25-b8976d9950a8"],
-Cell[28573, 639, 177, 3, 35, "Output",ExpressionUUID->"db38dbdb-523c-4c6d-9255-20b66b566c9b"]
+Cell[39031, 784, 352, 7, 31, "Input",ExpressionUUID->"689545e5-a425-4786-8941-e8eba89792a6"],
+Cell[39386, 793, 430, 10, 23, "Message",ExpressionUUID->"b7b907b2-a362-4d68-9d8e-6f9c558d2e64"],
+Cell[39819, 805, 575, 12, 23, "Message",ExpressionUUID->"c1b4a932-03b8-4709-951d-4e8d7693aeec"],
+Cell[40397, 819, 550, 11, 23, "Message",ExpressionUUID->"0ebe0311-1136-4d48-bd54-8ffb42142fe5"],
+Cell[40950, 832, 3463, 55, 81, "Message",ExpressionUUID->"d0a144bd-4fe4-4f95-bfbf-b9f835ba79be"],
+Cell[44416, 889, 3522, 56, 81, "Message",ExpressionUUID->"f045ea9c-c30b-46ed-87ae-e0259973d546"],
+Cell[47941, 947, 3758, 60, 81, "Message",ExpressionUUID->"9ed23a0c-7ba7-49d2-b772-2489af460215"],
+Cell[51702, 1009, 3717, 60, 81, "Message",ExpressionUUID->"ba8a2c6f-8361-42ad-91c9-2576dff42c80"],
+Cell[55422, 1071, 450, 10, 23, "Message",ExpressionUUID->"567afa32-b0ef-438b-b7df-ea1d1361dae4"],
+Cell[55875, 1083, 552, 11, 23, "Message",ExpressionUUID->"05b6fd1e-87fd-46ae-958b-bf9482d704c3"],
+Cell[56430, 1096, 3769, 60, 81, "Message",ExpressionUUID->"7e56ed48-9cd8-4ff4-bdde-ce56e8350b83"],
+Cell[60202, 1158, 457, 10, 23, "Message",ExpressionUUID->"d6f76079-358e-4ffb-aa8c-c3c734da2b1b"],
+Cell[60662, 1170, 4963, 71, 62, "Message",ExpressionUUID->"9da7649b-4ee6-4df0-904e-3bd04f05bf5f"],
+Cell[65628, 1243, 6507, 93, 100, "Message",ExpressionUUID->"dace6500-1725-42b1-8aac-af9a271a72d7"],
+Cell[72138, 1338, 456, 10, 23, "Message",ExpressionUUID->"8805ad06-8a58-4f2b-93b7-34fa9823efd9"],
+Cell[72597, 1350, 5395, 77, 81, "Message",ExpressionUUID->"2a44d49b-eed0-4e70-bd54-05c9fbd404ca"],
+Cell[77995, 1429, 449, 10, 23, "Message",ExpressionUUID->"3851eeba-60e9-4ed6-86df-f4dc1279efd3"],
+Cell[78447, 1441, 184, 2, 35, "Output",ExpressionUUID->"48700fab-6aa6-4cd5-9755-4229c73a092d"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[28787, 647, 405, 10, 31, "Input",ExpressionUUID->"ca7b62e7-2229-43e0-9c73-2cd58ff553c2"],
-Cell[29195, 659, 250, 4, 35, "Output",ExpressionUUID->"cb97e317-3635-4ffd-991c-bbe9b7fec3d3"]
+Cell[78668, 1448, 379, 8, 31, "Input",ExpressionUUID->"182fe2c4-c03d-44aa-aa2c-ace6867bbade"],
+Cell[79050, 1458, 416, 10, 23, "Message",ExpressionUUID->"a8aa6076-a5b6-4ba3-8cc1-537a74c833d7"],
+Cell[79469, 1470, 486, 11, 23, "Message",ExpressionUUID->"d61d56ec-ba1c-4595-917d-403f24fbe4ff"],
+Cell[79958, 1483, 186, 2, 35, "Output",ExpressionUUID->"5cd519c8-a9fa-4a31-a96e-0d1103a4d9dd"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[29482, 668, 401, 10, 31, "Input",ExpressionUUID->"10f34287-656c-441b-a8d1-7d2d8966e5ef"],
-Cell[29886, 680, 9830, 155, 377, "Output",ExpressionUUID->"fcad2e7c-eeff-4732-bce6-b0cf097f1b40"]
+Cell[80181, 1490, 276, 5, 31, "Input",ExpressionUUID->"15005752-7c57-4efd-8386-b2f6bcb7cf64"],
+Cell[80460, 1497, 419, 10, 23, "Message",ExpressionUUID->"a71efbc2-51d0-4780-a2c2-0ec846ee86da"],
+Cell[80882, 1509, 454, 10, 23, "Message",ExpressionUUID->"c19bf53b-06e7-4fb5-a406-0f5ebcfdb657"],
+Cell[81339, 1521, 4781, 113, 151, "Output",ExpressionUUID->"109f558e-bf59-4b5d-842b-b49cd988853c"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[39753, 840, 515, 13, 30, "Input",ExpressionUUID->"ef4b1646-d2e8-4c8e-a6cb-bba8fe75d98a"],
-Cell[40271, 855, 486, 9, 34, "Output",ExpressionUUID->"6578ce3e-964a-4762-a1be-a2005c0d656d"]
+Cell[86157, 1639, 328, 6, 31, "Input",ExpressionUUID->"4a2b3b28-30f5-4fec-9e51-26a56ffe78f5"],
+Cell[86488, 1647, 175, 2, 35, "Output",ExpressionUUID->"5c96c5cf-36dc-487e-9449-56c6beb3b877"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[40794, 869, 387, 8, 30, "Input",ExpressionUUID->"04f511ac-a215-46f0-afeb-6d4a64ab152e"],
-Cell[41184, 879, 199, 3, 34, "Output",ExpressionUUID->"079c1013-510d-441b-a4da-874ec902d6e8"]
+Cell[86700, 1654, 331, 8, 31, "Input",ExpressionUUID->"4aea9dd7-f1bc-433b-8e25-b8976d9950a8"],
+Cell[87034, 1664, 177, 3, 35, "Output",ExpressionUUID->"db38dbdb-523c-4c6d-9255-20b66b566c9b"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[41420, 887, 384, 8, 30, "Input",ExpressionUUID->"9ca5c8f7-e091-436b-975d-a96bd152c2b6"],
-Cell[41807, 897, 172, 2, 34, "Output",ExpressionUUID->"de7d68d7-d9fb-4cbd-aaf2-3f95da1df4aa"]
+Cell[87248, 1672, 405, 10, 31, "Input",ExpressionUUID->"ca7b62e7-2229-43e0-9c73-2cd58ff553c2"],
+Cell[87656, 1684, 250, 4, 35, "Output",ExpressionUUID->"cb97e317-3635-4ffd-991c-bbe9b7fec3d3"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[42016, 904, 410, 10, 30, "Input",ExpressionUUID->"839cc774-be63-4e09-9422-a5a4857f0976"],
-Cell[42429, 916, 205, 4, 34, "Output",ExpressionUUID->"4448accc-2c93-4f31-961e-738cce0863c8"]
+Cell[87943, 1693, 401, 10, 31, "Input",ExpressionUUID->"10f34287-656c-441b-a8d1-7d2d8966e5ef"],
+Cell[88347, 1705, 9830, 155, 377, "Output",ExpressionUUID->"fcad2e7c-eeff-4732-bce6-b0cf097f1b40"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[42671, 925, 1152, 28, 30, "Input",ExpressionUUID->"3708e17c-65bd-4eae-a0c7-b69b366cacb6"],
-Cell[43826, 955, 9305, 247, 444, "Output",ExpressionUUID->"a12a7b74-6104-4194-8a39-4249aef2f868"]
+Cell[98214, 1865, 515, 13, 31, "Input",ExpressionUUID->"ef4b1646-d2e8-4c8e-a6cb-bba8fe75d98a"],
+Cell[98732, 1880, 486, 9, 35, "Output",ExpressionUUID->"6578ce3e-964a-4762-a1be-a2005c0d656d"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[99255, 1894, 387, 8, 31, "Input",ExpressionUUID->"04f511ac-a215-46f0-afeb-6d4a64ab152e"],
+Cell[99645, 1904, 199, 3, 35, "Output",ExpressionUUID->"079c1013-510d-441b-a4da-874ec902d6e8"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[99881, 1912, 384, 8, 31, "Input",ExpressionUUID->"9ca5c8f7-e091-436b-975d-a96bd152c2b6"],
+Cell[100268, 1922, 172, 2, 35, "Output",ExpressionUUID->"de7d68d7-d9fb-4cbd-aaf2-3f95da1df4aa"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[100477, 1929, 410, 10, 31, "Input",ExpressionUUID->"839cc774-be63-4e09-9422-a5a4857f0976"],
+Cell[100890, 1941, 205, 4, 35, "Output",ExpressionUUID->"4448accc-2c93-4f31-961e-738cce0863c8"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[101132, 1950, 1204, 29, 31, "Input",ExpressionUUID->"3708e17c-65bd-4eae-a0c7-b69b366cacb6"],
+Cell[102339, 1981, 9225, 245, 409, "Output",ExpressionUUID->"e0154966-9c96-408d-81b7-adbeb26749a1"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[111601, 2231, 706, 19, 31, "Input",ExpressionUUID->"8fcac157-22ce-4706-abb4-2479d0436e67"],
+Cell[112310, 2252, 258, 3, 35, "Output",ExpressionUUID->"914b05e6-9f62-4126-9bd5-d7cb1e52c140"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[112605, 2260, 781, 20, 31, "Input",ExpressionUUID->"7beb2aeb-4066-4a6f-bd43-e25dff88e586"],
+Cell[113389, 2282, 1312, 41, 35, "Output",ExpressionUUID->"3af6926e-f16e-48e6-86c3-3ea8e1c365a5"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[114738, 2328, 1337, 30, 124, "Input",ExpressionUUID->"77f5ac8b-e13c-46e3-b163-761ad6c3561c"],
+Cell[116078, 2360, 416, 10, 23, "Message",ExpressionUUID->"bd72e08f-0869-47a9-b8c8-1898a9c54487"],
+Cell[116497, 2372, 416, 10, 23, "Message",ExpressionUUID->"0240ed86-a7c1-4674-b642-0ec724a4ad51"],
+Cell[116916, 2384, 416, 10, 23, "Message",ExpressionUUID->"0048fdbe-7bb9-4e47-b675-d44b2e623b56"],
+Cell[117335, 2396, 452, 10, 23, "Message",ExpressionUUID->"94d40fa4-11fb-41fd-abc3-ab666301ec20"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[117824, 2411, 435, 10, 31, "Input",ExpressionUUID->"25136797-47a2-4996-b6dc-023753a64868"],
+Cell[CellGroupData[{
+Cell[118284, 2425, 176, 4, 25, "Print",ExpressionUUID->"b729e265-3c07-4bb1-98ba-ff7eb2d8a823"],
+Cell[118463, 2431, 177, 4, 25, "Print",ExpressionUUID->"f2a8f898-1965-47a6-b609-1d45130552a0"],
+Cell[118643, 2437, 177, 4, 25, "Print",ExpressionUUID->"17109778-617c-4e2a-afe2-f5b4b7bd0677"],
+Cell[118823, 2443, 178, 4, 25, "Print",ExpressionUUID->"36cd547f-e5e3-42ab-a832-241262b0dd9e"],
+Cell[119004, 2449, 178, 4, 25, "Print",ExpressionUUID->"749c2790-74f2-472d-89cf-596632955d61"],
+Cell[119185, 2455, 181, 4, 25, "Print",ExpressionUUID->"01392896-87dc-41d6-becb-5c4946fdb00d"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[119415, 2465, 173, 3, 68, "Section",ExpressionUUID->"13f03185-5d8a-4ea4-8447-69614dbada1a"],
+Cell[119591, 2470, 2266, 58, 124, "Input",ExpressionUUID->"ef904adf-2c77-4cb3-b306-7cb2f63813eb"],
+Cell[CellGroupData[{
+Cell[121882, 2532, 369, 6, 55, "Input",ExpressionUUID->"7560f3fe-81e7-45d8-b3db-6f6391e09056"],
+Cell[122254, 2540, 227, 3, 35, "Output",ExpressionUUID->"83107146-0ca8-4837-9797-c099d57d7e83"],
+Cell[122484, 2545, 228, 3, 35, "Output",ExpressionUUID->"dd668ef5-a505-47df-9d4e-ab7bb09d88aa"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[122749, 2553, 368, 8, 31, "Input",ExpressionUUID->"9bdd03cb-1d1d-46ca-9348-7bef9b1f37af"],
+Cell[123120, 2563, 225, 3, 35, "Output",ExpressionUUID->"0bd9792a-535f-4bca-91ba-e46695109758"]
+}, Open  ]]
 }, Open  ]]
 }
 ]
